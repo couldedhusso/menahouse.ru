@@ -41,7 +41,7 @@ class ImageManipulationRepository implements ImageManipulationInterface
     public function UploadToS3($filename, $contents){
 
         $s3 = Storage::disk('s3');
-        $s3->put($filename, $contents);
+        $s3->put($filename, $contents, 'public');
         // $path = $this->THUMBNAIL_PATH.'/'.$filename;
 
         // $this->setStorageDirectory($this->THUMBNAIL_PATH);

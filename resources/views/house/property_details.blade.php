@@ -35,8 +35,8 @@
     <div class="owl-carousel property-carousel">
       @foreach($house->images->data as $img )
       <div class="property-slide">
-          <a href="{{asset('storage/dev/images/'.$img->source)}}" class="image-popup">
-            <img alt="" src="{{asset('storage/dev/images/'.$img->source)}}">
+          <a href="{{asset('https://s3.amazonaws.com/devmenastorage/'.$img->source)}}" class="image-popup">
+            <img alt="" src="{{asset('https://s3.amazonaws.com/devmenastorage/'.$img->source)}}">
           </a>
       </div>
       <!-- /.property-slide -->

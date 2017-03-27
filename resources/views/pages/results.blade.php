@@ -46,7 +46,7 @@
                   <figure class="ribbon">
                     @{{ house.status }}
                   </figure>
-                  <a href ng-click ="vm.openlink(house.link, house.id)"> <img alt="" src="{{asset('storage/dev/thumbs').'/'}}@{{house.thumb.source}}"></a>
+                  <a href ng-click ="vm.openlink(house.link, house.id)"> <img alt="" src="https://s3.amazonaws.com/devmenastorage/@{{house.thumb.source}}"></a>
              </div>
               <div class="info">
                   <header>

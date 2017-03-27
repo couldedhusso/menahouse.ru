@@ -49,7 +49,7 @@
                                     @if(Auth::user()->status == 'banned')
 
                                         <td class="image">
-                                            <a href="#"><img alt="" src="{{'http://d3ngeoscgpa8s9.cloudfront.net/'.$house->thumb->source}}"></a>
+                                            <a href="#"><img alt="" src="{{'https://s3.amazonaws.com/devmenastorage/'.$house->thumb->source}}"></a>
                                             </td>
                                             <td><div class="inner">
                                                 <a href="#"><h2>{{ $house->type_appart.', м.'.$house->metro }}</h2></a>
@@ -75,7 +75,9 @@
                                     @else
 
                                         <td class="image">
-                                            <a href="{{url('/'.$house->link)}}"><img alt="" src="{{'http://d3ngeoscgpa8s9.cloudfront.net/'.$house->thumb->source}}"></a>
+
+                                            {{-- ====== TODO : utiliser cloudfront pour le rendu des imqges --}}
+                                            <a href="{{url('/'.$house->link)}}"><img alt="" src="{{'https://s3.amazonaws.com/devmenastorage/'.$house->thumb->source}}"></a>
                                             </td>
                                             <td><div class="inner">
                                                 <a href="{{url('/'.$house->link)}}"><h2>{{ $house->type_appart.', м.'.$house->metro }}</h2></a>

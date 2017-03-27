@@ -47,7 +47,7 @@
         <!-- Breadcrumb -->
         <div class="container">
             <ol class="breadcrumb">
-                <li><a href="index.html">Главная</a></li>
+                <li><a href="{{url('/')}}">Главная</a></li>
                 <li class="active">Подробное описание</li>
             </ol>
         </div>

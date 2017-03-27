@@ -7,10 +7,10 @@
 # server 'example.com', user: 'deploy', roles: %w{app web}, other_property: :other_value
 # server 'db.example.com', user: 'deploy', roles: %w{db}
 
-set :user, 'ubuntu'
-server 'ec2-52-28-204-86.eu-central-1.compute.amazonaws.com', user: 'ubuntu',
-        keys:%w(/home/couldedhusso/workspace/menahouseoncloud/AWSKeys/kubenetes.pem),
-        roles: %w{app, db, web}
+set :user, 'ec2-user'
+server 'ec2-35-161-27-29.us-west-2.compute.amazonaws.com', user: 'ec2-user',
+        keys:%w(/home/couldedhusso/workspace/AWSKeys/deploy_key.pem),
+        roles: %w{app, web}
 # ssh_options[:keys] = ['/home/couldedhusso/workspace/menahouseoncloud/menahouse-vps.pem']
 
 # role-based syntax
