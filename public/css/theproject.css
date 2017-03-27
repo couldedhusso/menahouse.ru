@@ -1,0 +1,163 @@
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.row.house {
+	margin: 1px ;
+	border-radius: 2px;
+	border: 1px solid #888;
+	background-color: #fff;
+}
+
+.row.house:hover .btn.the-ad {
+	visibility: visible;
+}
+
+.row.house:hover a {
+	visibility: visible;
+}
+
+[class*="col-"].house {
+  padding: 2px;
+  height: 220px;
+}
+
+div.house-img-larger  {
+	height: 100%;
+	width:100%;
+	text-align: center;
+	height: 220px;
+	/*padding: 1px;*/
+}
+
+.carousel .carousel-inner .item img{
+	height: 100% !important;
+}
+
+/*.carousel-inner > .item > img {
+    position: relative;
+    height: 100% !important;
+}*/
+
+/*.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    width: 100%;
+		height: 100% !important;
+}*/
+
+/*.house-img-larger {
+	width:100%;
+	position: relative;
+	height: 220px;
+}*/
+
+div.house-img-smaller {
+	height: 33%;
+	width:100%;
+	text-align: center;
+	/*padding: 1px;*/
+	white-space:nowrap;
+	vertical-align: middle;
+}
+
+img.scaled {
+	height: 100%; /*reminder: should be max-height to scale image properly*/
+	width: 100%; /*reminder: should be max-height to scale image properly*/
+	/*padding: 1px;*/
+	border-color: #888;
+	border: solid 1px;
+}
+img.smaller {
+	width: 32%; /*reminder: should be max-height to scale image properly*/
+}
+
+.metro-line-3 {
+	/*border-left: solid #06f 12px;*/
+	border-left: 3px solid #06F;
+	height: 100%;
+	padding-left: 2px;
+	margin-left: 3px;
+}
+
+.metro-line-10 {
+	border-left: solid #9c0 12px;
+}
+
+span.metro-span-3 {
+	float:left;
+	margin-left: -10px;
+	margin-top: 50px;
+	background-color: #06f;
+	color: #fff;
+	padding: 1px 10px 1px 10px;
+	border-radius: 15px;
+	font-size: 20px;
+}
+
+span.metro-span-10 {
+	float:left;
+	margin-left: -24px;
+	margin-top: 50px;
+	background-color: #9c0;
+	color: #fff;
+	padding: 1px 6px 1px 4px;
+	border-radius: 15px;
+	font-size: 20px;
+}
+
+.house-row {
+	height: 50px;
+	padding-left: 10px;
+}
+
+.house-hr {
+	border:0;
+	border-bottom: 1px dashed #888;
+}
+
+h4.grey {
+	color: #888;
+}
+
+p.subline {
+	line-height: 50%;
+	/*font-size: 90%;*/
+	color: #888;
+}
+
+.btn.house {
+	width: 100%;
+	background-color: #fff;
+	border-color: #888;
+	box-shadow: 1px 1px 5px black;
+	visibility: hidden;
+}
+
+.btn.house:focus {
+  background-color: #ccc;
+}
+.btn.house:hover {
+  background-color: #ccc;
+}
+.btn.house:active {
+  background-color: #ccc;
+  box-shadow: none;
+}
+
+.house a {
+	visibility: hidden;
+}
+
+.house-img-larger.bxslider{
+  width: 100%;
+  height: 100%
+}
+
+
+.cls-entente{
+	margin-top: 7px;
+}
+
+.cls-entente h3{
+	margin-bottom: 5px;
+}

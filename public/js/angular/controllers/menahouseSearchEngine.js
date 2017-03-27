@@ -1,0 +1,3 @@
+function  SearchItemsController($scope, $http){
+
+}
