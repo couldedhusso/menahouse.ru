@@ -34,7 +34,9 @@
         "league/glide-laravel": "^1.0",
         "laracasts/utilities": "~2.0",
         "dompdf/dompdf": "^0.8.0",
-        "aws/aws-sdk-php-laravel": "^3.1"
+        "aws/aws-sdk-php-laravel": "^3.1",
+        "fideloper/proxy": "^3.3",
+        "dusterio/laravel-aws-worker": "^0.1.9"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

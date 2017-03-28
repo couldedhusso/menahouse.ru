@@ -8,9 +8,11 @@
 # server 'db.example.com', user: 'deploy', roles: %w{db}
 
 set :user, 'ec2-user'
-server 'ec2-35-161-27-29.us-west-2.compute.amazonaws.com', user: 'ec2-user',
+server '35.161.27.29', user: 'ec2-user',
         keys:%w(/home/couldedhusso/workspace/AWSKeys/deploy_key.pem),
         roles: %w{app, web}
+
+
 # ssh_options[:keys] = ['/home/couldedhusso/workspace/menahouseoncloud/menahouse-vps.pem']
 
 # role-based syntax

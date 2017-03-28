@@ -2,9 +2,11 @@
 lock '3.5.0'
 
 set :application, 'menahouse'
-set :repo_url, 'git@github.com:couldedhusso/menahouse.git'
+#set :repo_url, 'git@github.com:couldedhusso/menahouse.git'
+set :repo_url, 'https://github.com/couldedhusso/menahouse.ru.git'
 set :default_stage, 'production'
-set :user, 'ubuntu'
+set :user, 'ec2-user'
+
 
 set :branch, 'master'
 # Default branch is :dev
@@ -14,9 +16,13 @@ set :branch, 'master'
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, '/home/ec2-user/menahouse'
+#set :deploy_to, '/home/ubuntu/menahouse'
 
-role :web, 'ec2-35-161-27-29.us-west-2.compute.amazonaws.com' # Your HTTP server, Apache/etc
-role :app, 'ec2-35-161-27-29.us-west-2.compute.amazonaws.com' # This may be the same as your `Web` server
+#role :web, '34.208.240.76' # Your HTTP server, Apache/etc
+#role :app, '34.208.240.76' # This may be the same as your `Web` server
+
+role :web, '35.161.27.29' # Your HTTP server, Apache/etc
+role :app, '35.161.27.29' # This may be the same as your `Web` server
 
 set :ssh_options, { :forward_agent => true }
 #ssh_options[:forward_agent] = true

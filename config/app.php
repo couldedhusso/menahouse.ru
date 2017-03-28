@@ -144,6 +144,8 @@ return [
         Dingo\Api\Provider\LaravelServiceProvider::class,
         'Laracasts\Utilities\JavaScript\JavaScriptServiceProvider',
         Aws\Laravel\AwsServiceProvider::class,
+        Fideloper\Proxy\TrustedProxyServiceProvider::class,
+        'Dusterio\AwsWorker\Integrations\LaravelServiceProvider',
 
 
 
