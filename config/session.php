@@ -16,8 +16,8 @@ return [
     |
     */
 
-    // 'driver' => env('SESSION_DRIVER', 'file'),
-    'driver' => 'redis', //env('SESSION_DRIVER', 'database'),
+    'driver' => env('SESSION_DRIVER', 'file'),
+    // 'driver' => 'redis', //env('SESSION_DRIVER', 'database'),
 
     /*
     |--------------------------------------------------------------------------
@@ -71,7 +71,7 @@ return [
     |
     */
 
-    'connection' => 'session',
+    'connection' => 'default',
 
     /*
     |--------------------------------------------------------------------------
