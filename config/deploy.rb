@@ -65,11 +65,12 @@ namespace :deploy do
   # end
 
   after :updated,  :menahouse do
-    on roles(:web)  do
-      within release_path do
-        execute :composer, :install
-      end
-    end
+    # on roles(:web)  do
+    #   within release_path do
+    #     execute :composer, :install
+    #   end
+    # end
+    invoke "laravel:migrate"
     invoke "laravel:optimize"
     invoke "laravel:permissions"
   end

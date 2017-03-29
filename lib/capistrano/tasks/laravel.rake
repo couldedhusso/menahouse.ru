@@ -1,11 +1,24 @@
 namespace :laravel do
 
+  # desc "Build"
+  #   after :updated, :build do
+  #       on roles(:app) do
+  #           within release_path  do
+  #               execute :composer, "install --no-dev --quiet" # install dependencies
+  #               execute :chmod, "u+x artisan" # make artisan executable
+  #           end
+  #       end
+  #   end
+
   # manage migration task for laravel framework
   task :migrate do
     on roles(:web) do
       within release_path do
         # execute :composer, :install
-        execute :php, :artisan, :migrate
+         execute :composer, "install --no-dev --quiet" # install dependencies
+         execute :chmod, "u+x artisan" # make artisan executable
+         execute :php, "artisan migrate --force" # run migrations
+        # execute :php, :artisan, :migrate, :force
       end
     end
   end

@@ -8225,3 +8225,2235 @@ c7b92074b9615d54107f9af1ea4acb92f2edaaef	refs/heads/master
   INFO [26b5c685] Running /usr/bin/env echo "Branch master (at 56a3c34b167b7f574561eb212472a980676f66a6) deployed as release 20170328043629 by couldedhusso" >> /home/ec2-user/menahouse/revisions.log as ec2-user@35.161.27.29
  DEBUG [26b5c685] Command: cd /home/ec2-user/menahouse/releases && /usr/bin/env echo "Branch master (at 56a3c34b167b7f574561eb212472a980676f66a6) deployed as release 20170328043629 by couldedhusso" >> /home/ec2-user/menahouse/revisions.log
   INFO [26b5c685] Finished in 0.519 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-03-29 09:31:36 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [82a04f3d] Running /usr/bin/env mkdir -p /tmp/menahouse/ as ec2-user@35.161.27.29
+ DEBUG [82a04f3d] Command: /usr/bin/env mkdir -p /tmp/menahouse/
+  INFO [665590d3] Running /usr/bin/env #<StringIO:0x00000001fa0cc0> /tmp/menahouse/git-ssh.sh as ec2-user@35.161.27.29
+ DEBUG [665590d3] Command: /usr/bin/env #<StringIO:0x00000001fa0cc0> /tmp/menahouse/git-ssh.sh
+  INFO [77deb056] Running /usr/bin/env chmod +rx /tmp/menahouse/git-ssh.sh as ec2-user@35.161.27.29
+ DEBUG [77deb056] Command: /usr/bin/env chmod +rx /tmp/menahouse/git-ssh.sh
+  INFO [69058291] Running /usr/bin/env git ls-remote --heads https://github.com/couldedhusso/menahouse.ru.git as ec2-user@35.161.27.29
+ DEBUG [69058291] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git ls-remote --heads https://github.com/couldedhusso/menahouse.ru.git )
+  INFO [5331b2f9] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared /home/ec2-user/menahouse/releases as ec2-user@35.161.27.29
+ DEBUG [5331b2f9] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared /home/ec2-user/menahouse/releases
+  INFO [5475b65e] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared/storage/framework/sessions as ec2-user@35.161.27.29
+ DEBUG [5475b65e] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared/storage/framework/sessions
+  INFO [80bb71d6] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared as ec2-user@35.161.27.29
+ DEBUG [80bb71d6] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared
+ DEBUG [dd52cc6b] Running [ -f /home/ec2-user/menahouse/shared/.env ] as ec2-user@35.161.27.29
+ DEBUG [dd52cc6b] Command: [ -f /home/ec2-user/menahouse/shared/.env ]
+ DEBUG [0534da3b] Running [ -f /home/ec2-user/menahouse/current/REVISION ] as ec2-user@35.161.27.29
+ DEBUG [0534da3b] Command: [ -f /home/ec2-user/menahouse/current/REVISION ]
+ DEBUG [a21fa950] Running /usr/bin/env cat /home/ec2-user/menahouse/current/REVISION 2>/dev/null as ec2-user@35.161.27.29
+ DEBUG [a21fa950] Command: /usr/bin/env cat /home/ec2-user/menahouse/current/REVISION 2>/dev/null
+ DEBUG [23ea41a2] Running [ -f /home/ec2-user/menahouse/repo/HEAD ] as ec2-user@35.161.27.29
+ DEBUG [23ea41a2] Command: [ -f /home/ec2-user/menahouse/repo/HEAD ]
+  INFO The repository mirror is at /home/ec2-user/menahouse/repo
+ DEBUG [34f6aff8] Running if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [34f6aff8] Command: if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi
+  INFO [68ede70b] Running /usr/bin/env git remote update --prune as ec2-user@35.161.27.29
+ DEBUG [68ede70b] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [9d31fe82] Running if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [9d31fe82] Command: if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi
+  INFO [21c2f84d] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329063137 as ec2-user@35.161.27.29
+ DEBUG [21c2f84d] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329063137 )
+  INFO [13997174] Running /usr/bin/env git archive master | tar -x -f - -C /home/ec2-user/menahouse/releases/20170329063137 as ec2-user@35.161.27.29
+ DEBUG [13997174] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/ec2-user/menahouse/releases/20170329063137 )
+ DEBUG [3118634a] Running if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [3118634a] Command: if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi
+ DEBUG [a0fb3725] Running /usr/bin/env git rev-list --max-count=1 master as ec2-user@35.161.27.29
+ DEBUG [a0fb3725] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [8feba971] Running if test ! -d /home/ec2-user/menahouse/releases/20170329063137; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329063137'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [8feba971] Command: if test ! -d /home/ec2-user/menahouse/releases/20170329063137; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329063137'" 1>&2; false; fi
+  INFO [88b2f510] Running /usr/bin/env echo "" >> REVISION as ec2-user@35.161.27.29
+ DEBUG [88b2f510] Command: cd /home/ec2-user/menahouse/releases/20170329063137 && /usr/bin/env echo "" >> REVISION
+  INFO [2ac501e4] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329063137 as ec2-user@35.161.27.29
+ DEBUG [2ac501e4] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329063137
+ DEBUG [f3e2ae53] Running [ -L /home/ec2-user/menahouse/releases/20170329063137/.env ] as ec2-user@35.161.27.29
+ DEBUG [f3e2ae53] Command: [ -L /home/ec2-user/menahouse/releases/20170329063137/.env ]
+  INFO [0d605462] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329063137/storage/framework as ec2-user@35.161.27.29
+ DEBUG [0d605462] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329063137/storage/framework
+ DEBUG [0cdf3355] Running [ -L /home/ec2-user/menahouse/releases/20170329063137/storage/framework/sessions ] as ec2-user@35.161.27.29
+ DEBUG [0cdf3355] Command: [ -L /home/ec2-user/menahouse/releases/20170329063137/storage/framework/sessions ]
+ DEBUG [e39c27b1] Running if test ! -d /home/ec2-user/menahouse/releases/20170329063137; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329063137'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [e39c27b1] Command: if test ! -d /home/ec2-user/menahouse/releases/20170329063137; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329063137'" 1>&2; false; fi
+  INFO [1fb3c4b4] Running /usr/bin/env composer install as ec2-user@35.161.27.29
+ DEBUG [1fb3c4b4] Command: cd /home/ec2-user/menahouse/releases/20170329063137 && /usr/bin/env composer install
+ DEBUG [eb7a314b] Running if test ! -d /home/ec2-user/menahouse/releases/20170329063137; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329063137'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [eb7a314b] Command: if test ! -d /home/ec2-user/menahouse/releases/20170329063137; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329063137'" 1>&2; false; fi
+  INFO [6209e7a5] Running /usr/bin/env php artisan optimize as ec2-user@35.161.27.29
+ DEBUG [6209e7a5] Command: cd /home/ec2-user/menahouse/releases/20170329063137 && /usr/bin/env php artisan optimize
+ DEBUG [919234c1] Running if test ! -d /home/ec2-user/menahouse/releases/20170329063137; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329063137'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [919234c1] Command: if test ! -d /home/ec2-user/menahouse/releases/20170329063137; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329063137'" 1>&2; false; fi
+  INFO [96f01677] Running /usr/bin/env chmod 777 -R bootstrap/cache as ec2-user@35.161.27.29
+ DEBUG [96f01677] Command: cd /home/ec2-user/menahouse/releases/20170329063137 && /usr/bin/env chmod 777 -R bootstrap/cache
+  INFO [bc67f506] Running /usr/bin/env chmod 777 -R storage as ec2-user@35.161.27.29
+ DEBUG [bc67f506] Command: cd /home/ec2-user/menahouse/releases/20170329063137 && /usr/bin/env chmod 777 -R storage
+  INFO [f9a265b0] Running /usr/bin/env ln -s /home/ec2-user/menahouse/releases/20170329063137 /home/ec2-user/menahouse/releases/current as ec2-user@35.161.27.29
+ DEBUG [f9a265b0] Command: /usr/bin/env ln -s /home/ec2-user/menahouse/releases/20170329063137 /home/ec2-user/menahouse/releases/current
+  INFO [a1cf41c0] Running /usr/bin/env mv /home/ec2-user/menahouse/releases/current /home/ec2-user/menahouse as ec2-user@35.161.27.29
+ DEBUG [a1cf41c0] Command: /usr/bin/env mv /home/ec2-user/menahouse/releases/current /home/ec2-user/menahouse
+ DEBUG [6a5ccac6] Running /usr/bin/env ls -xtr /home/ec2-user/menahouse/releases as ec2-user@35.161.27.29
+ DEBUG [6a5ccac6] Command: /usr/bin/env ls -xtr /home/ec2-user/menahouse/releases
+ DEBUG [52642563] Running if test ! -d /home/ec2-user/menahouse/releases; then echo "Directory does not exist '/home/ec2-user/menahouse/releases'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [52642563] Command: if test ! -d /home/ec2-user/menahouse/releases; then echo "Directory does not exist '/home/ec2-user/menahouse/releases'" 1>&2; false; fi
+  INFO [a4eb90e3] Running /usr/bin/env echo "Branch master (at ) deployed as release 20170329063137 by couldedhusso" >> /home/ec2-user/menahouse/revisions.log as ec2-user@35.161.27.29
+ DEBUG [a4eb90e3] Command: cd /home/ec2-user/menahouse/releases && /usr/bin/env echo "Branch master (at ) deployed as release 20170329063137 by couldedhusso" >> /home/ec2-user/menahouse/revisions.log
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-03-29 09:31:55 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [cdbd10a5] Running /usr/bin/env mkdir -p /tmp/menahouse/ as ec2-user@35.161.27.29
+ DEBUG [cdbd10a5] Command: /usr/bin/env mkdir -p /tmp/menahouse/
+  INFO [cdbd10a5] Finished in 3.781 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/menahouse/git-ssh.sh 0.0%
+  INFO Uploading /tmp/menahouse/git-ssh.sh 100.0%
+  INFO [3b167147] Running /usr/bin/env chmod +rx /tmp/menahouse/git-ssh.sh as ec2-user@35.161.27.29
+ DEBUG [3b167147] Command: /usr/bin/env chmod +rx /tmp/menahouse/git-ssh.sh
+  INFO [3b167147] Finished in 0.490 seconds with exit status 0 (successful).
+  INFO [03af2c6d] Running /usr/bin/env git ls-remote --heads https://github.com/couldedhusso/menahouse.ru.git as ec2-user@35.161.27.29
+ DEBUG [03af2c6d] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git ls-remote --heads https://github.com/couldedhusso/menahouse.ru.git )
+ DEBUG [03af2c6d] 	634ba09f56183a340390d1244333372884d22936	refs/heads/master
+  INFO [03af2c6d] Finished in 0.983 seconds with exit status 0 (successful).
+  INFO [c48b2c2b] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared /home/ec2-user/menahouse/releases as ec2-user@35.161.27.29
+ DEBUG [c48b2c2b] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared /home/ec2-user/menahouse/releases
+  INFO [c48b2c2b] Finished in 0.485 seconds with exit status 0 (successful).
+  INFO [8ad56c6d] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared/storage/framework/sessions as ec2-user@35.161.27.29
+ DEBUG [8ad56c6d] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared/storage/framework/sessions
+  INFO [8ad56c6d] Finished in 0.550 seconds with exit status 0 (successful).
+  INFO [229adf0d] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared as ec2-user@35.161.27.29
+ DEBUG [229adf0d] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared
+  INFO [229adf0d] Finished in 0.486 seconds with exit status 0 (successful).
+ DEBUG [f8cb303c] Running [ -f /home/ec2-user/menahouse/shared/.env ] as ec2-user@35.161.27.29
+ DEBUG [f8cb303c] Command: [ -f /home/ec2-user/menahouse/shared/.env ]
+ DEBUG [f8cb303c] Finished in 0.527 seconds with exit status 0 (successful).
+ DEBUG [8db1f032] Running [ -f /home/ec2-user/menahouse/current/REVISION ] as ec2-user@35.161.27.29
+ DEBUG [8db1f032] Command: [ -f /home/ec2-user/menahouse/current/REVISION ]
+ DEBUG [8db1f032] Finished in 0.500 seconds with exit status 0 (successful).
+ DEBUG [347d67da] Running /usr/bin/env cat /home/ec2-user/menahouse/current/REVISION 2>/dev/null as ec2-user@35.161.27.29
+ DEBUG [347d67da] Command: /usr/bin/env cat /home/ec2-user/menahouse/current/REVISION 2>/dev/null
+ DEBUG [347d67da] 	56a3c34b167b7f574561eb212472a980676f66a6
+ DEBUG [347d67da] Finished in 0.489 seconds with exit status 0 (successful).
+ DEBUG [7eac017e] Running [ -f /home/ec2-user/menahouse/repo/HEAD ] as ec2-user@35.161.27.29
+ DEBUG [7eac017e] Command: [ -f /home/ec2-user/menahouse/repo/HEAD ]
+ DEBUG [7eac017e] Finished in 0.547 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ec2-user/menahouse/repo
+ DEBUG [58baa3fa] Running if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [58baa3fa] Command: if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi
+ DEBUG [58baa3fa] Finished in 0.515 seconds with exit status 0 (successful).
+  INFO [1ec44ebe] Running /usr/bin/env git remote update --prune as ec2-user@35.161.27.29
+ DEBUG [1ec44ebe] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [1ec44ebe] 	Fetching origin
+ DEBUG [1ec44ebe] 	From https://github.com/couldedhusso/menahouse.ru
+   56a3c34..634ba09  master     -> master
+  INFO [1ec44ebe] Finished in 1.280 seconds with exit status 0 (successful).
+ DEBUG [2f022cc1] Running if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [2f022cc1] Command: if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi
+ DEBUG [2f022cc1] Finished in 0.525 seconds with exit status 0 (successful).
+  INFO [f6dc5660] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329063205 as ec2-user@35.161.27.29
+ DEBUG [f6dc5660] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329063205 )
+  INFO [f6dc5660] Finished in 0.551 seconds with exit status 0 (successful).
+  INFO [16d793ed] Running /usr/bin/env git archive master | tar -x -f - -C /home/ec2-user/menahouse/releases/20170329063205 as ec2-user@35.161.27.29
+ DEBUG [16d793ed] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/ec2-user/menahouse/releases/20170329063205 )
+  INFO [16d793ed] Finished in 0.960 seconds with exit status 0 (successful).
+ DEBUG [e408c0a0] Running if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [e408c0a0] Command: if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi
+ DEBUG [e408c0a0] Finished in 0.481 seconds with exit status 0 (successful).
+ DEBUG [a200bf58] Running /usr/bin/env git rev-list --max-count=1 master as ec2-user@35.161.27.29
+ DEBUG [a200bf58] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [a200bf58] 	634ba09f56183a340390d1244333372884d22936
+ DEBUG [a200bf58] Finished in 0.495 seconds with exit status 0 (successful).
+ DEBUG [9c0a0dab] Running if test ! -d /home/ec2-user/menahouse/releases/20170329063205; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329063205'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [9c0a0dab] Command: if test ! -d /home/ec2-user/menahouse/releases/20170329063205; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329063205'" 1>&2; false; fi
+ DEBUG [9c0a0dab] Finished in 0.538 seconds with exit status 0 (successful).
+  INFO [53eb99ba] Running /usr/bin/env echo "634ba09f56183a340390d1244333372884d22936" >> REVISION as ec2-user@35.161.27.29
+ DEBUG [53eb99ba] Command: cd /home/ec2-user/menahouse/releases/20170329063205 && /usr/bin/env echo "634ba09f56183a340390d1244333372884d22936" >> REVISION
+  INFO [53eb99ba] Finished in 0.487 seconds with exit status 0 (successful).
+  INFO [e66ff2e4] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329063205 as ec2-user@35.161.27.29
+ DEBUG [e66ff2e4] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329063205
+  INFO [e66ff2e4] Finished in 0.549 seconds with exit status 0 (successful).
+ DEBUG [be339818] Running [ -L /home/ec2-user/menahouse/releases/20170329063205/.env ] as ec2-user@35.161.27.29
+ DEBUG [be339818] Command: [ -L /home/ec2-user/menahouse/releases/20170329063205/.env ]
+ DEBUG [be339818] Finished in 0.485 seconds with exit status 1 (failed).
+ DEBUG [44f18dd6] Running [ -f /home/ec2-user/menahouse/releases/20170329063205/.env ] as ec2-user@35.161.27.29
+ DEBUG [44f18dd6] Command: [ -f /home/ec2-user/menahouse/releases/20170329063205/.env ]
+ DEBUG [44f18dd6] Finished in 0.552 seconds with exit status 1 (failed).
+  INFO [c4a7caf5] Running /usr/bin/env ln -s /home/ec2-user/menahouse/shared/.env /home/ec2-user/menahouse/releases/20170329063205/.env as ec2-user@35.161.27.29
+ DEBUG [c4a7caf5] Command: /usr/bin/env ln -s /home/ec2-user/menahouse/shared/.env /home/ec2-user/menahouse/releases/20170329063205/.env
+  INFO [c4a7caf5] Finished in 0.485 seconds with exit status 0 (successful).
+  INFO [5d8d7cf8] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329063205/storage/framework as ec2-user@35.161.27.29
+ DEBUG [5d8d7cf8] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329063205/storage/framework
+  INFO [5d8d7cf8] Finished in 0.551 seconds with exit status 0 (successful).
+ DEBUG [e24182e4] Running [ -L /home/ec2-user/menahouse/releases/20170329063205/storage/framework/sessions ] as ec2-user@35.161.27.29
+ DEBUG [e24182e4] Command: [ -L /home/ec2-user/menahouse/releases/20170329063205/storage/framework/sessions ]
+ DEBUG [e24182e4] Finished in 0.486 seconds with exit status 1 (failed).
+ DEBUG [b4944be1] Running [ -d /home/ec2-user/menahouse/releases/20170329063205/storage/framework/sessions ] as ec2-user@35.161.27.29
+ DEBUG [b4944be1] Command: [ -d /home/ec2-user/menahouse/releases/20170329063205/storage/framework/sessions ]
+ DEBUG [b4944be1] Finished in 0.483 seconds with exit status 0 (successful).
+  INFO [3e31f3e1] Running /usr/bin/env rm -rf /home/ec2-user/menahouse/releases/20170329063205/storage/framework/sessions as ec2-user@35.161.27.29
+ DEBUG [3e31f3e1] Command: /usr/bin/env rm -rf /home/ec2-user/menahouse/releases/20170329063205/storage/framework/sessions
+  INFO [3e31f3e1] Finished in 0.548 seconds with exit status 0 (successful).
+  INFO [d35047fc] Running /usr/bin/env ln -s /home/ec2-user/menahouse/shared/storage/framework/sessions /home/ec2-user/menahouse/releases/20170329063205/storage/framework/sessions as ec2-user@35.161.27.29
+ DEBUG [d35047fc] Command: /usr/bin/env ln -s /home/ec2-user/menahouse/shared/storage/framework/sessions /home/ec2-user/menahouse/releases/20170329063205/storage/framework/sessions
+  INFO [d35047fc] Finished in 0.486 seconds with exit status 0 (successful).
+ DEBUG [6ebf29b8] Running if test ! -d /home/ec2-user/menahouse/releases/20170329063205; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329063205'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [6ebf29b8] Command: if test ! -d /home/ec2-user/menahouse/releases/20170329063205; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329063205'" 1>&2; false; fi
+ DEBUG [6ebf29b8] Finished in 0.550 seconds with exit status 0 (successful).
+  INFO [d5dca38a] Running /usr/bin/env composer install as ec2-user@35.161.27.29
+ DEBUG [d5dca38a] Command: cd /home/ec2-user/menahouse/releases/20170329063205 && /usr/bin/env composer install
+ DEBUG [d5dca38a] 	Loading composer repositories with package information
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	Installing dependencies (including require-dev) from lock file
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	Package operations: 114 installs, 0 updates, 0 removals
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing vlucas/phpdotenv (v2.4.0): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing symfony/polyfill-mbstring (v1.3.0): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing symfony/var-dumper (v3.0.9): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing symfony/translation (v3.0.9): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing symfony/routing (v3.0.9): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing symfony/process (v3.0.9): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing symfony/polyfill-util (v1.3.0): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing symfony/polyfill-php56 (v1.3.0): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing symfony/http-foundation (v3.0.9): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing symfony/event-dispatcher (v3.2.6): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing psr/log (1.0.2): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing symfony/debug (v3.0.9): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing symfony/http-kernel (v3.0.9): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing symfony/finder (v3.0.9): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing symfony/console (v3.0.9): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing swiftmailer/swiftmailer (v5.4.6): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing nikic/php-parser (v2.1.1): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing jakub-onderka/php-console-color (0.1): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing jakub-onderka/php-console-highlighter (v0.3.2): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing dnoegel/php-xdg-base-dir (0.1): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing psy/psysh (v0.7.2): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing paragonie/random_compat (v1.4.2): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing nesbot/carbon (1.22.1): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing mtdowling/cron-expression (v1.2.0): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing monolog/monolog (1.22.1): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing league/flysystem (1.0.37): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing jeremeamia/superclosure (2.3.0): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing doctrine/inflector (v1.1.0): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing classpreloader/classpreloader (3.1.0): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing laravel/framework (v5.2.45): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing mtdowling/jmespath.php (2.4.0): Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing psr/http-message (1.0.1): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing guzzlehttp/psr7 (1.4.2): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing guzzlehttp/promises (v1.3.1): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing guzzlehttp/guzzle (6.2.3): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing aws/aws-sdk-php (3.24.7): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing aws/aws-sdk-php-laravel (3.1.0): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing maximebf/debugbar (1.13.1): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing barryvdh/laravel-debugbar (v2.3.2): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing cmgmyr/messenger (2.13.3): Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing league/fractal (0.15.0): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing webmozart/assert (1.2.0): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing phpdocumentor/reflection-common (1.0): Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing phpdocumentor/type-resolver (0.2.1): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing phpdocumentor/reflection-docblock (3.1.1): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing doctrine/lexer (v1.0.1): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing doctrine/annotations (v1.4.0): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing dingo/blueprint (0.2.2): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing dingo/api (dev-master 46cffad): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing doctrine/cache (v1.6.1): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing doctrine/collections (v1.4.0): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing doctrine/common (v2.7.2): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing doctrine/dbal (v2.5.12): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing sabberworm/php-css-parser (6.0.1): Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing phenx/php-svg-lib (v0.2): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing phenx/php-font-lib (0.5): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing dompdf/dompdf (v0.8.0): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing dusterio/laravel-aws-worker (v0.1.9): 
+ DEBUG [d5dca38a] 	Downloading (connecting...)
+ DEBUG [d5dca38a] 	Downloading (0%)           Downloading (35%)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	Downloading (100%)
+ DEBUG [d5dca38a] 	
+  - Installing enyo/dropzone (v4.3.0): Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing fideloper/proxy (3.3.0): 
+ DEBUG [d5dca38a] 	Downloading (connecting...)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	Downloading (100%)
+ DEBUG [d5dca38a] 	         
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	
+  - Installing filp/whoops (1.1.10): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing firebase/php-jwt (v3.0.0): Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing google/recaptcha (1.1.3): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing react/promise (v2.5.1): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing guzzlehttp/streams (3.0.0): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing guzzlehttp/ringphp (1.1.0): Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing hashids/hashids (2.0.3): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing intervention/image (2.3.11): Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing landish/pagination (1.3.3): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing laracasts/flash (1.3.4): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing laracasts/utilities (2.1): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing laravelcollective/html (v5.2.5): Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing league/flysystem-aws-s3-v3 (1.0.13): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing league/glide (1.2.1): Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing league/glide-symfony (1.0.2): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing league/glide-laravel (1.0.0): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing oriceon/toastr-5-laravel (dev-master 148d274): Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing php-http/promise (v1.0.0): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing php-http/httplug (v1.1.0): Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing php-http/guzzle6-adapter (v1.1.1): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing phpseclib/phpseclib (0.3.10): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing predis/predis (v1.1.1): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing namshi/jose (5.0.2): Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing tymon/jwt-auth (0.5.10): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing webpatser/laravel-uuid (2.0.1): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing igorw/get-in (v1.0.3): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing zendframework/zend-diactoros (1.3.10): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing egeloen/http-adapter (0.8.0): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing willdurand/geocoder (v3.3.0): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing elasticsearch/elasticsearch (v2.1.5): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing elasticquent/elasticquent (dev-master 03aa15d): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing fzaninotto/faker (v1.6.0): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing laracasts/testdummy (2.3.2): Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing hamcrest/hamcrest-php (v1.2.2): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing mockery/mockery (0.9.9): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing symfony/yaml (v3.2.6): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing sebastian/recursion-context (1.0.5): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing sebastian/exporter (1.2.2): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing sebastian/diff (1.4.1): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing sebastian/comparator (1.2.4): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing doctrine/instantiator (1.0.5): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing phpspec/prophecy (v1.7.0): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing phpspec/php-diff (v1.0.2): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing phpspec/phpspec (2.5.5): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing phpunit/php-token-stream (1.4.11): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing sebastian/version (1.0.6): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing sebastian/global-state (1.1.1): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+  - Installing sebastian/environment (1.3.8): Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing phpunit/php-text-template (1.2.1): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing phpunit/phpunit-mock-objects (2.3.8): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing phpunit/php-timer (1.0.9): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing phpunit/php-file-iterator (1.4.2): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing phpunit/php-code-coverage (2.2.4): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	  - Installing phpunit/phpunit (4.8.35): 
+ DEBUG [d5dca38a] 	Loading from cache
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	symfony/var-dumper suggests installing ext-symfony_debug ()
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	symfony/translation suggests installing symfony/config ()
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	symfony/routing suggests installing symfony/config (For using the all-in-one router or any loader)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	symfony/routing suggests installing symfony/dependency-injection (For loading routes from a service)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	symfony/routing suggests installing symfony/expression-language (For using expression matching)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	symfony/event-dispatcher suggests installing symfony/dependency-injection ()
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	symfony/http-kernel suggests installing symfony/browser-kit ()
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	symfony/http-kernel suggests installing symfony/class-loader ()
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	symfony/http-kernel suggests installing symfony/config ()
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	symfony/http-kernel suggests installing symfony/dependency-injection ()
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	psy/psysh suggests installing ext-pdo-sqlite (The doc command requires SQLite to work.)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	paragonie/random_compat suggests installing ext-libsodium (Provides a modern crypto API that can be used to generate random bytes.)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	monolog/monolog suggests installing doctrine/couchdb (Allow sending log messages to a CouchDB server)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	monolog/monolog suggests installing ext-amqp (Allow sending log messages to an AMQP server (1.0+ required))
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	monolog/monolog suggests installing ext-mongo (Allow sending log messages to a MongoDB server)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	monolog/monolog suggests installing graylog2/gelf-php (Allow sending log messages to a GrayLog2 server)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	monolog/monolog suggests installing mongodb/mongodb (Allow sending log messages to a MongoDB server via PHP Driver)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	monolog/monolog suggests installing php-amqplib/php-amqplib (Allow sending log messages to an AMQP server using php-amqplib)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	monolog/monolog suggests installing php-console/php-console (Allow sending log messages to Google Chrome)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	monolog/monolog suggests installing rollbar/rollbar (Allow sending log messages to Rollbar)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	monolog/monolog suggests installing ruflin/elastica (Allow sending log messages to an Elastic Search server)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	monolog/monolog suggests installing sentry/sentry (Allow sending log messages to a Sentry server)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	league/flysystem suggests installing league/flysystem-aws-s3-v2 (Allows you to use S3 storage with AWS SDK v2)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	league/flysystem suggests installing league/flysystem-azure (Allows you to use Windows Azure Blob storage)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	league/flysystem suggests installing league/flysystem-cached-adapter (Flysystem adapter decorator for metadata caching)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	league/flysystem suggests installing league/flysystem-copy (Allows you to use Copy.com storage)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	league/flysystem suggests installing league/flysystem-dropbox (Allows you to use Dropbox storage)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	league/flysystem suggests installing league/flysystem-eventable-filesystem (Allows you to use EventableFilesystem)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	league/flysystem suggests installing league/flysystem-rackspace (Allows you to use Rackspace Cloud Files)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	league/flysystem suggests installing league/flysystem-sftp (Allows you to use SFTP server storage via phpseclib)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	league/flysystem suggests installing league/flysystem-webdav (Allows you to use WebDAV storage)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	league/flysystem suggests installing league/flysystem-ziparchive (Allows you to use ZipArchive adapter)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	laravel/framework suggests installing league/flysystem-rackspace (Required to use the Flysystem Rackspace driver (~1.0).)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	laravel/framework suggests installing pda/pheanstalk (Required to use the beanstalk queue driver (~3.0).)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	laravel/framework suggests installing pusher/pusher-php-server (Required to use the Pusher broadcast driver (~2.0).)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	laravel/framework suggests installing symfony/css-selector (Required to use some of the crawler integration testing tools (2.8.*|3.0.*).)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	laravel/framework suggests installing symfony/dom-crawler (Required to use most of the crawler integration testing tools (2.8.*|3.0.*).)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	laravel/framework suggests installing symfony/psr-http-message-bridge (Required to use psr7 bridging features (0.2.*).)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	aws/aws-sdk-php suggests installing aws/aws-php-sns-message-validator (To validate incoming SNS notifications)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	aws/aws-sdk-php-laravel suggests installing laravel/lumen-framework (To test the Lumen bindings)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	maximebf/debugbar suggests installing kriswallsmith/assetic (The best way to manage assets)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	league/fractal suggests installing pagerfanta/pagerfanta (Pagerfanta Paginator)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	league/fractal suggests installing zendframework/zend-paginator (Zend Framework Paginator)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	dingo/api suggests installing lucadegasperi/oauth2-server-laravel (Protect your API with OAuth 2.0.)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	intervention/image suggests installing ext-imagick (to use Imagick based image processing.)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	intervention/image suggests installing intervention/imagecache (Caching extension for the Intervention Image library)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	phpseclib/phpseclib suggests installing ext-gmp (Install the GMP (GNU Multiple Precision) extension in order to speed up arbitrary precision integer arithmetic operations.)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	phpseclib/phpseclib suggests installing ext-mcrypt (Install the Mcrypt extension in order to speed up a wide variety of cryptographic operations.)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	phpseclib/phpseclib suggests installing pear-pear/PHP_Compat (Install PHP_Compat to get phpseclib working on PHP < 4.3.3.)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	predis/predis suggests installing ext-phpiredis (Allows faster serialization and deserialization of the Redis protocol)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	egeloen/http-adapter suggests installing ext-http (Allows you to use the PECL adapter)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	egeloen/http-adapter suggests installing guzzle/guzzle (Allows you to use the Guzzle 3 adapter)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	egeloen/http-adapter suggests installing kriswallsmith/buzz (Allows you to use the Buzz adapter)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	egeloen/http-adapter suggests installing nategood/httpful (Allows you to use the httpful adapter)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	egeloen/http-adapter suggests installing symfony/stopwatch (Allows you to use the stopwatch http adapter and event subscriber)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	egeloen/http-adapter suggests installing zendframework/zend-http (Allows you to use the Zend 2 adapter)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	egeloen/http-adapter suggests installing zendframework/zendframework1 (Allows you to use the Zend 1 adapter)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	willdurand/geocoder suggests installing ext-geoip (Enabling the geoip extension allows you to use the MaxMindProvider.)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	willdurand/geocoder suggests installing geoip/geoip (If you are going to use the MaxMindBinaryProvider (conflict with geoip extension).)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	willdurand/geocoder suggests installing geoip2/geoip2 (If you are going to use the GeoIP2DatabaseProvider.)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	willdurand/geocoder suggests installing symfony/stopwatch (If you want to use the TimedGeocoder)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	phpspec/phpspec suggests installing phpspec/nyan-formatters (~1.0 – Adds Nyan formatters)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	sebastian/global-state suggests installing ext-uopz (*)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	phpunit/php-code-coverage suggests installing ext-xdebug (>=2.2.1)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	phpunit/phpunit suggests installing phpunit/php-invoker (~1.1)
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	Package egeloen/http-adapter is abandoned, you should avoid using it. Use php-http/httplug instead.
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	Generating autoload files
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	Warning: Ambiguous class resolution, "AddSoftdeletesToThreadsTable" was found in both "/home/ec2-user/menahouse/releases/20170329063205/database/migrations/2014_12_04_124531_add_softdeletes_to_threads_table.php" and "/home/ec2-user/menahouse/releases/20170329063205/database/migrations/mgr/2014_12_04_124531_add_softdeletes_to_threads_table.php", the first will be used.
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	Warning: Ambiguous class resolution, "CreateParticipantsTable" was found in both "/home/ec2-user/menahouse/releases/20170329063205/database/migrations/mgr/2014_10_28_180224_create_participants_table.php" and "/home/ec2-user/menahouse/releases/20170329063205/database/migrations/2014_10_28_180224_create_participants_table.php", the first will be used.
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	Warning: Ambiguous class resolution, "AddSoftDeletesToParticipantsTable" was found in both "/home/ec2-user/menahouse/releases/20170329063205/database/migrations/mgr/2014_11_03_154831_add_soft_deletes_to_participants_table.php" and "/home/ec2-user/menahouse/releases/20170329063205/database/migrations/2014_11_03_154831_add_soft_deletes_to_participants_table.php", the first will be used.
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	Warning: Ambiguous class resolution, "CreateMessagesTable" was found in both "/home/ec2-user/menahouse/releases/20170329063205/database/migrations/mgr/2014_10_28_175710_create_messages_table.php" and "/home/ec2-user/menahouse/releases/20170329063205/database/migrations/2014_10_28_175710_create_messages_table.php", the first will be used.
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	Warning: Ambiguous class resolution, "CreateThreadsTable" was found in both "/home/ec2-user/menahouse/releases/20170329063205/database/migrations/mgr/2014_10_28_175635_create_threads_table.php" and "/home/ec2-user/menahouse/releases/20170329063205/database/migrations/2014_10_28_175635_create_threads_table.php", the first will be used.
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	> php artisan clear-compiled
+ DEBUG [d5dca38a] 	
+ DEBUG [d5dca38a] 	> php artisan optimize
+ DEBUG [d5dca38a] 	Generating optimized class loader
+  INFO [d5dca38a] Finished in 9.318 seconds with exit status 0 (successful).
+ DEBUG [b66a853a] Running if test ! -d /home/ec2-user/menahouse/releases/20170329063205; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329063205'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [b66a853a] Command: if test ! -d /home/ec2-user/menahouse/releases/20170329063205; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329063205'" 1>&2; false; fi
+ DEBUG [b66a853a] Finished in 0.527 seconds with exit status 0 (successful).
+  INFO [a35ceaad] Running /usr/bin/env php artisan optimize as ec2-user@35.161.27.29
+ DEBUG [a35ceaad] Command: cd /home/ec2-user/menahouse/releases/20170329063205 && /usr/bin/env php artisan optimize
+ DEBUG [a35ceaad] 	Generating optimized class loader
+  INFO [a35ceaad] Finished in 3.309 seconds with exit status 0 (successful).
+ DEBUG [2f313272] Running if test ! -d /home/ec2-user/menahouse/releases/20170329063205; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329063205'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [2f313272] Command: if test ! -d /home/ec2-user/menahouse/releases/20170329063205; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329063205'" 1>&2; false; fi
+ DEBUG [2f313272] Finished in 0.526 seconds with exit status 0 (successful).
+  INFO [9850281f] Running /usr/bin/env chmod 777 -R bootstrap/cache as ec2-user@35.161.27.29
+ DEBUG [9850281f] Command: cd /home/ec2-user/menahouse/releases/20170329063205 && /usr/bin/env chmod 777 -R bootstrap/cache
+  INFO [9850281f] Finished in 0.551 seconds with exit status 0 (successful).
+  INFO [3ae4f707] Running /usr/bin/env chmod 777 -R storage as ec2-user@35.161.27.29
+ DEBUG [3ae4f707] Command: cd /home/ec2-user/menahouse/releases/20170329063205 && /usr/bin/env chmod 777 -R storage
+  INFO [3ae4f707] Finished in 0.520 seconds with exit status 0 (successful).
+  INFO [057c91d1] Running /usr/bin/env ln -s /home/ec2-user/menahouse/releases/20170329063205 /home/ec2-user/menahouse/releases/current as ec2-user@35.161.27.29
+ DEBUG [057c91d1] Command: /usr/bin/env ln -s /home/ec2-user/menahouse/releases/20170329063205 /home/ec2-user/menahouse/releases/current
+  INFO [057c91d1] Finished in 0.524 seconds with exit status 0 (successful).
+  INFO [cd729d2a] Running /usr/bin/env mv /home/ec2-user/menahouse/releases/current /home/ec2-user/menahouse as ec2-user@35.161.27.29
+ DEBUG [cd729d2a] Command: /usr/bin/env mv /home/ec2-user/menahouse/releases/current /home/ec2-user/menahouse
+  INFO [cd729d2a] Finished in 0.548 seconds with exit status 0 (successful).
+ DEBUG [39d4868a] Running /usr/bin/env ls -xtr /home/ec2-user/menahouse/releases as ec2-user@35.161.27.29
+ DEBUG [39d4868a] Command: /usr/bin/env ls -xtr /home/ec2-user/menahouse/releases
+ DEBUG [39d4868a] 	20170328043349	20170328043629	20170329063205
+ DEBUG [39d4868a] Finished in 0.487 seconds with exit status 0 (successful).
+  INFO Keeping 2 of 3 deployed releases on 35.161.27.29
+  INFO [f6434871] Running /usr/bin/env rm -rf /home/ec2-user/menahouse/releases/20170328043349 as ec2-user@35.161.27.29
+ DEBUG [f6434871] Command: /usr/bin/env rm -rf /home/ec2-user/menahouse/releases/20170328043349
+  INFO [f6434871] Finished in 0.830 seconds with exit status 0 (successful).
+ DEBUG [68cae81d] Running if test ! -d /home/ec2-user/menahouse/releases; then echo "Directory does not exist '/home/ec2-user/menahouse/releases'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [68cae81d] Command: if test ! -d /home/ec2-user/menahouse/releases; then echo "Directory does not exist '/home/ec2-user/menahouse/releases'" 1>&2; false; fi
+ DEBUG [68cae81d] Finished in 0.524 seconds with exit status 0 (successful).
+  INFO [65b52a18] Running /usr/bin/env echo "Branch master (at 634ba09f56183a340390d1244333372884d22936) deployed as release 20170329063205 by couldedhusso" >> /home/ec2-user/menahouse/revisions.log as ec2-user@35.161.27.29
+ DEBUG [65b52a18] Command: cd /home/ec2-user/menahouse/releases && /usr/bin/env echo "Branch master (at 634ba09f56183a340390d1244333372884d22936) deployed as release 20170329063205 by couldedhusso" >> /home/ec2-user/menahouse/revisions.log
+  INFO [65b52a18] Finished in 0.531 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-03-29 09:38:00 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [cbcab631] Running /usr/bin/env mkdir -p /tmp/menahouse/ as ec2-user@35.161.27.29
+ DEBUG [cbcab631] Command: /usr/bin/env mkdir -p /tmp/menahouse/
+  INFO [cbcab631] Finished in 3.720 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/menahouse/git-ssh.sh 0.0%
+  INFO Uploading /tmp/menahouse/git-ssh.sh 100.0%
+  INFO [0ba9a6ce] Running /usr/bin/env chmod +rx /tmp/menahouse/git-ssh.sh as ec2-user@35.161.27.29
+ DEBUG [0ba9a6ce] Command: /usr/bin/env chmod +rx /tmp/menahouse/git-ssh.sh
+  INFO [0ba9a6ce] Finished in 0.484 seconds with exit status 0 (successful).
+  INFO [48846a72] Running /usr/bin/env git ls-remote --heads https://github.com/couldedhusso/menahouse.ru.git as ec2-user@35.161.27.29
+ DEBUG [48846a72] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git ls-remote --heads https://github.com/couldedhusso/menahouse.ru.git )
+ DEBUG [48846a72] 	634ba09f56183a340390d1244333372884d22936	refs/heads/master
+  INFO [48846a72] Finished in 0.984 seconds with exit status 0 (successful).
+  INFO [909350d6] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared /home/ec2-user/menahouse/releases as ec2-user@35.161.27.29
+ DEBUG [909350d6] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared /home/ec2-user/menahouse/releases
+  INFO [909350d6] Finished in 0.486 seconds with exit status 0 (successful).
+  INFO [08cd62fd] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared/storage/framework/sessions as ec2-user@35.161.27.29
+ DEBUG [08cd62fd] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared/storage/framework/sessions
+  INFO [08cd62fd] Finished in 0.548 seconds with exit status 0 (successful).
+  INFO [32cb1e86] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared as ec2-user@35.161.27.29
+ DEBUG [32cb1e86] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared
+  INFO [32cb1e86] Finished in 0.486 seconds with exit status 0 (successful).
+ DEBUG [001c341d] Running [ -f /home/ec2-user/menahouse/shared/.env ] as ec2-user@35.161.27.29
+ DEBUG [001c341d] Command: [ -f /home/ec2-user/menahouse/shared/.env ]
+ DEBUG [001c341d] Finished in 0.550 seconds with exit status 0 (successful).
+ DEBUG [3f97568a] Running [ -f /home/ec2-user/menahouse/current/REVISION ] as ec2-user@35.161.27.29
+ DEBUG [3f97568a] Command: [ -f /home/ec2-user/menahouse/current/REVISION ]
+ DEBUG [3f97568a] Finished in 0.487 seconds with exit status 0 (successful).
+ DEBUG [7282ca75] Running /usr/bin/env cat /home/ec2-user/menahouse/current/REVISION 2>/dev/null as ec2-user@35.161.27.29
+ DEBUG [7282ca75] Command: /usr/bin/env cat /home/ec2-user/menahouse/current/REVISION 2>/dev/null
+ DEBUG [7282ca75] 	634ba09f56183a340390d1244333372884d22936
+ DEBUG [7282ca75] Finished in 0.550 seconds with exit status 0 (successful).
+ DEBUG [fe91e4e2] Running [ -f /home/ec2-user/menahouse/repo/HEAD ] as ec2-user@35.161.27.29
+ DEBUG [fe91e4e2] Command: [ -f /home/ec2-user/menahouse/repo/HEAD ]
+ DEBUG [fe91e4e2] Finished in 0.558 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ec2-user/menahouse/repo
+ DEBUG [88c2c2f8] Running if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [88c2c2f8] Command: if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi
+ DEBUG [88c2c2f8] Finished in 0.488 seconds with exit status 0 (successful).
+  INFO [8a6f69be] Running /usr/bin/env git remote update --prune as ec2-user@35.161.27.29
+ DEBUG [8a6f69be] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [8a6f69be] 	Fetching origin
+  INFO [8a6f69be] Finished in 0.986 seconds with exit status 0 (successful).
+ DEBUG [5e880029] Running if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [5e880029] Command: if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi
+ DEBUG [5e880029] Finished in 0.529 seconds with exit status 0 (successful).
+  INFO [c865f972] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329063809 as ec2-user@35.161.27.29
+ DEBUG [c865f972] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329063809 )
+  INFO [c865f972] Finished in 0.550 seconds with exit status 0 (successful).
+  INFO [74be711d] Running /usr/bin/env git archive master | tar -x -f - -C /home/ec2-user/menahouse/releases/20170329063809 as ec2-user@35.161.27.29
+ DEBUG [74be711d] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/ec2-user/menahouse/releases/20170329063809 )
+  INFO [74be711d] Finished in 0.997 seconds with exit status 0 (successful).
+ DEBUG [5bc8cec4] Running if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [5bc8cec4] Command: if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi
+ DEBUG [5bc8cec4] Finished in 0.559 seconds with exit status 0 (successful).
+ DEBUG [ed57262f] Running /usr/bin/env git rev-list --max-count=1 master as ec2-user@35.161.27.29
+ DEBUG [ed57262f] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [ed57262f] 	634ba09f56183a340390d1244333372884d22936
+ DEBUG [ed57262f] Finished in 0.561 seconds with exit status 0 (successful).
+ DEBUG [3ae123f3] Running if test ! -d /home/ec2-user/menahouse/releases/20170329063809; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329063809'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [3ae123f3] Command: if test ! -d /home/ec2-user/menahouse/releases/20170329063809; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329063809'" 1>&2; false; fi
+ DEBUG [3ae123f3] Finished in 0.556 seconds with exit status 0 (successful).
+  INFO [99fa667b] Running /usr/bin/env echo "634ba09f56183a340390d1244333372884d22936" >> REVISION as ec2-user@35.161.27.29
+ DEBUG [99fa667b] Command: cd /home/ec2-user/menahouse/releases/20170329063809 && /usr/bin/env echo "634ba09f56183a340390d1244333372884d22936" >> REVISION
+  INFO [99fa667b] Finished in 0.558 seconds with exit status 0 (successful).
+  INFO [429cffcc] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329063809 as ec2-user@35.161.27.29
+ DEBUG [429cffcc] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329063809
+  INFO [429cffcc] Finished in 0.559 seconds with exit status 0 (successful).
+ DEBUG [b3370a46] Running [ -L /home/ec2-user/menahouse/releases/20170329063809/.env ] as ec2-user@35.161.27.29
+ DEBUG [b3370a46] Command: [ -L /home/ec2-user/menahouse/releases/20170329063809/.env ]
+ DEBUG [b3370a46] Finished in 0.559 seconds with exit status 1 (failed).
+ DEBUG [ee37880a] Running [ -f /home/ec2-user/menahouse/releases/20170329063809/.env ] as ec2-user@35.161.27.29
+ DEBUG [ee37880a] Command: [ -f /home/ec2-user/menahouse/releases/20170329063809/.env ]
+ DEBUG [ee37880a] Finished in 0.559 seconds with exit status 1 (failed).
+  INFO [611ba47e] Running /usr/bin/env ln -s /home/ec2-user/menahouse/shared/.env /home/ec2-user/menahouse/releases/20170329063809/.env as ec2-user@35.161.27.29
+ DEBUG [611ba47e] Command: /usr/bin/env ln -s /home/ec2-user/menahouse/shared/.env /home/ec2-user/menahouse/releases/20170329063809/.env
+  INFO [611ba47e] Finished in 0.559 seconds with exit status 0 (successful).
+  INFO [72e4db00] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329063809/storage/framework as ec2-user@35.161.27.29
+ DEBUG [72e4db00] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329063809/storage/framework
+  INFO [72e4db00] Finished in 0.529 seconds with exit status 0 (successful).
+ DEBUG [5838fab0] Running [ -L /home/ec2-user/menahouse/releases/20170329063809/storage/framework/sessions ] as ec2-user@35.161.27.29
+ DEBUG [5838fab0] Command: [ -L /home/ec2-user/menahouse/releases/20170329063809/storage/framework/sessions ]
+ DEBUG [5838fab0] Finished in 0.549 seconds with exit status 1 (failed).
+ DEBUG [20e9f3b7] Running [ -d /home/ec2-user/menahouse/releases/20170329063809/storage/framework/sessions ] as ec2-user@35.161.27.29
+ DEBUG [20e9f3b7] Command: [ -d /home/ec2-user/menahouse/releases/20170329063809/storage/framework/sessions ]
+ DEBUG [20e9f3b7] Finished in 0.518 seconds with exit status 0 (successful).
+  INFO [eea4ff09] Running /usr/bin/env rm -rf /home/ec2-user/menahouse/releases/20170329063809/storage/framework/sessions as ec2-user@35.161.27.29
+ DEBUG [eea4ff09] Command: /usr/bin/env rm -rf /home/ec2-user/menahouse/releases/20170329063809/storage/framework/sessions
+  INFO [eea4ff09] Finished in 0.560 seconds with exit status 0 (successful).
+  INFO [33f19c85] Running /usr/bin/env ln -s /home/ec2-user/menahouse/shared/storage/framework/sessions /home/ec2-user/menahouse/releases/20170329063809/storage/framework/sessions as ec2-user@35.161.27.29
+ DEBUG [33f19c85] Command: /usr/bin/env ln -s /home/ec2-user/menahouse/shared/storage/framework/sessions /home/ec2-user/menahouse/releases/20170329063809/storage/framework/sessions
+  INFO [33f19c85] Finished in 0.556 seconds with exit status 0 (successful).
+ DEBUG [4a32f292] Running if test ! -d /home/ec2-user/menahouse/releases/20170329063809; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329063809'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [4a32f292] Command: if test ! -d /home/ec2-user/menahouse/releases/20170329063809; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329063809'" 1>&2; false; fi
+ DEBUG [4a32f292] Finished in 0.530 seconds with exit status 0 (successful).
+  INFO [618ea534] Running /usr/bin/env composer install as ec2-user@35.161.27.29
+ DEBUG [618ea534] Command: cd /home/ec2-user/menahouse/releases/20170329063809 && /usr/bin/env composer install
+ DEBUG [618ea534] 	Loading composer repositories with package information
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	Installing dependencies (including require-dev) from lock file
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	Package operations: 114 installs, 0 updates, 0 removals
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing vlucas/phpdotenv (v2.4.0): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+  - Installing symfony/polyfill-mbstring (v1.3.0): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing symfony/var-dumper (v3.0.9): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing symfony/translation (v3.0.9): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing symfony/routing (v3.0.9): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing symfony/process (v3.0.9): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing symfony/polyfill-util (v1.3.0): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing symfony/polyfill-php56 (v1.3.0): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing symfony/http-foundation (v3.0.9): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing symfony/event-dispatcher (v3.2.6): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing psr/log (1.0.2): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing symfony/debug (v3.0.9): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing symfony/http-kernel (v3.0.9): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing symfony/finder (v3.0.9): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing symfony/console (v3.0.9): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing swiftmailer/swiftmailer (v5.4.6): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing nikic/php-parser (v2.1.1): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing jakub-onderka/php-console-color (0.1): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+  - Installing jakub-onderka/php-console-highlighter (v0.3.2): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing dnoegel/php-xdg-base-dir (0.1): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+  - Installing psy/psysh (v0.7.2): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing paragonie/random_compat (v1.4.2): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing nesbot/carbon (1.22.1): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing mtdowling/cron-expression (v1.2.0): Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing monolog/monolog (1.22.1): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+  - Installing league/flysystem (1.0.37): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing jeremeamia/superclosure (2.3.0): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing doctrine/inflector (v1.1.0): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing classpreloader/classpreloader (3.1.0): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing laravel/framework (v5.2.45): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing mtdowling/jmespath.php (2.4.0): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing psr/http-message (1.0.1): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing guzzlehttp/psr7 (1.4.2): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing guzzlehttp/promises (v1.3.1): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+  - Installing guzzlehttp/guzzle (6.2.3): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+  - Installing aws/aws-sdk-php (3.24.7): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+  - Installing aws/aws-sdk-php-laravel (3.1.0): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing maximebf/debugbar (1.13.1): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing barryvdh/laravel-debugbar (v2.3.2): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing cmgmyr/messenger (2.13.3): Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing league/fractal (0.15.0): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+  - Installing webmozart/assert (1.2.0): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing phpdocumentor/reflection-common (1.0): Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing phpdocumentor/type-resolver (0.2.1): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+  - Installing phpdocumentor/reflection-docblock (3.1.1): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing doctrine/lexer (v1.0.1): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing doctrine/annotations (v1.4.0): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing dingo/blueprint (0.2.2): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing dingo/api (dev-master 46cffad): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing doctrine/cache (v1.6.1): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing doctrine/collections (v1.4.0): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+  - Installing doctrine/common (v2.7.2): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing doctrine/dbal (v2.5.12): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing sabberworm/php-css-parser (6.0.1): Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing phenx/php-svg-lib (v0.2): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing phenx/php-font-lib (0.5): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+  - Installing dompdf/dompdf (v0.8.0): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing dusterio/laravel-aws-worker (v0.1.9): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing enyo/dropzone (v4.3.0): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing fideloper/proxy (3.3.0): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing filp/whoops (1.1.10): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing firebase/php-jwt (v3.0.0): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+  - Installing google/recaptcha (1.1.3): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing react/promise (v2.5.1): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+  - Installing guzzlehttp/streams (3.0.0): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+  - Installing guzzlehttp/ringphp (1.1.0): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing hashids/hashids (2.0.3): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing intervention/image (2.3.11): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing landish/pagination (1.3.3): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+  - Installing laracasts/flash (1.3.4): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing laracasts/utilities (2.1): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+  - Installing laravelcollective/html (v5.2.5): Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing league/flysystem-aws-s3-v3 (1.0.13): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing league/glide (1.2.1): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+  - Installing league/glide-symfony (1.0.2): Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing league/glide-laravel (1.0.0): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+  - Installing oriceon/toastr-5-laravel (dev-master 148d274): Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing php-http/promise (v1.0.0): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+  - Installing php-http/httplug (v1.1.0): Loading from cache
+ DEBUG [618ea534] 	
+  - Installing php-http/guzzle6-adapter (v1.1.1): Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing phpseclib/phpseclib (0.3.10): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing predis/predis (v1.1.1): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing namshi/jose (5.0.2): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+  - Installing tymon/jwt-auth (0.5.10): Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing webpatser/laravel-uuid (2.0.1): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing igorw/get-in (v1.0.3): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing zendframework/zend-diactoros (1.3.10): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing egeloen/http-adapter (0.8.0): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing willdurand/geocoder (v3.3.0): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing elasticsearch/elasticsearch (v2.1.5): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+  - Installing elasticquent/elasticquent (dev-master 03aa15d): Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing fzaninotto/faker (v1.6.0): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing laracasts/testdummy (2.3.2): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing hamcrest/hamcrest-php (v1.2.2): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing mockery/mockery (0.9.9): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+  - Installing symfony/yaml (v3.2.6): Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing sebastian/recursion-context (1.0.5): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+  - Installing sebastian/exporter (1.2.2): Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing sebastian/diff (1.4.1): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing sebastian/comparator (1.2.4): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing doctrine/instantiator (1.0.5): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing phpspec/prophecy (v1.7.0): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing phpspec/php-diff (v1.0.2): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing phpspec/phpspec (2.5.5): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing phpunit/php-token-stream (1.4.11): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+  - Installing sebastian/version (1.0.6): Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing sebastian/global-state (1.1.1): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing sebastian/environment (1.3.8): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+  - Installing phpunit/php-text-template (1.2.1): Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing phpunit/phpunit-mock-objects (2.3.8): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing phpunit/php-timer (1.0.9): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing phpunit/php-file-iterator (1.4.2): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+  - Installing phpunit/php-code-coverage (2.2.4): Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	  - Installing phpunit/phpunit (4.8.35): 
+ DEBUG [618ea534] 	Loading from cache
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	symfony/var-dumper suggests installing ext-symfony_debug ()
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	symfony/translation suggests installing symfony/config ()
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	symfony/routing suggests installing symfony/config (For using the all-in-one router or any loader)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	symfony/routing suggests installing symfony/dependency-injection (For loading routes from a service)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	symfony/routing suggests installing symfony/expression-language (For using expression matching)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	symfony/event-dispatcher suggests installing symfony/dependency-injection ()
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	symfony/http-kernel suggests installing symfony/browser-kit ()
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	symfony/http-kernel suggests installing symfony/class-loader ()
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	symfony/http-kernel suggests installing symfony/config ()
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	symfony/http-kernel suggests installing symfony/dependency-injection ()
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	psy/psysh suggests installing ext-pdo-sqlite (The doc command requires SQLite to work.)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	paragonie/random_compat suggests installing ext-libsodium (Provides a modern crypto API that can be used to generate random bytes.)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	monolog/monolog suggests installing doctrine/couchdb (Allow sending log messages to a CouchDB server)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	monolog/monolog suggests installing ext-amqp (Allow sending log messages to an AMQP server (1.0+ required))
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	monolog/monolog suggests installing ext-mongo (Allow sending log messages to a MongoDB server)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	monolog/monolog suggests installing graylog2/gelf-php (Allow sending log messages to a GrayLog2 server)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	monolog/monolog suggests installing mongodb/mongodb (Allow sending log messages to a MongoDB server via PHP Driver)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	monolog/monolog suggests installing php-amqplib/php-amqplib (Allow sending log messages to an AMQP server using php-amqplib)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	monolog/monolog suggests installing php-console/php-console (Allow sending log messages to Google Chrome)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	monolog/monolog suggests installing rollbar/rollbar (Allow sending log messages to Rollbar)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	monolog/monolog suggests installing ruflin/elastica (Allow sending log messages to an Elastic Search server)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	monolog/monolog suggests installing sentry/sentry (Allow sending log messages to a Sentry server)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	league/flysystem suggests installing league/flysystem-aws-s3-v2 (Allows you to use S3 storage with AWS SDK v2)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	league/flysystem suggests installing league/flysystem-azure (Allows you to use Windows Azure Blob storage)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	league/flysystem suggests installing league/flysystem-cached-adapter (Flysystem adapter decorator for metadata caching)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	league/flysystem suggests installing league/flysystem-copy (Allows you to use Copy.com storage)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	league/flysystem suggests installing league/flysystem-dropbox (Allows you to use Dropbox storage)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	league/flysystem suggests installing league/flysystem-eventable-filesystem (Allows you to use EventableFilesystem)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	league/flysystem suggests installing league/flysystem-rackspace (Allows you to use Rackspace Cloud Files)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	league/flysystem suggests installing league/flysystem-sftp (Allows you to use SFTP server storage via phpseclib)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	league/flysystem suggests installing league/flysystem-webdav (Allows you to use WebDAV storage)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	league/flysystem suggests installing league/flysystem-ziparchive (Allows you to use ZipArchive adapter)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	laravel/framework suggests installing league/flysystem-rackspace (Required to use the Flysystem Rackspace driver (~1.0).)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	laravel/framework suggests installing pda/pheanstalk (Required to use the beanstalk queue driver (~3.0).)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	laravel/framework suggests installing pusher/pusher-php-server (Required to use the Pusher broadcast driver (~2.0).)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	laravel/framework suggests installing symfony/css-selector (Required to use some of the crawler integration testing tools (2.8.*|3.0.*).)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	laravel/framework suggests installing symfony/dom-crawler (Required to use most of the crawler integration testing tools (2.8.*|3.0.*).)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	laravel/framework suggests installing symfony/psr-http-message-bridge (Required to use psr7 bridging features (0.2.*).)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	aws/aws-sdk-php suggests installing aws/aws-php-sns-message-validator (To validate incoming SNS notifications)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	aws/aws-sdk-php-laravel suggests installing laravel/lumen-framework (To test the Lumen bindings)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	maximebf/debugbar suggests installing kriswallsmith/assetic (The best way to manage assets)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	league/fractal suggests installing pagerfanta/pagerfanta (Pagerfanta Paginator)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	league/fractal suggests installing zendframework/zend-paginator (Zend Framework Paginator)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	dingo/api suggests installing lucadegasperi/oauth2-server-laravel (Protect your API with OAuth 2.0.)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	intervention/image suggests installing ext-imagick (to use Imagick based image processing.)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	intervention/image suggests installing intervention/imagecache (Caching extension for the Intervention Image library)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	phpseclib/phpseclib suggests installing ext-gmp (Install the GMP (GNU Multiple Precision) extension in order to speed up arbitrary precision integer arithmetic operations.)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	phpseclib/phpseclib suggests installing ext-mcrypt (Install the Mcrypt extension in order to speed up a wide variety of cryptographic operations.)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	phpseclib/phpseclib suggests installing pear-pear/PHP_Compat (Install PHP_Compat to get phpseclib working on PHP < 4.3.3.)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	predis/predis suggests installing ext-phpiredis (Allows faster serialization and deserialization of the Redis protocol)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	egeloen/http-adapter suggests installing ext-http (Allows you to use the PECL adapter)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	egeloen/http-adapter suggests installing guzzle/guzzle (Allows you to use the Guzzle 3 adapter)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	egeloen/http-adapter suggests installing kriswallsmith/buzz (Allows you to use the Buzz adapter)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	egeloen/http-adapter suggests installing nategood/httpful (Allows you to use the httpful adapter)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	egeloen/http-adapter suggests installing symfony/stopwatch (Allows you to use the stopwatch http adapter and event subscriber)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	egeloen/http-adapter suggests installing zendframework/zend-http (Allows you to use the Zend 2 adapter)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	egeloen/http-adapter suggests installing zendframework/zendframework1 (Allows you to use the Zend 1 adapter)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	willdurand/geocoder suggests installing ext-geoip (Enabling the geoip extension allows you to use the MaxMindProvider.)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	willdurand/geocoder suggests installing geoip/geoip (If you are going to use the MaxMindBinaryProvider (conflict with geoip extension).)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	willdurand/geocoder suggests installing geoip2/geoip2 (If you are going to use the GeoIP2DatabaseProvider.)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	willdurand/geocoder suggests installing symfony/stopwatch (If you want to use the TimedGeocoder)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	phpspec/phpspec suggests installing phpspec/nyan-formatters (~1.0 – Adds Nyan formatters)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	sebastian/global-state suggests installing ext-uopz (*)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	phpunit/php-code-coverage suggests installing ext-xdebug (>=2.2.1)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	phpunit/phpunit suggests installing phpunit/php-invoker (~1.1)
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	Package egeloen/http-adapter is abandoned, you should avoid using it. Use php-http/httplug instead.
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	Generating autoload files
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	Warning: Ambiguous class resolution, "AddSoftdeletesToThreadsTable" was found in both "/home/ec2-user/menahouse/releases/20170329063809/database/migrations/2014_12_04_124531_add_softdeletes_to_threads_table.php" and "/home/ec2-user/menahouse/releases/20170329063809/database/migrations/mgr/2014_12_04_124531_add_softdeletes_to_threads_table.php", the first will be used.
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	Warning: Ambiguous class resolution, "CreateParticipantsTable" was found in both "/home/ec2-user/menahouse/releases/20170329063809/database/migrations/mgr/2014_10_28_180224_create_participants_table.php" and "/home/ec2-user/menahouse/releases/20170329063809/database/migrations/2014_10_28_180224_create_participants_table.php", the first will be used.
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	Warning: Ambiguous class resolution, "AddSoftDeletesToParticipantsTable" was found in both "/home/ec2-user/menahouse/releases/20170329063809/database/migrations/mgr/2014_11_03_154831_add_soft_deletes_to_participants_table.php" and "/home/ec2-user/menahouse/releases/20170329063809/database/migrations/2014_11_03_154831_add_soft_deletes_to_participants_table.php", the first will be used.
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	Warning: Ambiguous class resolution, "CreateMessagesTable" was found in both "/home/ec2-user/menahouse/releases/20170329063809/database/migrations/mgr/2014_10_28_175710_create_messages_table.php" and "/home/ec2-user/menahouse/releases/20170329063809/database/migrations/2014_10_28_175710_create_messages_table.php", the first will be used.
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	Warning: Ambiguous class resolution, "CreateThreadsTable" was found in both "/home/ec2-user/menahouse/releases/20170329063809/database/migrations/mgr/2014_10_28_175635_create_threads_table.php" and "/home/ec2-user/menahouse/releases/20170329063809/database/migrations/2014_10_28_175635_create_threads_table.php", the first will be used.
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	> php artisan clear-compiled
+ DEBUG [618ea534] 	
+ DEBUG [618ea534] 	> php artisan optimize
+ DEBUG [618ea534] 	Generating optimized class loader
+  INFO [618ea534] Finished in 7.308 seconds with exit status 0 (successful).
+ DEBUG [c7d05851] Running if test ! -d /home/ec2-user/menahouse/releases/20170329063809; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329063809'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [c7d05851] Command: if test ! -d /home/ec2-user/menahouse/releases/20170329063809; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329063809'" 1>&2; false; fi
+ DEBUG [c7d05851] Finished in 0.538 seconds with exit status 0 (successful).
+  INFO [10ac5f84] Running /usr/bin/env php artisan migrate as ec2-user@35.161.27.29
+ DEBUG [10ac5f84] Command: cd /home/ec2-user/menahouse/releases/20170329063809 && /usr/bin/env php artisan migrate
+ DEBUG [10ac5f84] 	**************************************
+*     Application In Production!     *
+**************************************
+
+Command Cancelled!
+  INFO [10ac5f84] Finished in 0.649 seconds with exit status 0 (successful).
+ DEBUG [0c74761f] Running if test ! -d /home/ec2-user/menahouse/releases/20170329063809; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329063809'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [0c74761f] Command: if test ! -d /home/ec2-user/menahouse/releases/20170329063809; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329063809'" 1>&2; false; fi
+ DEBUG [0c74761f] Finished in 0.530 seconds with exit status 0 (successful).
+  INFO [c3b8e477] Running /usr/bin/env php artisan optimize as ec2-user@35.161.27.29
+ DEBUG [c3b8e477] Command: cd /home/ec2-user/menahouse/releases/20170329063809 && /usr/bin/env php artisan optimize
+ DEBUG [c3b8e477] 	Generating optimized class loader
+  INFO [c3b8e477] Finished in 3.271 seconds with exit status 0 (successful).
+ DEBUG [b2f6f6d8] Running if test ! -d /home/ec2-user/menahouse/releases/20170329063809; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329063809'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [b2f6f6d8] Command: if test ! -d /home/ec2-user/menahouse/releases/20170329063809; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329063809'" 1>&2; false; fi
+ DEBUG [b2f6f6d8] Finished in 0.527 seconds with exit status 0 (successful).
+  INFO [c6861d76] Running /usr/bin/env chmod 777 -R bootstrap/cache as ec2-user@35.161.27.29
+ DEBUG [c6861d76] Command: cd /home/ec2-user/menahouse/releases/20170329063809 && /usr/bin/env chmod 777 -R bootstrap/cache
+  INFO [c6861d76] Finished in 0.558 seconds with exit status 0 (successful).
+  INFO [66f3e426] Running /usr/bin/env chmod 777 -R storage as ec2-user@35.161.27.29
+ DEBUG [66f3e426] Command: cd /home/ec2-user/menahouse/releases/20170329063809 && /usr/bin/env chmod 777 -R storage
+  INFO [66f3e426] Finished in 0.562 seconds with exit status 0 (successful).
+  INFO [ce4f2862] Running /usr/bin/env ln -s /home/ec2-user/menahouse/releases/20170329063809 /home/ec2-user/menahouse/releases/current as ec2-user@35.161.27.29
+ DEBUG [ce4f2862] Command: /usr/bin/env ln -s /home/ec2-user/menahouse/releases/20170329063809 /home/ec2-user/menahouse/releases/current
+  INFO [ce4f2862] Finished in 0.552 seconds with exit status 0 (successful).
+  INFO [f9795206] Running /usr/bin/env mv /home/ec2-user/menahouse/releases/current /home/ec2-user/menahouse as ec2-user@35.161.27.29
+ DEBUG [f9795206] Command: /usr/bin/env mv /home/ec2-user/menahouse/releases/current /home/ec2-user/menahouse
+  INFO [f9795206] Finished in 0.529 seconds with exit status 0 (successful).
+ DEBUG [0786a5e2] Running /usr/bin/env ls -xtr /home/ec2-user/menahouse/releases as ec2-user@35.161.27.29
+ DEBUG [0786a5e2] Command: /usr/bin/env ls -xtr /home/ec2-user/menahouse/releases
+ DEBUG [0786a5e2] 	20170329063205	20170329063809
+ DEBUG [0786a5e2] Finished in 0.548 seconds with exit status 0 (successful).
+  INFO Keeping 2 of 2 deployed releases on 35.161.27.29
+  INFO No old releases (keeping newest 2) on 35.161.27.29
+ DEBUG [a630079a] Running if test ! -d /home/ec2-user/menahouse/releases; then echo "Directory does not exist '/home/ec2-user/menahouse/releases'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [a630079a] Command: if test ! -d /home/ec2-user/menahouse/releases; then echo "Directory does not exist '/home/ec2-user/menahouse/releases'" 1>&2; false; fi
+ DEBUG [a630079a] Finished in 0.484 seconds with exit status 0 (successful).
+  INFO [fbba281d] Running /usr/bin/env echo "Branch master (at 634ba09f56183a340390d1244333372884d22936) deployed as release 20170329063809 by couldedhusso" >> /home/ec2-user/menahouse/revisions.log as ec2-user@35.161.27.29
+ DEBUG [fbba281d] Command: cd /home/ec2-user/menahouse/releases && /usr/bin/env echo "Branch master (at 634ba09f56183a340390d1244333372884d22936) deployed as release 20170329063809 by couldedhusso" >> /home/ec2-user/menahouse/revisions.log
+  INFO [fbba281d] Finished in 0.548 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-03-29 09:44:23 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [1e6f31cc] Running /usr/bin/env mkdir -p /tmp/menahouse/ as ec2-user@35.161.27.29
+ DEBUG [1e6f31cc] Command: /usr/bin/env mkdir -p /tmp/menahouse/
+  INFO [1e6f31cc] Finished in 3.750 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/menahouse/git-ssh.sh 0.0%
+  INFO Uploading /tmp/menahouse/git-ssh.sh 100.0%
+  INFO [13b867db] Running /usr/bin/env chmod +rx /tmp/menahouse/git-ssh.sh as ec2-user@35.161.27.29
+ DEBUG [13b867db] Command: /usr/bin/env chmod +rx /tmp/menahouse/git-ssh.sh
+  INFO [13b867db] Finished in 0.528 seconds with exit status 0 (successful).
+  INFO [f5bb6dc5] Running /usr/bin/env git ls-remote --heads https://github.com/couldedhusso/menahouse.ru.git as ec2-user@35.161.27.29
+ DEBUG [f5bb6dc5] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git ls-remote --heads https://github.com/couldedhusso/menahouse.ru.git )
+ DEBUG [f5bb6dc5] 	634ba09f56183a340390d1244333372884d22936	refs/heads/master
+  INFO [f5bb6dc5] Finished in 0.937 seconds with exit status 0 (successful).
+  INFO [7ca9166f] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared /home/ec2-user/menahouse/releases as ec2-user@35.161.27.29
+ DEBUG [7ca9166f] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared /home/ec2-user/menahouse/releases
+  INFO [7ca9166f] Finished in 0.523 seconds with exit status 0 (successful).
+  INFO [7907f6c6] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared/storage/framework/sessions as ec2-user@35.161.27.29
+ DEBUG [7907f6c6] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared/storage/framework/sessions
+  INFO [7907f6c6] Finished in 0.550 seconds with exit status 0 (successful).
+  INFO [6493cb72] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared as ec2-user@35.161.27.29
+ DEBUG [6493cb72] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared
+  INFO [6493cb72] Finished in 0.488 seconds with exit status 0 (successful).
+ DEBUG [0580b057] Running [ -f /home/ec2-user/menahouse/shared/.env ] as ec2-user@35.161.27.29
+ DEBUG [0580b057] Command: [ -f /home/ec2-user/menahouse/shared/.env ]
+ DEBUG [0580b057] Finished in 0.546 seconds with exit status 0 (successful).
+ DEBUG [a422a798] Running [ -f /home/ec2-user/menahouse/current/REVISION ] as ec2-user@35.161.27.29
+ DEBUG [a422a798] Command: [ -f /home/ec2-user/menahouse/current/REVISION ]
+ DEBUG [a422a798] Finished in 0.519 seconds with exit status 0 (successful).
+ DEBUG [cbf4c618] Running /usr/bin/env cat /home/ec2-user/menahouse/current/REVISION 2>/dev/null as ec2-user@35.161.27.29
+ DEBUG [cbf4c618] Command: /usr/bin/env cat /home/ec2-user/menahouse/current/REVISION 2>/dev/null
+ DEBUG [cbf4c618] 	634ba09f56183a340390d1244333372884d22936
+ DEBUG [cbf4c618] Finished in 0.529 seconds with exit status 0 (successful).
+ DEBUG [00701b9c] Running [ -f /home/ec2-user/menahouse/repo/HEAD ] as ec2-user@35.161.27.29
+ DEBUG [00701b9c] Command: [ -f /home/ec2-user/menahouse/repo/HEAD ]
+ DEBUG [00701b9c] Finished in 0.590 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ec2-user/menahouse/repo
+ DEBUG [05d15e25] Running if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [05d15e25] Command: if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi
+ DEBUG [05d15e25] Finished in 0.522 seconds with exit status 0 (successful).
+  INFO [e304eeb3] Running /usr/bin/env git remote update --prune as ec2-user@35.161.27.29
+ DEBUG [e304eeb3] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [e304eeb3] 	Fetching origin
+  INFO [e304eeb3] Finished in 0.964 seconds with exit status 0 (successful).
+ DEBUG [5567e331] Running if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [5567e331] Command: if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi
+ DEBUG [5567e331] Finished in 0.492 seconds with exit status 0 (successful).
+  INFO [7cf0ccfa] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329064433 as ec2-user@35.161.27.29
+ DEBUG [7cf0ccfa] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329064433 )
+  INFO [7cf0ccfa] Finished in 0.508 seconds with exit status 0 (successful).
+  INFO [60a5c9bd] Running /usr/bin/env git archive master | tar -x -f - -C /home/ec2-user/menahouse/releases/20170329064433 as ec2-user@35.161.27.29
+ DEBUG [60a5c9bd] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/ec2-user/menahouse/releases/20170329064433 )
+  INFO [60a5c9bd] Finished in 0.979 seconds with exit status 0 (successful).
+ DEBUG [ffc3ad1b] Running if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [ffc3ad1b] Command: if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi
+ DEBUG [ffc3ad1b] Finished in 0.485 seconds with exit status 0 (successful).
+ DEBUG [ff947bc0] Running /usr/bin/env git rev-list --max-count=1 master as ec2-user@35.161.27.29
+ DEBUG [ff947bc0] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [ff947bc0] 	634ba09f56183a340390d1244333372884d22936
+ DEBUG [ff947bc0] Finished in 0.480 seconds with exit status 0 (successful).
+ DEBUG [64bd70b4] Running if test ! -d /home/ec2-user/menahouse/releases/20170329064433; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329064433'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [64bd70b4] Command: if test ! -d /home/ec2-user/menahouse/releases/20170329064433; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329064433'" 1>&2; false; fi
+ DEBUG [64bd70b4] Finished in 0.551 seconds with exit status 0 (successful).
+  INFO [7f210ed8] Running /usr/bin/env echo "634ba09f56183a340390d1244333372884d22936" >> REVISION as ec2-user@35.161.27.29
+ DEBUG [7f210ed8] Command: cd /home/ec2-user/menahouse/releases/20170329064433 && /usr/bin/env echo "634ba09f56183a340390d1244333372884d22936" >> REVISION
+  INFO [7f210ed8] Finished in 0.487 seconds with exit status 0 (successful).
+  INFO [57778f33] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329064433 as ec2-user@35.161.27.29
+ DEBUG [57778f33] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329064433
+  INFO [57778f33] Finished in 0.494 seconds with exit status 0 (successful).
+ DEBUG [c4debcfd] Running [ -L /home/ec2-user/menahouse/releases/20170329064433/.env ] as ec2-user@35.161.27.29
+ DEBUG [c4debcfd] Command: [ -L /home/ec2-user/menahouse/releases/20170329064433/.env ]
+ DEBUG [c4debcfd] Finished in 0.534 seconds with exit status 1 (failed).
+ DEBUG [dfa9493f] Running [ -f /home/ec2-user/menahouse/releases/20170329064433/.env ] as ec2-user@35.161.27.29
+ DEBUG [dfa9493f] Command: [ -f /home/ec2-user/menahouse/releases/20170329064433/.env ]
+ DEBUG [dfa9493f] Finished in 0.486 seconds with exit status 1 (failed).
+  INFO [89f51c1e] Running /usr/bin/env ln -s /home/ec2-user/menahouse/shared/.env /home/ec2-user/menahouse/releases/20170329064433/.env as ec2-user@35.161.27.29
+ DEBUG [89f51c1e] Command: /usr/bin/env ln -s /home/ec2-user/menahouse/shared/.env /home/ec2-user/menahouse/releases/20170329064433/.env
+  INFO [89f51c1e] Finished in 0.551 seconds with exit status 0 (successful).
+  INFO [4bc3515a] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329064433/storage/framework as ec2-user@35.161.27.29
+ DEBUG [4bc3515a] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329064433/storage/framework
+  INFO [4bc3515a] Finished in 0.488 seconds with exit status 0 (successful).
+ DEBUG [80b8ba47] Running [ -L /home/ec2-user/menahouse/releases/20170329064433/storage/framework/sessions ] as ec2-user@35.161.27.29
+ DEBUG [80b8ba47] Command: [ -L /home/ec2-user/menahouse/releases/20170329064433/storage/framework/sessions ]
+ DEBUG [80b8ba47] Finished in 0.550 seconds with exit status 1 (failed).
+ DEBUG [b3d3dcf1] Running [ -d /home/ec2-user/menahouse/releases/20170329064433/storage/framework/sessions ] as ec2-user@35.161.27.29
+ DEBUG [b3d3dcf1] Command: [ -d /home/ec2-user/menahouse/releases/20170329064433/storage/framework/sessions ]
+ DEBUG [b3d3dcf1] Finished in 0.485 seconds with exit status 0 (successful).
+  INFO [b73b3caf] Running /usr/bin/env rm -rf /home/ec2-user/menahouse/releases/20170329064433/storage/framework/sessions as ec2-user@35.161.27.29
+ DEBUG [b73b3caf] Command: /usr/bin/env rm -rf /home/ec2-user/menahouse/releases/20170329064433/storage/framework/sessions
+  INFO [b73b3caf] Finished in 0.514 seconds with exit status 0 (successful).
+  INFO [598642d0] Running /usr/bin/env ln -s /home/ec2-user/menahouse/shared/storage/framework/sessions /home/ec2-user/menahouse/releases/20170329064433/storage/framework/sessions as ec2-user@35.161.27.29
+ DEBUG [598642d0] Command: /usr/bin/env ln -s /home/ec2-user/menahouse/shared/storage/framework/sessions /home/ec2-user/menahouse/releases/20170329064433/storage/framework/sessions
+  INFO [598642d0] Finished in 0.518 seconds with exit status 0 (successful).
+ DEBUG [1890d075] Running if test ! -d /home/ec2-user/menahouse/releases/20170329064433; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329064433'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [1890d075] Command: if test ! -d /home/ec2-user/menahouse/releases/20170329064433; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329064433'" 1>&2; false; fi
+ DEBUG [1890d075] Finished in 0.485 seconds with exit status 0 (successful).
+  INFO [a318e9be] Running /usr/bin/env composer install as ec2-user@35.161.27.29
+ DEBUG [a318e9be] Command: cd /home/ec2-user/menahouse/releases/20170329064433 && /usr/bin/env composer install
+ DEBUG [a318e9be] 	Loading composer repositories with package information
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	Installing dependencies (including require-dev) from lock file
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	Package operations: 114 installs, 0 updates, 0 removals
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing vlucas/phpdotenv (v2.4.0): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing symfony/polyfill-mbstring (v1.3.0): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing symfony/var-dumper (v3.0.9): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing symfony/translation (v3.0.9): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing symfony/routing (v3.0.9): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing symfony/process (v3.0.9): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing symfony/polyfill-util (v1.3.0): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing symfony/polyfill-php56 (v1.3.0): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing symfony/http-foundation (v3.0.9): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing symfony/event-dispatcher (v3.2.6): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing psr/log (1.0.2): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing symfony/debug (v3.0.9): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing symfony/http-kernel (v3.0.9): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing symfony/finder (v3.0.9): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing symfony/console (v3.0.9): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing swiftmailer/swiftmailer (v5.4.6): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing nikic/php-parser (v2.1.1): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing jakub-onderka/php-console-color (0.1): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing jakub-onderka/php-console-highlighter (v0.3.2): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing dnoegel/php-xdg-base-dir (0.1): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing psy/psysh (v0.7.2): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing paragonie/random_compat (v1.4.2): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing nesbot/carbon (1.22.1): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing mtdowling/cron-expression (v1.2.0): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing monolog/monolog (1.22.1): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing league/flysystem (1.0.37): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing jeremeamia/superclosure (2.3.0): Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing doctrine/inflector (v1.1.0): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing classpreloader/classpreloader (3.1.0): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing laravel/framework (v5.2.45): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing mtdowling/jmespath.php (2.4.0): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing psr/http-message (1.0.1): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing guzzlehttp/psr7 (1.4.2): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing guzzlehttp/promises (v1.3.1): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing guzzlehttp/guzzle (6.2.3): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing aws/aws-sdk-php (3.24.7): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing aws/aws-sdk-php-laravel (3.1.0): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing maximebf/debugbar (1.13.1): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing barryvdh/laravel-debugbar (v2.3.2): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing cmgmyr/messenger (2.13.3): Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing league/fractal (0.15.0): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing webmozart/assert (1.2.0): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing phpdocumentor/reflection-common (1.0): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing phpdocumentor/type-resolver (0.2.1): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing phpdocumentor/reflection-docblock (3.1.1): Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing doctrine/lexer (v1.0.1): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing doctrine/annotations (v1.4.0): Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing dingo/blueprint (0.2.2): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing dingo/api (dev-master 46cffad): Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing doctrine/cache (v1.6.1): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing doctrine/collections (v1.4.0): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing doctrine/common (v2.7.2): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing doctrine/dbal (v2.5.12): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing sabberworm/php-css-parser (6.0.1): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing phenx/php-svg-lib (v0.2): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing phenx/php-font-lib (0.5): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing dompdf/dompdf (v0.8.0): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing dusterio/laravel-aws-worker (v0.1.9): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing enyo/dropzone (v4.3.0): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing fideloper/proxy (3.3.0): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing filp/whoops (1.1.10): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing firebase/php-jwt (v3.0.0): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing google/recaptcha (1.1.3): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing react/promise (v2.5.1): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing guzzlehttp/streams (3.0.0): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing guzzlehttp/ringphp (1.1.0): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing hashids/hashids (2.0.3): Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing intervention/image (2.3.11): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing landish/pagination (1.3.3): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing laracasts/flash (1.3.4): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing laracasts/utilities (2.1): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing laravelcollective/html (v5.2.5): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing league/flysystem-aws-s3-v3 (1.0.13): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing league/glide (1.2.1): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing league/glide-symfony (1.0.2): Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing league/glide-laravel (1.0.0): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing oriceon/toastr-5-laravel (dev-master 148d274): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing php-http/promise (v1.0.0): Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing php-http/httplug (v1.1.0): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing php-http/guzzle6-adapter (v1.1.1): Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing phpseclib/phpseclib (0.3.10): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing predis/predis (v1.1.1): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing namshi/jose (5.0.2): Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing tymon/jwt-auth (0.5.10): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing webpatser/laravel-uuid (2.0.1): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing igorw/get-in (v1.0.3): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing zendframework/zend-diactoros (1.3.10): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing egeloen/http-adapter (0.8.0): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing willdurand/geocoder (v3.3.0): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing elasticsearch/elasticsearch (v2.1.5): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing elasticquent/elasticquent (dev-master 03aa15d): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing fzaninotto/faker (v1.6.0): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing laracasts/testdummy (2.3.2): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing hamcrest/hamcrest-php (v1.2.2): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing mockery/mockery (0.9.9): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing symfony/yaml (v3.2.6): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing sebastian/recursion-context (1.0.5): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing sebastian/exporter (1.2.2): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing sebastian/diff (1.4.1): Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing sebastian/comparator (1.2.4): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing doctrine/instantiator (1.0.5): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing phpspec/prophecy (v1.7.0): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing phpspec/php-diff (v1.0.2): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing phpspec/phpspec (2.5.5): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing phpunit/php-token-stream (1.4.11): Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing sebastian/version (1.0.6): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing sebastian/global-state (1.1.1): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing sebastian/environment (1.3.8): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+  - Installing phpunit/php-text-template (1.2.1): Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing phpunit/phpunit-mock-objects (2.3.8): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing phpunit/php-timer (1.0.9): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing phpunit/php-file-iterator (1.4.2): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing phpunit/php-code-coverage (2.2.4): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	  - Installing phpunit/phpunit (4.8.35): 
+ DEBUG [a318e9be] 	Loading from cache
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	symfony/var-dumper suggests installing ext-symfony_debug ()
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	symfony/translation suggests installing symfony/config ()
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	symfony/routing suggests installing symfony/config (For using the all-in-one router or any loader)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	symfony/routing suggests installing symfony/dependency-injection (For loading routes from a service)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	symfony/routing suggests installing symfony/expression-language (For using expression matching)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	symfony/event-dispatcher suggests installing symfony/dependency-injection ()
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	symfony/http-kernel suggests installing symfony/browser-kit ()
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	symfony/http-kernel suggests installing symfony/class-loader ()
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	symfony/http-kernel suggests installing symfony/config ()
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	symfony/http-kernel suggests installing symfony/dependency-injection ()
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	psy/psysh suggests installing ext-pdo-sqlite (The doc command requires SQLite to work.)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	paragonie/random_compat suggests installing ext-libsodium (Provides a modern crypto API that can be used to generate random bytes.)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	monolog/monolog suggests installing doctrine/couchdb (Allow sending log messages to a CouchDB server)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	monolog/monolog suggests installing ext-amqp (Allow sending log messages to an AMQP server (1.0+ required))
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	monolog/monolog suggests installing ext-mongo (Allow sending log messages to a MongoDB server)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	monolog/monolog suggests installing graylog2/gelf-php (Allow sending log messages to a GrayLog2 server)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	monolog/monolog suggests installing mongodb/mongodb (Allow sending log messages to a MongoDB server via PHP Driver)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	monolog/monolog suggests installing php-amqplib/php-amqplib (Allow sending log messages to an AMQP server using php-amqplib)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	monolog/monolog suggests installing php-console/php-console (Allow sending log messages to Google Chrome)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	monolog/monolog suggests installing rollbar/rollbar (Allow sending log messages to Rollbar)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	monolog/monolog suggests installing ruflin/elastica (Allow sending log messages to an Elastic Search server)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	monolog/monolog suggests installing sentry/sentry (Allow sending log messages to a Sentry server)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	league/flysystem suggests installing league/flysystem-aws-s3-v2 (Allows you to use S3 storage with AWS SDK v2)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	league/flysystem suggests installing league/flysystem-azure (Allows you to use Windows Azure Blob storage)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	league/flysystem suggests installing league/flysystem-cached-adapter (Flysystem adapter decorator for metadata caching)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	league/flysystem suggests installing league/flysystem-copy (Allows you to use Copy.com storage)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	league/flysystem suggests installing league/flysystem-dropbox (Allows you to use Dropbox storage)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	league/flysystem suggests installing league/flysystem-eventable-filesystem (Allows you to use EventableFilesystem)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	league/flysystem suggests installing league/flysystem-rackspace (Allows you to use Rackspace Cloud Files)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	league/flysystem suggests installing league/flysystem-sftp (Allows you to use SFTP server storage via phpseclib)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	league/flysystem suggests installing league/flysystem-webdav (Allows you to use WebDAV storage)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	league/flysystem suggests installing league/flysystem-ziparchive (Allows you to use ZipArchive adapter)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	laravel/framework suggests installing league/flysystem-rackspace (Required to use the Flysystem Rackspace driver (~1.0).)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	laravel/framework suggests installing pda/pheanstalk (Required to use the beanstalk queue driver (~3.0).)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	laravel/framework suggests installing pusher/pusher-php-server (Required to use the Pusher broadcast driver (~2.0).)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	laravel/framework suggests installing symfony/css-selector (Required to use some of the crawler integration testing tools (2.8.*|3.0.*).)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	laravel/framework suggests installing symfony/dom-crawler (Required to use most of the crawler integration testing tools (2.8.*|3.0.*).)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	laravel/framework suggests installing symfony/psr-http-message-bridge (Required to use psr7 bridging features (0.2.*).)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	aws/aws-sdk-php suggests installing aws/aws-php-sns-message-validator (To validate incoming SNS notifications)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	aws/aws-sdk-php-laravel suggests installing laravel/lumen-framework (To test the Lumen bindings)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	maximebf/debugbar suggests installing kriswallsmith/assetic (The best way to manage assets)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	league/fractal suggests installing pagerfanta/pagerfanta (Pagerfanta Paginator)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	league/fractal suggests installing zendframework/zend-paginator (Zend Framework Paginator)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	dingo/api suggests installing lucadegasperi/oauth2-server-laravel (Protect your API with OAuth 2.0.)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	intervention/image suggests installing ext-imagick (to use Imagick based image processing.)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	intervention/image suggests installing intervention/imagecache (Caching extension for the Intervention Image library)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	phpseclib/phpseclib suggests installing ext-gmp (Install the GMP (GNU Multiple Precision) extension in order to speed up arbitrary precision integer arithmetic operations.)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	phpseclib/phpseclib suggests installing ext-mcrypt (Install the Mcrypt extension in order to speed up a wide variety of cryptographic operations.)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	phpseclib/phpseclib suggests installing pear-pear/PHP_Compat (Install PHP_Compat to get phpseclib working on PHP < 4.3.3.)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	predis/predis suggests installing ext-phpiredis (Allows faster serialization and deserialization of the Redis protocol)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	egeloen/http-adapter suggests installing ext-http (Allows you to use the PECL adapter)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	egeloen/http-adapter suggests installing guzzle/guzzle (Allows you to use the Guzzle 3 adapter)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	egeloen/http-adapter suggests installing kriswallsmith/buzz (Allows you to use the Buzz adapter)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	egeloen/http-adapter suggests installing nategood/httpful (Allows you to use the httpful adapter)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	egeloen/http-adapter suggests installing symfony/stopwatch (Allows you to use the stopwatch http adapter and event subscriber)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	egeloen/http-adapter suggests installing zendframework/zend-http (Allows you to use the Zend 2 adapter)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	egeloen/http-adapter suggests installing zendframework/zendframework1 (Allows you to use the Zend 1 adapter)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	willdurand/geocoder suggests installing ext-geoip (Enabling the geoip extension allows you to use the MaxMindProvider.)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	willdurand/geocoder suggests installing geoip/geoip (If you are going to use the MaxMindBinaryProvider (conflict with geoip extension).)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	willdurand/geocoder suggests installing geoip2/geoip2 (If you are going to use the GeoIP2DatabaseProvider.)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	willdurand/geocoder suggests installing symfony/stopwatch (If you want to use the TimedGeocoder)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	phpspec/phpspec suggests installing phpspec/nyan-formatters (~1.0 – Adds Nyan formatters)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	sebastian/global-state suggests installing ext-uopz (*)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	phpunit/php-code-coverage suggests installing ext-xdebug (>=2.2.1)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	phpunit/phpunit suggests installing phpunit/php-invoker (~1.1)
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	Package egeloen/http-adapter is abandoned, you should avoid using it. Use php-http/httplug instead.
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	Generating autoload files
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	Warning: Ambiguous class resolution, "AddSoftdeletesToThreadsTable" was found in both "/home/ec2-user/menahouse/releases/20170329064433/database/migrations/2014_12_04_124531_add_softdeletes_to_threads_table.php" and "/home/ec2-user/menahouse/releases/20170329064433/database/migrations/mgr/2014_12_04_124531_add_softdeletes_to_threads_table.php", the first will be used.
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	Warning: Ambiguous class resolution, "CreateParticipantsTable" was found in both "/home/ec2-user/menahouse/releases/20170329064433/database/migrations/mgr/2014_10_28_180224_create_participants_table.php" and "/home/ec2-user/menahouse/releases/20170329064433/database/migrations/2014_10_28_180224_create_participants_table.php", the first will be used.
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	Warning: Ambiguous class resolution, "AddSoftDeletesToParticipantsTable" was found in both "/home/ec2-user/menahouse/releases/20170329064433/database/migrations/mgr/2014_11_03_154831_add_soft_deletes_to_participants_table.php" and "/home/ec2-user/menahouse/releases/20170329064433/database/migrations/2014_11_03_154831_add_soft_deletes_to_participants_table.php", the first will be used.
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	Warning: Ambiguous class resolution, "CreateMessagesTable" was found in both "/home/ec2-user/menahouse/releases/20170329064433/database/migrations/mgr/2014_10_28_175710_create_messages_table.php" and "/home/ec2-user/menahouse/releases/20170329064433/database/migrations/2014_10_28_175710_create_messages_table.php", the first will be used.
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	Warning: Ambiguous class resolution, "CreateThreadsTable" was found in both "/home/ec2-user/menahouse/releases/20170329064433/database/migrations/mgr/2014_10_28_175635_create_threads_table.php" and "/home/ec2-user/menahouse/releases/20170329064433/database/migrations/2014_10_28_175635_create_threads_table.php", the first will be used.
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	> php artisan clear-compiled
+ DEBUG [a318e9be] 	
+ DEBUG [a318e9be] 	> php artisan optimize
+ DEBUG [a318e9be] 	Generating optimized class loader
+  INFO [a318e9be] Finished in 7.353 seconds with exit status 0 (successful).
+ DEBUG [52545b6c] Running if test ! -d /home/ec2-user/menahouse/releases/20170329064433; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329064433'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [52545b6c] Command: if test ! -d /home/ec2-user/menahouse/releases/20170329064433; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329064433'" 1>&2; false; fi
+ DEBUG [52545b6c] Finished in 0.483 seconds with exit status 0 (successful).
+  INFO [ddab8293] Running /usr/bin/env php artisan migrate force as ec2-user@35.161.27.29
+ DEBUG [ddab8293] Command: cd /home/ec2-user/menahouse/releases/20170329064433 && /usr/bin/env php artisan migrate force
+ DEBUG [ddab8293] 	
+ DEBUG [ddab8293] 	                                                          
+  [Symfony\Component\Console\Exception\RuntimeException]  
+  Too many arguments, expected arguments "command".       
+                                                          
+
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-03-29 09:55:53 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [0492aeec] Running /usr/bin/env mkdir -p /tmp/menahouse/ as ec2-user@35.161.27.29
+ DEBUG [0492aeec] Command: /usr/bin/env mkdir -p /tmp/menahouse/
+  INFO [85de2bb4] Running /usr/bin/env #<StringIO:0x000000023afc08> /tmp/menahouse/git-ssh.sh as ec2-user@35.161.27.29
+ DEBUG [85de2bb4] Command: /usr/bin/env #<StringIO:0x000000023afc08> /tmp/menahouse/git-ssh.sh
+  INFO [3e5e3815] Running /usr/bin/env chmod +rx /tmp/menahouse/git-ssh.sh as ec2-user@35.161.27.29
+ DEBUG [3e5e3815] Command: /usr/bin/env chmod +rx /tmp/menahouse/git-ssh.sh
+  INFO [3a3ecb59] Running /usr/bin/env git ls-remote --heads https://github.com/couldedhusso/menahouse.ru.git as ec2-user@35.161.27.29
+ DEBUG [3a3ecb59] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git ls-remote --heads https://github.com/couldedhusso/menahouse.ru.git )
+  INFO [0ddc62b2] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared /home/ec2-user/menahouse/releases as ec2-user@35.161.27.29
+ DEBUG [0ddc62b2] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared /home/ec2-user/menahouse/releases
+  INFO [987f19ad] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared/storage/framework/sessions as ec2-user@35.161.27.29
+ DEBUG [987f19ad] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared/storage/framework/sessions
+  INFO [57c4dad4] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared as ec2-user@35.161.27.29
+ DEBUG [57c4dad4] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared
+ DEBUG [edb024c0] Running [ -f /home/ec2-user/menahouse/shared/.env ] as ec2-user@35.161.27.29
+ DEBUG [edb024c0] Command: [ -f /home/ec2-user/menahouse/shared/.env ]
+ DEBUG [7908667c] Running [ -f /home/ec2-user/menahouse/current/REVISION ] as ec2-user@35.161.27.29
+ DEBUG [7908667c] Command: [ -f /home/ec2-user/menahouse/current/REVISION ]
+ DEBUG [1f747c6a] Running /usr/bin/env cat /home/ec2-user/menahouse/current/REVISION 2>/dev/null as ec2-user@35.161.27.29
+ DEBUG [1f747c6a] Command: /usr/bin/env cat /home/ec2-user/menahouse/current/REVISION 2>/dev/null
+ DEBUG [9e16155f] Running [ -f /home/ec2-user/menahouse/repo/HEAD ] as ec2-user@35.161.27.29
+ DEBUG [9e16155f] Command: [ -f /home/ec2-user/menahouse/repo/HEAD ]
+  INFO The repository mirror is at /home/ec2-user/menahouse/repo
+ DEBUG [affb05de] Running if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [affb05de] Command: if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi
+  INFO [33bcf08d] Running /usr/bin/env git remote update --prune as ec2-user@35.161.27.29
+ DEBUG [33bcf08d] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [15fdaef2] Running if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [15fdaef2] Command: if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi
+  INFO [a59028f3] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329065553 as ec2-user@35.161.27.29
+ DEBUG [a59028f3] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329065553 )
+  INFO [01777915] Running /usr/bin/env git archive master | tar -x -f - -C /home/ec2-user/menahouse/releases/20170329065553 as ec2-user@35.161.27.29
+ DEBUG [01777915] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/ec2-user/menahouse/releases/20170329065553 )
+ DEBUG [e8f42df3] Running if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [e8f42df3] Command: if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi
+ DEBUG [50317e3e] Running /usr/bin/env git rev-list --max-count=1 master as ec2-user@35.161.27.29
+ DEBUG [50317e3e] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [2fdeb8fc] Running if test ! -d /home/ec2-user/menahouse/releases/20170329065553; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329065553'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [2fdeb8fc] Command: if test ! -d /home/ec2-user/menahouse/releases/20170329065553; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329065553'" 1>&2; false; fi
+  INFO [d3412e5f] Running /usr/bin/env echo "" >> REVISION as ec2-user@35.161.27.29
+ DEBUG [d3412e5f] Command: cd /home/ec2-user/menahouse/releases/20170329065553 && /usr/bin/env echo "" >> REVISION
+  INFO [727a7e4f] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329065553 as ec2-user@35.161.27.29
+ DEBUG [727a7e4f] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329065553
+ DEBUG [b1fd4a49] Running [ -L /home/ec2-user/menahouse/releases/20170329065553/.env ] as ec2-user@35.161.27.29
+ DEBUG [b1fd4a49] Command: [ -L /home/ec2-user/menahouse/releases/20170329065553/.env ]
+  INFO [af6a8fce] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329065553/storage/framework as ec2-user@35.161.27.29
+ DEBUG [af6a8fce] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329065553/storage/framework
+ DEBUG [53d700fc] Running [ -L /home/ec2-user/menahouse/releases/20170329065553/storage/framework/sessions ] as ec2-user@35.161.27.29
+ DEBUG [53d700fc] Command: [ -L /home/ec2-user/menahouse/releases/20170329065553/storage/framework/sessions ]
+ DEBUG [27e9718f] Running if test ! -d /home/ec2-user/menahouse/releases/20170329065553; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329065553'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [27e9718f] Command: if test ! -d /home/ec2-user/menahouse/releases/20170329065553; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329065553'" 1>&2; false; fi
+  INFO [de1a51fc] Running /usr/bin/env composer install --no-dev --quiet as ec2-user@35.161.27.29
+ DEBUG [de1a51fc] Command: cd /home/ec2-user/menahouse/releases/20170329065553 && /usr/bin/env composer install --no-dev --quiet
+  INFO [082ea7cc] Running /usr/bin/env chmod u+x artisan as ec2-user@35.161.27.29
+ DEBUG [082ea7cc] Command: cd /home/ec2-user/menahouse/releases/20170329065553 && /usr/bin/env chmod u+x artisan
+  INFO [6166e08a] Running /usr/bin/env php artisan migrate --force as ec2-user@35.161.27.29
+ DEBUG [6166e08a] Command: cd /home/ec2-user/menahouse/releases/20170329065553 && /usr/bin/env php artisan migrate --force
+ DEBUG [9cd01dd1] Running if test ! -d /home/ec2-user/menahouse/releases/20170329065553; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329065553'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [9cd01dd1] Command: if test ! -d /home/ec2-user/menahouse/releases/20170329065553; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329065553'" 1>&2; false; fi
+  INFO [83425a58] Running /usr/bin/env php artisan optimize as ec2-user@35.161.27.29
+ DEBUG [83425a58] Command: cd /home/ec2-user/menahouse/releases/20170329065553 && /usr/bin/env php artisan optimize
+ DEBUG [70c60899] Running if test ! -d /home/ec2-user/menahouse/releases/20170329065553; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329065553'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [70c60899] Command: if test ! -d /home/ec2-user/menahouse/releases/20170329065553; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329065553'" 1>&2; false; fi
+  INFO [d452425d] Running /usr/bin/env chmod 777 -R bootstrap/cache as ec2-user@35.161.27.29
+ DEBUG [d452425d] Command: cd /home/ec2-user/menahouse/releases/20170329065553 && /usr/bin/env chmod 777 -R bootstrap/cache
+  INFO [333300f3] Running /usr/bin/env chmod 777 -R storage as ec2-user@35.161.27.29
+ DEBUG [333300f3] Command: cd /home/ec2-user/menahouse/releases/20170329065553 && /usr/bin/env chmod 777 -R storage
+  INFO [d534d77a] Running /usr/bin/env ln -s /home/ec2-user/menahouse/releases/20170329065553 /home/ec2-user/menahouse/releases/current as ec2-user@35.161.27.29
+ DEBUG [d534d77a] Command: /usr/bin/env ln -s /home/ec2-user/menahouse/releases/20170329065553 /home/ec2-user/menahouse/releases/current
+  INFO [de809ea7] Running /usr/bin/env mv /home/ec2-user/menahouse/releases/current /home/ec2-user/menahouse as ec2-user@35.161.27.29
+ DEBUG [de809ea7] Command: /usr/bin/env mv /home/ec2-user/menahouse/releases/current /home/ec2-user/menahouse
+ DEBUG [d2e7984e] Running /usr/bin/env ls -xtr /home/ec2-user/menahouse/releases as ec2-user@35.161.27.29
+ DEBUG [d2e7984e] Command: /usr/bin/env ls -xtr /home/ec2-user/menahouse/releases
+ DEBUG [4501fa10] Running if test ! -d /home/ec2-user/menahouse/releases; then echo "Directory does not exist '/home/ec2-user/menahouse/releases'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [4501fa10] Command: if test ! -d /home/ec2-user/menahouse/releases; then echo "Directory does not exist '/home/ec2-user/menahouse/releases'" 1>&2; false; fi
+  INFO [9fed2398] Running /usr/bin/env echo "Branch master (at ) deployed as release 20170329065553 by couldedhusso" >> /home/ec2-user/menahouse/revisions.log as ec2-user@35.161.27.29
+ DEBUG [9fed2398] Command: cd /home/ec2-user/menahouse/releases && /usr/bin/env echo "Branch master (at ) deployed as release 20170329065553 by couldedhusso" >> /home/ec2-user/menahouse/revisions.log
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-03-29 09:56:10 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [9a262d8a] Running /usr/bin/env mkdir -p /tmp/menahouse/ as ec2-user@35.161.27.29
+ DEBUG [9a262d8a] Command: /usr/bin/env mkdir -p /tmp/menahouse/
+  INFO [9a262d8a] Finished in 5.174 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/menahouse/git-ssh.sh 0.0%
+  INFO Uploading /tmp/menahouse/git-ssh.sh 100.0%
+  INFO [cc314e25] Running /usr/bin/env chmod +rx /tmp/menahouse/git-ssh.sh as ec2-user@35.161.27.29
+ DEBUG [cc314e25] Command: /usr/bin/env chmod +rx /tmp/menahouse/git-ssh.sh
+  INFO [cc314e25] Finished in 0.613 seconds with exit status 0 (successful).
+  INFO [fcb73ee5] Running /usr/bin/env git ls-remote --heads https://github.com/couldedhusso/menahouse.ru.git as ec2-user@35.161.27.29
+ DEBUG [fcb73ee5] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git ls-remote --heads https://github.com/couldedhusso/menahouse.ru.git )
+ DEBUG [fcb73ee5] 	634ba09f56183a340390d1244333372884d22936	refs/heads/master
+  INFO [fcb73ee5] Finished in 1.046 seconds with exit status 0 (successful).
+  INFO [e3cc778f] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared /home/ec2-user/menahouse/releases as ec2-user@35.161.27.29
+ DEBUG [e3cc778f] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared /home/ec2-user/menahouse/releases
+  INFO [e3cc778f] Finished in 0.637 seconds with exit status 0 (successful).
+  INFO [eb8b988a] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared/storage/framework/sessions as ec2-user@35.161.27.29
+ DEBUG [eb8b988a] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared/storage/framework/sessions
+  INFO [eb8b988a] Finished in 0.670 seconds with exit status 0 (successful).
+  INFO [6f6c7a71] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared as ec2-user@35.161.27.29
+ DEBUG [6f6c7a71] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared
+  INFO [6f6c7a71] Finished in 0.647 seconds with exit status 0 (successful).
+ DEBUG [18d0114a] Running [ -f /home/ec2-user/menahouse/shared/.env ] as ec2-user@35.161.27.29
+ DEBUG [18d0114a] Command: [ -f /home/ec2-user/menahouse/shared/.env ]
+ DEBUG [18d0114a] Finished in 0.638 seconds with exit status 0 (successful).
+ DEBUG [69e320e1] Running [ -f /home/ec2-user/menahouse/current/REVISION ] as ec2-user@35.161.27.29
+ DEBUG [69e320e1] Command: [ -f /home/ec2-user/menahouse/current/REVISION ]
+ DEBUG [69e320e1] Finished in 0.638 seconds with exit status 1 (failed).
+ DEBUG [5ac7f222] Running [ -f /home/ec2-user/menahouse/repo/HEAD ] as ec2-user@35.161.27.29
+ DEBUG [5ac7f222] Command: [ -f /home/ec2-user/menahouse/repo/HEAD ]
+ DEBUG [5ac7f222] Finished in 0.639 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ec2-user/menahouse/repo
+ DEBUG [fb00899b] Running if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [fb00899b] Command: if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi
+ DEBUG [fb00899b] Finished in 0.637 seconds with exit status 0 (successful).
+  INFO [02fa39f2] Running /usr/bin/env git remote update --prune as ec2-user@35.161.27.29
+ DEBUG [02fa39f2] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [02fa39f2] 	Fetching origin
+  INFO [02fa39f2] Finished in 1.078 seconds with exit status 0 (successful).
+ DEBUG [1bcdb9c3] Running if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [1bcdb9c3] Command: if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi
+ DEBUG [1bcdb9c3] Finished in 0.638 seconds with exit status 0 (successful).
+  INFO [08264b23] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329065622 as ec2-user@35.161.27.29
+ DEBUG [08264b23] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329065622 )
+  INFO [08264b23] Finished in 0.641 seconds with exit status 0 (successful).
+  INFO [ed6a2bdf] Running /usr/bin/env git archive master | tar -x -f - -C /home/ec2-user/menahouse/releases/20170329065622 as ec2-user@35.161.27.29
+ DEBUG [ed6a2bdf] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/ec2-user/menahouse/releases/20170329065622 )
+  INFO [ed6a2bdf] Finished in 1.038 seconds with exit status 0 (successful).
+ DEBUG [34d96f8f] Running if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [34d96f8f] Command: if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi
+ DEBUG [34d96f8f] Finished in 0.638 seconds with exit status 0 (successful).
+ DEBUG [529e0adf] Running /usr/bin/env git rev-list --max-count=1 master as ec2-user@35.161.27.29
+ DEBUG [529e0adf] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [529e0adf] 	634ba09f56183a340390d1244333372884d22936
+ DEBUG [529e0adf] Finished in 0.640 seconds with exit status 0 (successful).
+ DEBUG [dfcb7f22] Running if test ! -d /home/ec2-user/menahouse/releases/20170329065622; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329065622'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [dfcb7f22] Command: if test ! -d /home/ec2-user/menahouse/releases/20170329065622; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329065622'" 1>&2; false; fi
+ DEBUG [dfcb7f22] Finished in 0.639 seconds with exit status 0 (successful).
+  INFO [6ca6f088] Running /usr/bin/env echo "634ba09f56183a340390d1244333372884d22936" >> REVISION as ec2-user@35.161.27.29
+ DEBUG [6ca6f088] Command: cd /home/ec2-user/menahouse/releases/20170329065622 && /usr/bin/env echo "634ba09f56183a340390d1244333372884d22936" >> REVISION
+  INFO [6ca6f088] Finished in 0.639 seconds with exit status 0 (successful).
+  INFO [ff0f2531] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329065622 as ec2-user@35.161.27.29
+ DEBUG [ff0f2531] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329065622
+  INFO [ff0f2531] Finished in 0.637 seconds with exit status 0 (successful).
+ DEBUG [3db7dde8] Running [ -L /home/ec2-user/menahouse/releases/20170329065622/.env ] as ec2-user@35.161.27.29
+ DEBUG [3db7dde8] Command: [ -L /home/ec2-user/menahouse/releases/20170329065622/.env ]
+ DEBUG [3db7dde8] Finished in 0.638 seconds with exit status 1 (failed).
+ DEBUG [3041f688] Running [ -f /home/ec2-user/menahouse/releases/20170329065622/.env ] as ec2-user@35.161.27.29
+ DEBUG [3041f688] Command: [ -f /home/ec2-user/menahouse/releases/20170329065622/.env ]
+ DEBUG [3041f688] Finished in 0.638 seconds with exit status 1 (failed).
+  INFO [51795e77] Running /usr/bin/env ln -s /home/ec2-user/menahouse/shared/.env /home/ec2-user/menahouse/releases/20170329065622/.env as ec2-user@35.161.27.29
+ DEBUG [51795e77] Command: /usr/bin/env ln -s /home/ec2-user/menahouse/shared/.env /home/ec2-user/menahouse/releases/20170329065622/.env
+  INFO [51795e77] Finished in 0.640 seconds with exit status 0 (successful).
+  INFO [f3b67e3b] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329065622/storage/framework as ec2-user@35.161.27.29
+ DEBUG [f3b67e3b] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329065622/storage/framework
+  INFO [f3b67e3b] Finished in 0.647 seconds with exit status 0 (successful).
+ DEBUG [efbd67d5] Running [ -L /home/ec2-user/menahouse/releases/20170329065622/storage/framework/sessions ] as ec2-user@35.161.27.29
+ DEBUG [efbd67d5] Command: [ -L /home/ec2-user/menahouse/releases/20170329065622/storage/framework/sessions ]
+ DEBUG [efbd67d5] Finished in 0.631 seconds with exit status 1 (failed).
+ DEBUG [d0c19df4] Running [ -d /home/ec2-user/menahouse/releases/20170329065622/storage/framework/sessions ] as ec2-user@35.161.27.29
+ DEBUG [d0c19df4] Command: [ -d /home/ec2-user/menahouse/releases/20170329065622/storage/framework/sessions ]
+ DEBUG [d0c19df4] Finished in 0.639 seconds with exit status 0 (successful).
+  INFO [94489732] Running /usr/bin/env rm -rf /home/ec2-user/menahouse/releases/20170329065622/storage/framework/sessions as ec2-user@35.161.27.29
+ DEBUG [94489732] Command: /usr/bin/env rm -rf /home/ec2-user/menahouse/releases/20170329065622/storage/framework/sessions
+  INFO [94489732] Finished in 0.639 seconds with exit status 0 (successful).
+  INFO [7e809a30] Running /usr/bin/env ln -s /home/ec2-user/menahouse/shared/storage/framework/sessions /home/ec2-user/menahouse/releases/20170329065622/storage/framework/sessions as ec2-user@35.161.27.29
+ DEBUG [7e809a30] Command: /usr/bin/env ln -s /home/ec2-user/menahouse/shared/storage/framework/sessions /home/ec2-user/menahouse/releases/20170329065622/storage/framework/sessions
+  INFO [7e809a30] Finished in 0.638 seconds with exit status 0 (successful).
+ DEBUG [40833da3] Running if test ! -d /home/ec2-user/menahouse/releases/20170329065622; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329065622'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [40833da3] Command: if test ! -d /home/ec2-user/menahouse/releases/20170329065622; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329065622'" 1>&2; false; fi
+ DEBUG [40833da3] Finished in 0.639 seconds with exit status 0 (successful).
+  INFO [b3c7f554] Running /usr/bin/env composer install --no-dev --quiet as ec2-user@35.161.27.29
+ DEBUG [b3c7f554] Command: cd /home/ec2-user/menahouse/releases/20170329065622 && /usr/bin/env composer install --no-dev --quiet
+  INFO [b3c7f554] Finished in 5.992 seconds with exit status 0 (successful).
+  INFO [4f692a9d] Running /usr/bin/env chmod u+x artisan as ec2-user@35.161.27.29
+ DEBUG [4f692a9d] Command: cd /home/ec2-user/menahouse/releases/20170329065622 && /usr/bin/env chmod u+x artisan
+  INFO [4f692a9d] Finished in 0.643 seconds with exit status 0 (successful).
+  INFO [909dbafa] Running /usr/bin/env php artisan migrate --force as ec2-user@35.161.27.29
+ DEBUG [909dbafa] Command: cd /home/ec2-user/menahouse/releases/20170329065622 && /usr/bin/env php artisan migrate --force
+ DEBUG [909dbafa] 	
+ DEBUG [909dbafa] 	                                               
+  [PDOException]                               
+  SQLSTATE[HY000] [2002] Connection timed out  
+                                               
+
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-03-29 10:01:19 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [5aa09ad9] Running /usr/bin/env mkdir -p /tmp/menahouse/ as ec2-user@35.161.27.29
+ DEBUG [5aa09ad9] Command: /usr/bin/env mkdir -p /tmp/menahouse/
+  INFO [5aa09ad9] Finished in 6.559 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/menahouse/git-ssh.sh 0.0%
+  INFO Uploading /tmp/menahouse/git-ssh.sh 100.0%
+  INFO [d6865a0c] Running /usr/bin/env chmod +rx /tmp/menahouse/git-ssh.sh as ec2-user@35.161.27.29
+ DEBUG [d6865a0c] Command: /usr/bin/env chmod +rx /tmp/menahouse/git-ssh.sh
+  INFO [d6865a0c] Finished in 0.640 seconds with exit status 0 (successful).
+  INFO [5979312b] Running /usr/bin/env git ls-remote --heads https://github.com/couldedhusso/menahouse.ru.git as ec2-user@35.161.27.29
+ DEBUG [5979312b] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git ls-remote --heads https://github.com/couldedhusso/menahouse.ru.git )
+ DEBUG [5979312b] 	634ba09f56183a340390d1244333372884d22936	refs/heads/master
+  INFO [5979312b] Finished in 1.130 seconds with exit status 0 (successful).
+  INFO [07d61522] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared /home/ec2-user/menahouse/releases as ec2-user@35.161.27.29
+ DEBUG [07d61522] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared /home/ec2-user/menahouse/releases
+  INFO [07d61522] Finished in 0.638 seconds with exit status 0 (successful).
+  INFO [f90f19ff] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared/storage/framework/sessions as ec2-user@35.161.27.29
+ DEBUG [f90f19ff] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared/storage/framework/sessions
+  INFO [f90f19ff] Finished in 0.637 seconds with exit status 0 (successful).
+  INFO [74811b1c] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared as ec2-user@35.161.27.29
+ DEBUG [74811b1c] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared
+  INFO [74811b1c] Finished in 0.638 seconds with exit status 0 (successful).
+ DEBUG [1bc5486d] Running [ -f /home/ec2-user/menahouse/shared/.env ] as ec2-user@35.161.27.29
+ DEBUG [1bc5486d] Command: [ -f /home/ec2-user/menahouse/shared/.env ]
+ DEBUG [1bc5486d] Finished in 0.638 seconds with exit status 0 (successful).
+ DEBUG [df32be18] Running [ -f /home/ec2-user/menahouse/current/REVISION ] as ec2-user@35.161.27.29
+ DEBUG [df32be18] Command: [ -f /home/ec2-user/menahouse/current/REVISION ]
+ DEBUG [df32be18] Finished in 0.639 seconds with exit status 1 (failed).
+ DEBUG [3a43dd85] Running [ -f /home/ec2-user/menahouse/repo/HEAD ] as ec2-user@35.161.27.29
+ DEBUG [3a43dd85] Command: [ -f /home/ec2-user/menahouse/repo/HEAD ]
+ DEBUG [3a43dd85] Finished in 0.640 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ec2-user/menahouse/repo
+ DEBUG [2a92144e] Running if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [2a92144e] Command: if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi
+ DEBUG [2a92144e] Finished in 0.638 seconds with exit status 0 (successful).
+  INFO [ecd4eac3] Running /usr/bin/env git remote update --prune as ec2-user@35.161.27.29
+ DEBUG [ecd4eac3] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [ecd4eac3] 	Fetching origin
+  INFO [ecd4eac3] Finished in 1.078 seconds with exit status 0 (successful).
+ DEBUG [fce0e155] Running if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [fce0e155] Command: if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi
+ DEBUG [fce0e155] Finished in 0.641 seconds with exit status 0 (successful).
+  INFO [22b2c90f] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329070132 as ec2-user@35.161.27.29
+ DEBUG [22b2c90f] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329070132 )
+  INFO [22b2c90f] Finished in 0.597 seconds with exit status 0 (successful).
+  INFO [49ac35d6] Running /usr/bin/env git archive master | tar -x -f - -C /home/ec2-user/menahouse/releases/20170329070132 as ec2-user@35.161.27.29
+ DEBUG [49ac35d6] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/ec2-user/menahouse/releases/20170329070132 )
+  INFO [49ac35d6] Finished in 1.078 seconds with exit status 0 (successful).
+ DEBUG [54337945] Running if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [54337945] Command: if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi
+ DEBUG [54337945] Finished in 0.599 seconds with exit status 0 (successful).
+ DEBUG [dec8ca6a] Running /usr/bin/env git rev-list --max-count=1 master as ec2-user@35.161.27.29
+ DEBUG [dec8ca6a] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [dec8ca6a] 	634ba09f56183a340390d1244333372884d22936
+ DEBUG [dec8ca6a] Finished in 0.599 seconds with exit status 0 (successful).
+ DEBUG [4f2148bd] Running if test ! -d /home/ec2-user/menahouse/releases/20170329070132; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329070132'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [4f2148bd] Command: if test ! -d /home/ec2-user/menahouse/releases/20170329070132; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329070132'" 1>&2; false; fi
+ DEBUG [4f2148bd] Finished in 0.638 seconds with exit status 0 (successful).
+  INFO [fe282082] Running /usr/bin/env echo "634ba09f56183a340390d1244333372884d22936" >> REVISION as ec2-user@35.161.27.29
+ DEBUG [fe282082] Command: cd /home/ec2-user/menahouse/releases/20170329070132 && /usr/bin/env echo "634ba09f56183a340390d1244333372884d22936" >> REVISION
+  INFO [fe282082] Finished in 0.640 seconds with exit status 0 (successful).
+  INFO [0efe7ae9] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329070132 as ec2-user@35.161.27.29
+ DEBUG [0efe7ae9] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329070132
+  INFO [0efe7ae9] Finished in 0.598 seconds with exit status 0 (successful).
+ DEBUG [9b138c0e] Running [ -L /home/ec2-user/menahouse/releases/20170329070132/.env ] as ec2-user@35.161.27.29
+ DEBUG [9b138c0e] Command: [ -L /home/ec2-user/menahouse/releases/20170329070132/.env ]
+ DEBUG [9b138c0e] Finished in 0.639 seconds with exit status 1 (failed).
+ DEBUG [5480df71] Running [ -f /home/ec2-user/menahouse/releases/20170329070132/.env ] as ec2-user@35.161.27.29
+ DEBUG [5480df71] Command: [ -f /home/ec2-user/menahouse/releases/20170329070132/.env ]
+ DEBUG [5480df71] Finished in 0.642 seconds with exit status 1 (failed).
+  INFO [1e6d1407] Running /usr/bin/env ln -s /home/ec2-user/menahouse/shared/.env /home/ec2-user/menahouse/releases/20170329070132/.env as ec2-user@35.161.27.29
+ DEBUG [1e6d1407] Command: /usr/bin/env ln -s /home/ec2-user/menahouse/shared/.env /home/ec2-user/menahouse/releases/20170329070132/.env
+  INFO [1e6d1407] Finished in 0.638 seconds with exit status 0 (successful).
+  INFO [18d11b36] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329070132/storage/framework as ec2-user@35.161.27.29
+ DEBUG [18d11b36] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329070132/storage/framework
+  INFO [18d11b36] Finished in 0.637 seconds with exit status 0 (successful).
+ DEBUG [b039e126] Running [ -L /home/ec2-user/menahouse/releases/20170329070132/storage/framework/sessions ] as ec2-user@35.161.27.29
+ DEBUG [b039e126] Command: [ -L /home/ec2-user/menahouse/releases/20170329070132/storage/framework/sessions ]
+ DEBUG [b039e126] Finished in 0.640 seconds with exit status 1 (failed).
+ DEBUG [5957e602] Running [ -d /home/ec2-user/menahouse/releases/20170329070132/storage/framework/sessions ] as ec2-user@35.161.27.29
+ DEBUG [5957e602] Command: [ -d /home/ec2-user/menahouse/releases/20170329070132/storage/framework/sessions ]
+ DEBUG [5957e602] Finished in 0.583 seconds with exit status 0 (successful).
+  INFO [2d14db1e] Running /usr/bin/env rm -rf /home/ec2-user/menahouse/releases/20170329070132/storage/framework/sessions as ec2-user@35.161.27.29
+ DEBUG [2d14db1e] Command: /usr/bin/env rm -rf /home/ec2-user/menahouse/releases/20170329070132/storage/framework/sessions
+  INFO [2d14db1e] Finished in 0.579 seconds with exit status 0 (successful).
+  INFO [ef41d8ad] Running /usr/bin/env ln -s /home/ec2-user/menahouse/shared/storage/framework/sessions /home/ec2-user/menahouse/releases/20170329070132/storage/framework/sessions as ec2-user@35.161.27.29
+ DEBUG [ef41d8ad] Command: /usr/bin/env ln -s /home/ec2-user/menahouse/shared/storage/framework/sessions /home/ec2-user/menahouse/releases/20170329070132/storage/framework/sessions
+  INFO [ef41d8ad] Finished in 0.589 seconds with exit status 0 (successful).
+ DEBUG [aa9b54d0] Running if test ! -d /home/ec2-user/menahouse/releases/20170329070132; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329070132'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [aa9b54d0] Command: if test ! -d /home/ec2-user/menahouse/releases/20170329070132; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329070132'" 1>&2; false; fi
+ DEBUG [aa9b54d0] Finished in 0.606 seconds with exit status 0 (successful).
+  INFO [83ffbc72] Running /usr/bin/env composer install --no-dev --quiet as ec2-user@35.161.27.29
+ DEBUG [83ffbc72] Command: cd /home/ec2-user/menahouse/releases/20170329070132 && /usr/bin/env composer install --no-dev --quiet
+  INFO [83ffbc72] Finished in 6.198 seconds with exit status 0 (successful).
+  INFO [7ec0fcdd] Running /usr/bin/env chmod u+x artisan as ec2-user@35.161.27.29
+ DEBUG [7ec0fcdd] Command: cd /home/ec2-user/menahouse/releases/20170329070132 && /usr/bin/env chmod u+x artisan
+  INFO [7ec0fcdd] Finished in 0.640 seconds with exit status 0 (successful).
+ DEBUG [215df103] Running if test ! -d /home/ec2-user/menahouse/releases/20170329070132; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329070132'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [215df103] Command: if test ! -d /home/ec2-user/menahouse/releases/20170329070132; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329070132'" 1>&2; false; fi
+ DEBUG [215df103] Finished in 0.580 seconds with exit status 0 (successful).
+  INFO [d438d264] Running /usr/bin/env php artisan optimize as ec2-user@35.161.27.29
+ DEBUG [d438d264] Command: cd /home/ec2-user/menahouse/releases/20170329070132 && /usr/bin/env php artisan optimize
+ DEBUG [d438d264] 	Generating optimized class loader
+  INFO [d438d264] Finished in 2.736 seconds with exit status 0 (successful).
+ DEBUG [28802c48] Running if test ! -d /home/ec2-user/menahouse/releases/20170329070132; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329070132'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [28802c48] Command: if test ! -d /home/ec2-user/menahouse/releases/20170329070132; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329070132'" 1>&2; false; fi
+ DEBUG [28802c48] Finished in 0.641 seconds with exit status 0 (successful).
+  INFO [0e81a701] Running /usr/bin/env chmod 777 -R bootstrap/cache as ec2-user@35.161.27.29
+ DEBUG [0e81a701] Command: cd /home/ec2-user/menahouse/releases/20170329070132 && /usr/bin/env chmod 777 -R bootstrap/cache
+  INFO [0e81a701] Finished in 0.638 seconds with exit status 0 (successful).
+  INFO [5a441c93] Running /usr/bin/env chmod 777 -R storage as ec2-user@35.161.27.29
+ DEBUG [5a441c93] Command: cd /home/ec2-user/menahouse/releases/20170329070132 && /usr/bin/env chmod 777 -R storage
+  INFO [5a441c93] Finished in 0.638 seconds with exit status 0 (successful).
+  INFO [35472b3d] Running /usr/bin/env ln -s /home/ec2-user/menahouse/releases/20170329070132 /home/ec2-user/menahouse/releases/current as ec2-user@35.161.27.29
+ DEBUG [35472b3d] Command: /usr/bin/env ln -s /home/ec2-user/menahouse/releases/20170329070132 /home/ec2-user/menahouse/releases/current
+  INFO [35472b3d] Finished in 0.601 seconds with exit status 0 (successful).
+  INFO [40ffabb9] Running /usr/bin/env mv /home/ec2-user/menahouse/releases/current /home/ec2-user/menahouse as ec2-user@35.161.27.29
+ DEBUG [40ffabb9] Command: /usr/bin/env mv /home/ec2-user/menahouse/releases/current /home/ec2-user/menahouse
+  INFO [40ffabb9] Finished in 0.635 seconds with exit status 0 (successful).
+ DEBUG [ed5e4aca] Running /usr/bin/env ls -xtr /home/ec2-user/menahouse/releases as ec2-user@35.161.27.29
+ DEBUG [ed5e4aca] Command: /usr/bin/env ls -xtr /home/ec2-user/menahouse/releases
+ DEBUG [ed5e4aca] 	20170329064433	20170329065622	20170329070132
+ DEBUG [ed5e4aca] Finished in 0.639 seconds with exit status 0 (successful).
+  INFO Keeping 2 of 3 deployed releases on 35.161.27.29
+  INFO [5ab1653e] Running /usr/bin/env rm -rf /home/ec2-user/menahouse/releases/20170329064433 as ec2-user@35.161.27.29
+ DEBUG [5ab1653e] Command: /usr/bin/env rm -rf /home/ec2-user/menahouse/releases/20170329064433
+  INFO [5ab1653e] Finished in 0.789 seconds with exit status 0 (successful).
+ DEBUG [452ce607] Running if test ! -d /home/ec2-user/menahouse/releases; then echo "Directory does not exist '/home/ec2-user/menahouse/releases'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [452ce607] Command: if test ! -d /home/ec2-user/menahouse/releases; then echo "Directory does not exist '/home/ec2-user/menahouse/releases'" 1>&2; false; fi
+ DEBUG [452ce607] Finished in 0.608 seconds with exit status 0 (successful).
+  INFO [752bf328] Running /usr/bin/env echo "Branch master (at 634ba09f56183a340390d1244333372884d22936) deployed as release 20170329070132 by couldedhusso" >> /home/ec2-user/menahouse/revisions.log as ec2-user@35.161.27.29
+ DEBUG [752bf328] Command: cd /home/ec2-user/menahouse/releases && /usr/bin/env echo "Branch master (at 634ba09f56183a340390d1244333372884d22936) deployed as release 20170329070132 by couldedhusso" >> /home/ec2-user/menahouse/revisions.log
+  INFO [752bf328] Finished in 0.639 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-03-29 10:10:50 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [83cf8a98] Running /usr/bin/env mkdir -p /tmp/menahouse/ as ec2-user@35.161.27.29
+ DEBUG [83cf8a98] Command: /usr/bin/env mkdir -p /tmp/menahouse/
+  INFO [83cf8a98] Finished in 4.598 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/menahouse/git-ssh.sh 0.0%
+  INFO Uploading /tmp/menahouse/git-ssh.sh 100.0%
+  INFO [dca76428] Running /usr/bin/env chmod +rx /tmp/menahouse/git-ssh.sh as ec2-user@35.161.27.29
+ DEBUG [dca76428] Command: /usr/bin/env chmod +rx /tmp/menahouse/git-ssh.sh
+  INFO [dca76428] Finished in 0.639 seconds with exit status 0 (successful).
+  INFO [d129519f] Running /usr/bin/env git ls-remote --heads https://github.com/couldedhusso/menahouse.ru.git as ec2-user@35.161.27.29
+ DEBUG [d129519f] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git ls-remote --heads https://github.com/couldedhusso/menahouse.ru.git )
+ DEBUG [d129519f] 	634ba09f56183a340390d1244333372884d22936	refs/heads/master
+  INFO [d129519f] Finished in 1.044 seconds with exit status 0 (successful).
+  INFO [e1e2e283] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared /home/ec2-user/menahouse/releases as ec2-user@35.161.27.29
+ DEBUG [e1e2e283] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared /home/ec2-user/menahouse/releases
+  INFO [e1e2e283] Finished in 0.607 seconds with exit status 0 (successful).
+  INFO [8f1b83dc] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared/storage/framework/sessions as ec2-user@35.161.27.29
+ DEBUG [8f1b83dc] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared/storage/framework/sessions
+  INFO [8f1b83dc] Finished in 0.633 seconds with exit status 0 (successful).
+  INFO [22797e2b] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared as ec2-user@35.161.27.29
+ DEBUG [22797e2b] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared
+  INFO [22797e2b] Finished in 0.622 seconds with exit status 0 (successful).
+ DEBUG [59cdd3e8] Running [ -f /home/ec2-user/menahouse/shared/.env ] as ec2-user@35.161.27.29
+ DEBUG [59cdd3e8] Command: [ -f /home/ec2-user/menahouse/shared/.env ]
+ DEBUG [59cdd3e8] Finished in 0.588 seconds with exit status 0 (successful).
+ DEBUG [c0c8b2e9] Running [ -f /home/ec2-user/menahouse/current/REVISION ] as ec2-user@35.161.27.29
+ DEBUG [c0c8b2e9] Command: [ -f /home/ec2-user/menahouse/current/REVISION ]
+ DEBUG [c0c8b2e9] Finished in 0.586 seconds with exit status 0 (successful).
+ DEBUG [f2d3a84b] Running /usr/bin/env cat /home/ec2-user/menahouse/current/REVISION 2>/dev/null as ec2-user@35.161.27.29
+ DEBUG [f2d3a84b] Command: /usr/bin/env cat /home/ec2-user/menahouse/current/REVISION 2>/dev/null
+ DEBUG [f2d3a84b] 	634ba09f56183a340390d1244333372884d22936
+ DEBUG [f2d3a84b] Finished in 0.639 seconds with exit status 0 (successful).
+ DEBUG [31f8750c] Running [ -f /home/ec2-user/menahouse/repo/HEAD ] as ec2-user@35.161.27.29
+ DEBUG [31f8750c] Command: [ -f /home/ec2-user/menahouse/repo/HEAD ]
+ DEBUG [31f8750c] Finished in 0.638 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ec2-user/menahouse/repo
+ DEBUG [46f90986] Running if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [46f90986] Command: if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi
+ DEBUG [46f90986] Finished in 0.639 seconds with exit status 0 (successful).
+  INFO [3d35fcb4] Running /usr/bin/env git remote update --prune as ec2-user@35.161.27.29
+ DEBUG [3d35fcb4] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [3d35fcb4] 	Fetching origin
+  INFO [3d35fcb4] Finished in 1.078 seconds with exit status 0 (successful).
+ DEBUG [42437886] Running if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [42437886] Command: if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi
+ DEBUG [42437886] Finished in 0.622 seconds with exit status 0 (successful).
+  INFO [c3cec3d3] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329071102 as ec2-user@35.161.27.29
+ DEBUG [c3cec3d3] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329071102 )
+  INFO [c3cec3d3] Finished in 0.591 seconds with exit status 0 (successful).
+  INFO [b6adf8ce] Running /usr/bin/env git archive master | tar -x -f - -C /home/ec2-user/menahouse/releases/20170329071102 as ec2-user@35.161.27.29
+ DEBUG [b6adf8ce] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/ec2-user/menahouse/releases/20170329071102 )
+  INFO [b6adf8ce] Finished in 1.064 seconds with exit status 0 (successful).
+ DEBUG [3d8d2264] Running if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [3d8d2264] Command: if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi
+ DEBUG [3d8d2264] Finished in 0.639 seconds with exit status 0 (successful).
+ DEBUG [ab8118ab] Running /usr/bin/env git rev-list --max-count=1 master as ec2-user@35.161.27.29
+ DEBUG [ab8118ab] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [ab8118ab] 	634ba09f56183a340390d1244333372884d22936
+ DEBUG [ab8118ab] Finished in 0.620 seconds with exit status 0 (successful).
+ DEBUG [25f57506] Running if test ! -d /home/ec2-user/menahouse/releases/20170329071102; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329071102'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [25f57506] Command: if test ! -d /home/ec2-user/menahouse/releases/20170329071102; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329071102'" 1>&2; false; fi
+ DEBUG [25f57506] Finished in 0.575 seconds with exit status 0 (successful).
+  INFO [57a4f869] Running /usr/bin/env echo "634ba09f56183a340390d1244333372884d22936" >> REVISION as ec2-user@35.161.27.29
+ DEBUG [57a4f869] Command: cd /home/ec2-user/menahouse/releases/20170329071102 && /usr/bin/env echo "634ba09f56183a340390d1244333372884d22936" >> REVISION
+  INFO [57a4f869] Finished in 0.612 seconds with exit status 0 (successful).
+  INFO [ad223f38] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329071102 as ec2-user@35.161.27.29
+ DEBUG [ad223f38] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329071102
+  INFO [ad223f38] Finished in 0.616 seconds with exit status 0 (successful).
+ DEBUG [25e675db] Running [ -L /home/ec2-user/menahouse/releases/20170329071102/.env ] as ec2-user@35.161.27.29
+ DEBUG [25e675db] Command: [ -L /home/ec2-user/menahouse/releases/20170329071102/.env ]
+ DEBUG [25e675db] Finished in 0.613 seconds with exit status 1 (failed).
+ DEBUG [c843d586] Running [ -f /home/ec2-user/menahouse/releases/20170329071102/.env ] as ec2-user@35.161.27.29
+ DEBUG [c843d586] Command: [ -f /home/ec2-user/menahouse/releases/20170329071102/.env ]
+ DEBUG [c843d586] Finished in 0.647 seconds with exit status 1 (failed).
+  INFO [356da8bf] Running /usr/bin/env ln -s /home/ec2-user/menahouse/shared/.env /home/ec2-user/menahouse/releases/20170329071102/.env as ec2-user@35.161.27.29
+ DEBUG [356da8bf] Command: /usr/bin/env ln -s /home/ec2-user/menahouse/shared/.env /home/ec2-user/menahouse/releases/20170329071102/.env
+  INFO [356da8bf] Finished in 0.632 seconds with exit status 0 (successful).
+  INFO [ad996cb5] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329071102/storage/framework as ec2-user@35.161.27.29
+ DEBUG [ad996cb5] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170329071102/storage/framework
+  INFO [ad996cb5] Finished in 0.633 seconds with exit status 0 (successful).
+ DEBUG [5aca3389] Running [ -L /home/ec2-user/menahouse/releases/20170329071102/storage/framework/sessions ] as ec2-user@35.161.27.29
+ DEBUG [5aca3389] Command: [ -L /home/ec2-user/menahouse/releases/20170329071102/storage/framework/sessions ]
+ DEBUG [5aca3389] Finished in 0.614 seconds with exit status 1 (failed).
+ DEBUG [74c93686] Running [ -d /home/ec2-user/menahouse/releases/20170329071102/storage/framework/sessions ] as ec2-user@35.161.27.29
+ DEBUG [74c93686] Command: [ -d /home/ec2-user/menahouse/releases/20170329071102/storage/framework/sessions ]
+ DEBUG [74c93686] Finished in 0.624 seconds with exit status 0 (successful).
+  INFO [df94e217] Running /usr/bin/env rm -rf /home/ec2-user/menahouse/releases/20170329071102/storage/framework/sessions as ec2-user@35.161.27.29
+ DEBUG [df94e217] Command: /usr/bin/env rm -rf /home/ec2-user/menahouse/releases/20170329071102/storage/framework/sessions
+  INFO [df94e217] Finished in 0.638 seconds with exit status 0 (successful).
+  INFO [34612f59] Running /usr/bin/env ln -s /home/ec2-user/menahouse/shared/storage/framework/sessions /home/ec2-user/menahouse/releases/20170329071102/storage/framework/sessions as ec2-user@35.161.27.29
+ DEBUG [34612f59] Command: /usr/bin/env ln -s /home/ec2-user/menahouse/shared/storage/framework/sessions /home/ec2-user/menahouse/releases/20170329071102/storage/framework/sessions
+  INFO [34612f59] Finished in 0.639 seconds with exit status 0 (successful).
+ DEBUG [fa02e58b] Running if test ! -d /home/ec2-user/menahouse/releases/20170329071102; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329071102'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [fa02e58b] Command: if test ! -d /home/ec2-user/menahouse/releases/20170329071102; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170329071102'" 1>&2; false; fi
+ DEBUG [fa02e58b] Finished in 0.637 seconds with exit status 0 (successful).
+  INFO [57f3a732] Running /usr/bin/env composer install --no-dev --quiet as ec2-user@35.161.27.29
+ DEBUG [57f3a732] Command: cd /home/ec2-user/menahouse/releases/20170329071102 && /usr/bin/env composer install --no-dev --quiet
+  INFO [57f3a732] Finished in 7.156 seconds with exit status 0 (successful).
+  INFO [f265d0c9] Running /usr/bin/env chmod u+x artisan as ec2-user@35.161.27.29
+ DEBUG [f265d0c9] Command: cd /home/ec2-user/menahouse/releases/20170329071102 && /usr/bin/env chmod u+x artisan
+  INFO [f265d0c9] Finished in 0.613 seconds with exit status 0 (successful).
+  INFO [8454fb44] Running /usr/bin/env php artisan migrate --force as ec2-user@35.161.27.29
+ DEBUG [8454fb44] Command: cd /home/ec2-user/menahouse/releases/20170329071102 && /usr/bin/env php artisan migrate --force
+ DEBUG [8454fb44] 	
+ DEBUG [8454fb44] 	                                                                                                                                                                                                                                                                                                                               
+ DEBUG [8454fb44] 	
+ DEBUG [8454fb44] 	  [Illuminate\Database\QueryException]                                                                                                                                                                                                                                                                                         
+ DEBUG [8454fb44] 	
+ DEBUG [8454fb44] 	  SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'threads' already exists (SQL: create table `threads` (`id` int unsigned not null auto_increment primary key, `subject` varchar(255) not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8 collate utf8_unicode_ci)  
+ DEBUG [8454fb44] 	
+ DEBUG [8454fb44] 	                                                                                                                                                                                                                                                                                                                               
+ DEBUG [8454fb44] 	
+ DEBUG [8454fb44] 	
+ DEBUG [8454fb44] 	                                                                                           
+  [PDOException]                                                                           
+  SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'threads' already exists  
+                                                                                           
+
