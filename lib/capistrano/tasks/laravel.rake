@@ -17,7 +17,7 @@ namespace :laravel do
         # execute :composer, :install
          execute :composer, "install --no-dev --quiet" # install dependencies
          execute :chmod, "u+x artisan" # make artisan executable
-         execute :php, "artisan migrate --force" # run migrations
+        #  execute :php, "artisan migrate --force" # run migrations
         # execute :php, :artisan, :migrate, :force
       end
     end

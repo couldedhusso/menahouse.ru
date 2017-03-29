@@ -115,17 +115,17 @@ return [
 
         'cluster' => false,
 
-        'default' => [
-                    'host'     => env('REDIS_HOST'),
-                    'port'     => 6379,
-                    'database' => 0,
-        ],
+        // 'default' => [
+        //             'host'     => env('REDIS_HOST'),
+        //             'port'     => 6379,
+        //             'database' => 0,
+        // ],
 
-        'session' => [
-            'host'     => env('REDIS_HOST'),
-            'port'     => 6379,
-            'database' => 1,
-        ],
+        // 'session' => [
+        //     'host'     => env('REDIS_HOST'),
+        //     'port'     => 6379,
+        //     'database' => 1,
+        // ],
 
     ],
 
