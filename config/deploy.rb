@@ -21,8 +21,11 @@ set :deploy_to, '/home/ec2-user/menahouse'
 #role :web, '34.208.240.76' # Your HTTP server, Apache/etc
 #role :app, '34.208.240.76' # This may be the same as your `Web` server
 
-role :web, '35.161.27.29' # Your HTTP server, Apache/etc
-role :app, '35.161.27.29' # This may be the same as your `Web` server
+role :web, '54.70.201.75' # Your HTTP server, Apache/etc
+role :app, '54.70.201.75' # This may be the same as your `Web` server
+
+# role :web, '35.161.27.29' # Your HTTP server, Apache/etc
+# role :app, '35.161.27.29' # This may be the same as your `Web` server
 
 set :ssh_options, { :forward_agent => true }
 #ssh_options[:forward_agent] = true

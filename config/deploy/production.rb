@@ -8,7 +8,7 @@
 # server 'db.example.com', user: 'deploy', roles: %w{db}
 
 set :user, 'ec2-user'
-server '35.161.27.29', user: 'ec2-user',
+server '54.70.201.75', user: 'ec2-user',
         keys:%w(/home/couldedhusso/workspace/AWSKeys/deploy_key.pem),
         roles: %w{app, web}
 

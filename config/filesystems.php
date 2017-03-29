@@ -66,7 +66,7 @@ return [
             'driver' => 's3',
             'key'    => env('S3_KEY'),
             'region' => env('S3_REGION'),
-            'secret' => env('S3_SECRET', 'us-east-1'),
+            'secret' => env('S3_SECRET', 'us-west-2'),
             'bucket' => env('S3_BUCKET', 'menahouse-'.env('APP_ENV')),
         ],
 
