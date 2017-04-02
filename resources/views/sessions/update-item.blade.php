@@ -218,8 +218,8 @@
                                                       <option value="1" selected>Москва</option>
                                                       <option value="2">Московская область</option>
                                                       <option value="3">Новая Москва</option>
-{{-- 
-                                                    {{-- @elseif($house->gorod === 'Московская область') --}}
+
+                                                    @elseif($house->gorod === 'Московская область')
 
                                                       <option value="1">Москва</option>
                                                       <option value="2" selected>Московская область</option>
@@ -463,7 +463,6 @@
     <div class="block clearfix gallery">
 
      <header><h2>Фотографии</h2></header>
-
 
 <br> <br>
      

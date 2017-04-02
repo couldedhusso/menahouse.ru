@@ -159,6 +159,9 @@
             @yield('content')
         </div><!-- /.container -->
 
+        <div class="container">
+            @yield('images')
+        </div><!-- /.container -->
     </div>
     <!-- end Page Content -->
     <!-- Page Footer -->

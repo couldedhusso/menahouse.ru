@@ -766,6 +766,7 @@ class ObivlenieController extends Controller
 
       // $address =  Input::get('address');
         $updateparams = [];
+        $params = [];
       //
       // if (!empty($address)) {
       //     $geo = $Helper->yandexGeocoding($address);
@@ -782,52 +783,58 @@ class ObivlenieController extends Controller
 
         $inputall = Input::except('_token');
 
-        dd($inputall);
+         foreach ($inputall as $key => $value) {
 
-        $house = Obivlenie::where('id', Input::get('id'))->update($inputall);
+            if (!empty($value))   {
+                $params += [$key => $value ];
+
+            } // fin if
+         } // fin foreach
+
+
+        $house = Obivlenie::where('id', Input::get('id'))->update($params);
         // dd($house);
+
+        // if ($request->hasFile('file-upload')){
+
         
+        //             $madeThumnail = false ;
+        //             $pictures = $request->file('file-upload');
 
-        if ($request->hasFile('file-upload')){
+        //            // $affectedRows = Images::where('imageable_id', '=', $updateparams['id'])->delete();
+        //             foreach ($request->file('file-upload') as $imgvalue) {
+        //                 $filename = Str::random(32).'.'.$imgvalue->guessClientExtension();
+        //                 // $filePath = 'dev/images/pics/' .$filename;
 
-        
-                    $madeThumnail = false ;
-                    $pictures = $request->file('file-upload');
+        //                 if ($imgvalue->isValid()) {
+        //                 // dd($imgvalue);
 
-                   // $affectedRows = Images::where('imageable_id', '=', $updateparams['id'])->delete();
-                    foreach ($request->file('file-upload') as $imgvalue) {
-                        $filename = Str::random(32).'.'.$imgvalue->guessClientExtension();
-                        // $filePath = 'dev/images/pics/' .$filename;
+        //                     $img = new Images ;
+        //                     $img = $house->images()->create(array('path' => $filename));
 
-                        if ($imgvalue->isValid()) {
-                        // dd($imgvalue);
+        //                     $imgvalue->move($StoragePath["storage"], $filename);
+        //                     $house->images()->save($img);
 
-                            $img = new Images ;
-                            $img = $house->images()->create(array('path' => $filename));
+        //                     if (! $madeThumnail) {
+        //                         $thumbnailName = $updateparams['id'].'.'.$imgvalue->guessClientExtension();
 
-                            $imgvalue->move($StoragePath["storage"], $filename);
-                            $house->images()->save($img);
+        //                         $ThumbNail = ThumbNail::where('obivlenie_id', '=', $updateparams['id'])->delete();
+        //                         $ThumbNail = ThumbNail::create([
+        //                         'obivlenie_id' => $updateparams['id']
+        //                         ]);
 
-                            if (! $madeThumnail) {
-                                $thumbnailName = $updateparams['id'].'.'.$imgvalue->guessClientExtension();
+        //                         $thumbImag = new Images;
+        //                         $thumbImag = $ThumbNail->images()->create(array('path' => $thumbnailName));
 
-                                $ThumbNail = ThumbNail::where('obivlenie_id', '=', $updateparams['id'])->delete();
-                                $ThumbNail = ThumbNail::create([
-                                'obivlenie_id' => $updateparams['id']
-                                ]);
+        //                         File::copy($StoragePath["storage"].'/'.$filename, $StoragePath["thumbs"].'/'.$thumbnailName);
+        //                         $ThumbNail->images()->save($thumbImag);
 
-                                $thumbImag = new Images;
-                                $thumbImag = $ThumbNail->images()->create(array('path' => $thumbnailName));
+        //                         $madeThumnail = true ;
+        //                 }
+        //             }
+        //         }
 
-                                File::copy($StoragePath["storage"].'/'.$filename, $StoragePath["thumbs"].'/'.$thumbnailName);
-                                $ThumbNail->images()->save($thumbImag);
-
-                                $madeThumnail = true ;
-                        }
-                    }
-                }
-
-           }
+        //    }
 
      // $response = $indexmodel->updateIndexedElement($updateparams);
 
