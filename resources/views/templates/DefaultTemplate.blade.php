@@ -7,12 +7,12 @@
     <meta name="author" content="ThemeStarz">
 
     <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" 
     
-    integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    
     <link href="{{ asset('assets/fonts/font-awesome.css') }}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="{{ elixir("css/all.css") }}">
+
+    
     <style>
         .thumbnail {
            border : none !important;
@@ -42,6 +42,25 @@
             display : block;
             float : left; 
         } */
+
+        .mr-2 {
+             margin-right: 0.5rem !important;
+        }
+
+       .update-form__input .btn-toolbar {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: start;
+            -webkit-justify-content: flex-start;
+                -ms-flex-pack: start;
+                    justify-content: flex-start;
+            }
+
+           .update-form__input .btn-toolbar .input-group {
+            width: auto;
+            }
 
         
 
@@ -140,9 +159,6 @@
             @yield('content')
         </div><!-- /.container -->
 
-        <div class="container">
-            @yield('images')
-        </div><!-- /.container -->
     </div>
     <!-- end Page Content -->
     <!-- Page Footer -->

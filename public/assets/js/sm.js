@@ -133,10 +133,10 @@
 
         // var typeHouse = btn("property-type"); type_nedvizhimosti
         var typeHouse = btn("type_nedvizhimosti");
-        var city = btn("gorod");
+        var city = btn("goroda");
         var district = btn("rayon");
         //количество элементов списка Город
-        var count = $("option", "[name=gorod]").length;
+        var count = $("option", "[name=goroda]").length;
 
         //уберем видимость город и районов
         disableRel(city);
@@ -163,7 +163,7 @@
         });
 
         // обработка нажатия по списку городов
-        $(".dropdown-menu li", $("[name=gorod]").parent()).on("click", function(ev) {
+        $(".dropdown-menu li", $("[name=goroda]").parent()).on("click", function(ev) {
             district.removeAttr("disabled");
             setVisible(ev.currentTarget);
             switch (ev.currentTarget.innerText) {
@@ -213,14 +213,14 @@
         check(typeHouse.attr("title"));
 
         //для city - Москва
-        setValue("gorod", "Москва");
+        setValue("goroda", "Москва");
         //установка видимости выпадающего списка
-        setVisible($(".dropdown-menu li.selected", $("[name=gorod]").parent())[0]);
+        setVisible($(".dropdown-menu li.selected", $("[name=goroda]").parent())[0]);
         //установка для районов все округа
         setValue("rayon", "Все округа");
 
         //для selected Москва - это 2 (см value)
-        $("[name=gorod]").val(2);
+        $("[name=goroda]").val(2);
         //Все округа - это 0 (см.value)
         $("[name=rayon]").val(0);
     })

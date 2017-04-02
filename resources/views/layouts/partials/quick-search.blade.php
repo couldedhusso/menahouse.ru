@@ -15,15 +15,18 @@
 
                 <div class="form-group">
                     <select name="gorod">
-                        <option value="">Город</option>
-                        <option value="1">Все города</option>
+                        <option value="" title="Город" style="display:none;"></option>
+                        @foreach(listCities() as $city)
+                            <option value="{{$city->id}}">{{$city->name}}</option>
+                        @endforeach
+                        {{-- <option value="1">Все города</option>
                         <option value="2">Москва</option>
                         <option value="3">Московская область</option>
-                        <option value="4">Новая Москва</option>
+                        <option value="4">Новая Москва</option> --}}
                     </select>
                 </div><!-- /.form-group -->
                 
-                <div class="form-group">
+                {{-- <div class="form-group">
                 <select name="rayon">
                     <option value="">Округ</option>
                     <option value="0" data-city="2">Все округа</option>
@@ -41,10 +44,11 @@
                     <option value="" data-city="3 4">Все районы</option>
                     <option value="12" data-city="4">Троицкий</option>
                 </select>
-                </div><!-- /.form-group -->
+                </div><!-- /.form-group --> --}}
                 <div class="form-group">
                     <select name="type_nedvizhimosti">
-                        <option value="">Тип жилья</option>
+                        {{-- <option value=""></option> --}}
+                        <option value="" title="Тип жилья" style="display:none;"></option>
                         <option value="1">Квартира</option>
                         <option value="2">Комната</option>
                         <option value="3">Частный дом</option>

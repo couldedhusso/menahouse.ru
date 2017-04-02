@@ -2,6 +2,7 @@
 
 use Carbon\Carbon;
 use App\User;
+use App\City;
 
 function Notifications($title = null, $message = null){
 
@@ -13,6 +14,11 @@ function Notifications($title = null, $message = null){
  
     return $flash->message($title, $message);
     
+}
+
+function listCities(){
+
+    return  City::get();
 }
 
 function exprireAt($month = 1){

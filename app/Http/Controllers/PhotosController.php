@@ -40,9 +40,16 @@ class PhotosController extends Controller
 
             if (!$valid) return redirect()->back();
 
-            dd($photo);
+            $name = sha1(time().'.'.$file->getClientOriginalName());
+            $filename = 'tn-'.$name.'.'.$file->guessClientExtension();
 
-            if ($photo) $photo->delete();
+          //  dd($filename);
+
+            $this->imageRepos->UploadToS3($filename, file_get_contents($file));
+
+            $upt = Thumbnail::where('obivlenie_id', $request->input('thumnail_id'))->update(['file_name' => $filename]);
+
+            // $photo->update(['file_name' => $filename]);
 
         }catch(TokenMismatchException $e){
             return redirect()->back();

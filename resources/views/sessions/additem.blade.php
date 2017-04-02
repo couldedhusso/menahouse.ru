@@ -141,14 +141,17 @@
                                             <div class="form-group">
                                                 <label for="submit-location">Местоположение</label>
                                                 <select name="gorod" id="submit-location">
-                                                    <option value="">Город</option>
-                                                    <option value="" style="display:none">Все города</option>
-                                                    <option value="1" selected="1">Москва</option>
-                                                    <option value="2">Московская область</option>
-                                                    <option value="3">Новая Москва</option>
+                                                    {{-- <option value=""></option> --}}
+                                                    <option value="" title="Какой город?" style="display:none;">Город</option>
+                                                    @foreach(listCities() as $city)
+                                                        <option value="{{$city->id}}">{{$city->name}}</option>
+                                                    @endforeach
+                                                    {{-- <option value="" style="display:none">Все города</option> --}}
+                                                    {{-- <option value="2">Московская область</option>
+                                                    <option value="3">Новая Москва</option> --}}
                                                 </select>
                                             </div>
-                                            <div class="form-group">
+                                            {{-- <div class="form-group">
                                                 <label for="submit-district">Округ/район</label>
                                                 <select name="rayon" id="submit-district">
                                                     <option value="">Округ</option>
@@ -167,7 +170,7 @@
                                                     <option value="12" data-city="4">Новомосковский АО</option>
                                                     <option value="13" data-city="4">Троицкий АО</option>
                                                 </select>
-                                            </div><!-- /.form-group -->
+                                            </div><!-- /.form-group --> --}}
                                             <div class="form-group">
                                                 <label for="metro">Ближайшее метро</label>
                                                 <input type="text" class="form-control" id="metro" name="submit-metro" placeholder="Укажите название станции метро рядом с Вами" required>

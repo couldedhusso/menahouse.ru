@@ -259,6 +259,8 @@ class ObivlenieController extends Controller
         $house = json_decode($response->content());
         $house = $house->data;
 
+        
+
         // dd($house);
 
         return View('sessions.update-item', compact('house', 'id')) ;

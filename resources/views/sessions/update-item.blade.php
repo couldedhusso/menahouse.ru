@@ -213,13 +213,13 @@
                                                     <option value="">Город</option>
                                                     {{-- <option value="" style="display:none">Все города</option> --}}
 
-                                                    {{-- @if($house->gorod === 'Москва') --}}
+                                                    @if($house->gorod === 'Москва')
 
-                                                      <option value="1">Москва</option>
+                                                      <option value="1" selected>Москва</option>
                                                       <option value="2">Московская область</option>
                                                       <option value="3">Новая Москва</option>
 {{-- 
-                                                    @elseif($house->gorod === 'Московская область')
+                                                    {{-- @elseif($house->gorod === 'Московская область') --}}
 
                                                       <option value="1">Москва</option>
                                                       <option value="2" selected>Московская область</option>
@@ -230,10 +230,10 @@
                                                       <option value="1">Москва</option>
                                                       <option value="2">Московская область</option>
                                                       <option value="3" selected>Новая Москва</option>
-                                                    @endif --}}
+                                                    @endif
                                                 </select>
                                             </div>
-                                            <div class="form-group">
+                                            {{-- <div class="form-group">
                                                 <label for="submit-district">Округ/район</label>
                                                 <select name="rayon" id="submit-district">
                                                     <option value="">Округ</option>
@@ -252,7 +252,7 @@
                                                     <option value="12" data-city="4">Новомосковский АО</option>
                                                     <option value="13" data-city="4">Троицкий АО</option>
                                                 </select>
-                                            </div><!-- /.form-group -->
+                                            </div><!-- /.form-group --> --}}
                                             <div class="form-group">
                                                 <label for="metro">Ближайшее метро</label>
                                                 <input type="text" class="form-control" id="metro" name="metro" value="{{$house->metro}}" placeholder="Укажите название станции метро рядом с Вами" required>
@@ -428,7 +428,7 @@
   <div class="row">
     <div class="block">
       <div class="col-md-9 col-sm-9">
-        <div class="float-right">
+        <div class="float-left">
           <div class="form-group">
             <button type="submit" class="btn btn-success large">Обнавить данные</button>
           </div>
@@ -489,7 +489,7 @@
                               <div class="btn-group mr-2" role="group" aria-label="First group">
                                 {{-- <button type="button" class="btn btn-secondary">1</button> --}}
                                 <label for="upload" class="btn small"> 
-                                        <i class="fa fa-upload">&nbsp;Загрузить изображения</i>
+                                        <i class="fa fa-upload">&nbsp;Загрузить</i>
                                         <input type="file" name="thumb" id="upload" style="display:none" accept="image/jpg, 
                                                       image/png, image/jpeg, image/pjpeg, image/x-png">
                                       </label>
@@ -540,7 +540,9 @@
                         <form method= "POST" action="/photo/{{$img->id}}" class="update-form__btn" >
                             {{ csrf_field() }}
 
-                            <input type="hidden" name="_method" value="DELETE">
+                            <input type="hidden" name="_method" value="PATCH">
+
+                            <input type="hidden" name="thumnail_id" value="{{$house->thumb->id}}">
                             {{-- <button type="submit" class="btn success small"></button> --}}
 
                             {{-- <div class="input-group ">
@@ -548,11 +550,19 @@
                                 <a class="input-group-btn btn btn-default go inline">Upload to DocMan</a>
                             </div> --}}
 
-                           <div class="btn-toolbar btn-toolbar-margin" role="toolbar" aria-label="Toolbar with button groups">
+                                {{-- <div class="button-set">
+        <button class="active">One</button>
+        <button>Two</button>
+        <button>Three</button>
+        <button>Four</button>
+        <button>Five</button>
+    </div> --}}
+
+                           <div class="button-set btn-toolbar-margin" role="toolbar" aria-label="Toolbar with button groups">
                               <div class="btn-group mr-2" role="group" aria-label="First group">
                                 {{-- <button type="button" class="btn btn-secondary">1</button> --}}
                                 <label for="upload" class="btn small"> 
-                                        <i class="fa fa-upload">&nbsp;Загрузить изображения</i>
+                                        <i class="fa fa-upload">&nbsp;Загрузить</i>
                                         <input type="file" name="thumb" id="upload" style="display:none" accept="image/jpg, 
                                                       image/png, image/jpeg, image/pjpeg, image/x-png">
                                       </label>
