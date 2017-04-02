@@ -12588,3 +12588,609 @@ Command Cancelled!
   INFO [3d568f50] Running /usr/bin/env echo "Branch dev (at 63ae532e577f302a65f2523da8b5a1c7cfdec2e8) deployed as release 20170402083745 by couldedhusso" >> /home/ec2-user/menahouse/revisions.log as ec2-user@35.161.27.29
  DEBUG [3d568f50] Command: cd /home/ec2-user/menahouse/releases && /usr/bin/env echo "Branch dev (at 63ae532e577f302a65f2523da8b5a1c7cfdec2e8) deployed as release 20170402083745 by couldedhusso" >> /home/ec2-user/menahouse/revisions.log
   INFO [3d568f50] Finished in 0.553 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-02 12:01:33 +0300 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [40021722] Running /usr/bin/env mkdir -p /tmp/menahouse/ as ec2-user@35.161.27.29
+ DEBUG [40021722] Command: /usr/bin/env mkdir -p /tmp/menahouse/
+  INFO [40021722] Finished in 4.447 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/menahouse/git-ssh.sh 0.0%
+  INFO Uploading /tmp/menahouse/git-ssh.sh 100.0%
+  INFO [5e2fd9c2] Running /usr/bin/env chmod +rx /tmp/menahouse/git-ssh.sh as ec2-user@35.161.27.29
+ DEBUG [5e2fd9c2] Command: /usr/bin/env chmod +rx /tmp/menahouse/git-ssh.sh
+  INFO [5e2fd9c2] Finished in 0.599 seconds with exit status 0 (successful).
+  INFO [0124cb6f] Running /usr/bin/env git ls-remote --heads https://github.com/couldedhusso/menahouse.ru.git as ec2-user@35.161.27.29
+ DEBUG [0124cb6f] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git ls-remote --heads https://github.com/couldedhusso/menahouse.ru.git )
+ DEBUG [0124cb6f] 	b31cec309893bb8c23cf3c5200b451fe47c0a7bd	refs/heads/dev
+04bfc3ecf92325b704f4931475c28f120ae38cf9	refs/heads/master
+  INFO [0124cb6f] Finished in 0.920 seconds with exit status 0 (successful).
+  INFO [66fb7590] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared /home/ec2-user/menahouse/releases as ec2-user@35.161.27.29
+ DEBUG [66fb7590] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared /home/ec2-user/menahouse/releases
+  INFO [66fb7590] Finished in 0.603 seconds with exit status 0 (successful).
+  INFO [d938d674] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared/storage/framework/sessions as ec2-user@35.161.27.29
+ DEBUG [d938d674] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared/storage/framework/sessions
+  INFO [d938d674] Finished in 0.564 seconds with exit status 0 (successful).
+  INFO [87d13355] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared as ec2-user@35.161.27.29
+ DEBUG [87d13355] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared
+  INFO [87d13355] Finished in 0.588 seconds with exit status 0 (successful).
+ DEBUG [1f61ffcc] Running [ -f /home/ec2-user/menahouse/shared/.env ] as ec2-user@35.161.27.29
+ DEBUG [1f61ffcc] Command: [ -f /home/ec2-user/menahouse/shared/.env ]
+ DEBUG [1f61ffcc] Finished in 0.618 seconds with exit status 0 (successful).
+ DEBUG [0a009cb3] Running [ -f /home/ec2-user/menahouse/current/REVISION ] as ec2-user@35.161.27.29
+ DEBUG [0a009cb3] Command: [ -f /home/ec2-user/menahouse/current/REVISION ]
+ DEBUG [0a009cb3] Finished in 0.587 seconds with exit status 0 (successful).
+ DEBUG [b506b195] Running /usr/bin/env cat /home/ec2-user/menahouse/current/REVISION 2>/dev/null as ec2-user@35.161.27.29
+ DEBUG [b506b195] Command: /usr/bin/env cat /home/ec2-user/menahouse/current/REVISION 2>/dev/null
+ DEBUG [b506b195] 	63ae532e577f302a65f2523da8b5a1c7cfdec2e8
+ DEBUG [b506b195] Finished in 0.594 seconds with exit status 0 (successful).
+ DEBUG [9b4a9217] Running [ -f /home/ec2-user/menahouse/repo/HEAD ] as ec2-user@35.161.27.29
+ DEBUG [9b4a9217] Command: [ -f /home/ec2-user/menahouse/repo/HEAD ]
+ DEBUG [9b4a9217] Finished in 0.567 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ec2-user/menahouse/repo
+ DEBUG [dfc1aa08] Running if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [dfc1aa08] Command: if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi
+ DEBUG [dfc1aa08] Finished in 0.553 seconds with exit status 0 (successful).
+  INFO [05566793] Running /usr/bin/env git remote update --prune as ec2-user@35.161.27.29
+ DEBUG [05566793] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [05566793] 	Fetching origin
+ DEBUG [05566793] 	From https://github.com/couldedhusso/menahouse.ru
+   63ae532..b31cec3  dev        -> dev
+  INFO [05566793] Finished in 1.160 seconds with exit status 0 (successful).
+ DEBUG [24704f9a] Running if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [24704f9a] Command: if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi
+ DEBUG [24704f9a] Finished in 0.548 seconds with exit status 0 (successful).
+  INFO [753e835d] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170402090145 as ec2-user@35.161.27.29
+ DEBUG [753e835d] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170402090145 )
+  INFO [753e835d] Finished in 0.561 seconds with exit status 0 (successful).
+  INFO [10eddddc] Running /usr/bin/env git archive dev | tar -x -f - -C /home/ec2-user/menahouse/releases/20170402090145 as ec2-user@35.161.27.29
+ DEBUG [10eddddc] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git archive dev | tar -x -f - -C /home/ec2-user/menahouse/releases/20170402090145 )
+  INFO [10eddddc] Finished in 1.480 seconds with exit status 0 (successful).
+ DEBUG [aaf3f8b6] Running if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [aaf3f8b6] Command: if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi
+ DEBUG [aaf3f8b6] Finished in 1.006 seconds with exit status 0 (successful).
+ DEBUG [fa74ac05] Running /usr/bin/env git rev-list --max-count=1 dev as ec2-user@35.161.27.29
+ DEBUG [fa74ac05] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git rev-list --max-count=1 dev )
+ DEBUG [fa74ac05] 	b31cec309893bb8c23cf3c5200b451fe47c0a7bd
+ DEBUG [fa74ac05] Finished in 0.569 seconds with exit status 0 (successful).
+ DEBUG [cd0a0a57] Running if test ! -d /home/ec2-user/menahouse/releases/20170402090145; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170402090145'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [cd0a0a57] Command: if test ! -d /home/ec2-user/menahouse/releases/20170402090145; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170402090145'" 1>&2; false; fi
+ DEBUG [cd0a0a57] Finished in 1.020 seconds with exit status 0 (successful).
+  INFO [a7b08256] Running /usr/bin/env echo "b31cec309893bb8c23cf3c5200b451fe47c0a7bd" >> REVISION as ec2-user@35.161.27.29
+ DEBUG [a7b08256] Command: cd /home/ec2-user/menahouse/releases/20170402090145 && /usr/bin/env echo "b31cec309893bb8c23cf3c5200b451fe47c0a7bd" >> REVISION
+  INFO [a7b08256] Finished in 0.547 seconds with exit status 0 (successful).
+  INFO [c682d39b] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170402090145 as ec2-user@35.161.27.29
+ DEBUG [c682d39b] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170402090145
+  INFO [c682d39b] Finished in 0.535 seconds with exit status 0 (successful).
+ DEBUG [c53a7e89] Running [ -L /home/ec2-user/menahouse/releases/20170402090145/.env ] as ec2-user@35.161.27.29
+ DEBUG [c53a7e89] Command: [ -L /home/ec2-user/menahouse/releases/20170402090145/.env ]
+ DEBUG [c53a7e89] Finished in 0.518 seconds with exit status 1 (failed).
+ DEBUG [a3d6e5a4] Running [ -f /home/ec2-user/menahouse/releases/20170402090145/.env ] as ec2-user@35.161.27.29
+ DEBUG [a3d6e5a4] Command: [ -f /home/ec2-user/menahouse/releases/20170402090145/.env ]
+ DEBUG [a3d6e5a4] Finished in 1.327 seconds with exit status 1 (failed).
+  INFO [23199907] Running /usr/bin/env ln -s /home/ec2-user/menahouse/shared/.env /home/ec2-user/menahouse/releases/20170402090145/.env as ec2-user@35.161.27.29
+ DEBUG [23199907] Command: /usr/bin/env ln -s /home/ec2-user/menahouse/shared/.env /home/ec2-user/menahouse/releases/20170402090145/.env
+  INFO [23199907] Finished in 0.508 seconds with exit status 0 (successful).
+  INFO [45079b6c] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170402090145/storage/framework as ec2-user@35.161.27.29
+ DEBUG [45079b6c] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170402090145/storage/framework
+  INFO [45079b6c] Finished in 0.560 seconds with exit status 0 (successful).
+ DEBUG [86418b67] Running [ -L /home/ec2-user/menahouse/releases/20170402090145/storage/framework/sessions ] as ec2-user@35.161.27.29
+ DEBUG [86418b67] Command: [ -L /home/ec2-user/menahouse/releases/20170402090145/storage/framework/sessions ]
+ DEBUG [86418b67] Finished in 0.557 seconds with exit status 1 (failed).
+ DEBUG [a13dbeec] Running [ -d /home/ec2-user/menahouse/releases/20170402090145/storage/framework/sessions ] as ec2-user@35.161.27.29
+ DEBUG [a13dbeec] Command: [ -d /home/ec2-user/menahouse/releases/20170402090145/storage/framework/sessions ]
+ DEBUG [a13dbeec] Finished in 0.560 seconds with exit status 0 (successful).
+  INFO [0cf0b64d] Running /usr/bin/env rm -rf /home/ec2-user/menahouse/releases/20170402090145/storage/framework/sessions as ec2-user@35.161.27.29
+ DEBUG [0cf0b64d] Command: /usr/bin/env rm -rf /home/ec2-user/menahouse/releases/20170402090145/storage/framework/sessions
+  INFO [0cf0b64d] Finished in 0.554 seconds with exit status 0 (successful).
+  INFO [e32a7cb6] Running /usr/bin/env ln -s /home/ec2-user/menahouse/shared/storage/framework/sessions /home/ec2-user/menahouse/releases/20170402090145/storage/framework/sessions as ec2-user@35.161.27.29
+ DEBUG [e32a7cb6] Command: /usr/bin/env ln -s /home/ec2-user/menahouse/shared/storage/framework/sessions /home/ec2-user/menahouse/releases/20170402090145/storage/framework/sessions
+  INFO [e32a7cb6] Finished in 0.560 seconds with exit status 0 (successful).
+ DEBUG [a636ef21] Running if test ! -d /home/ec2-user/menahouse/releases/20170402090145; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170402090145'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [a636ef21] Command: if test ! -d /home/ec2-user/menahouse/releases/20170402090145; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170402090145'" 1>&2; false; fi
+ DEBUG [a636ef21] Finished in 0.593 seconds with exit status 0 (successful).
+  INFO [b3f55732] Running /usr/bin/env composer install --no-dev --quiet as ec2-user@35.161.27.29
+ DEBUG [b3f55732] Command: cd /home/ec2-user/menahouse/releases/20170402090145 && /usr/bin/env composer install --no-dev --quiet
+  INFO [b3f55732] Finished in 6.041 seconds with exit status 0 (successful).
+  INFO [0e34f0d1] Running /usr/bin/env chmod u+x artisan as ec2-user@35.161.27.29
+ DEBUG [0e34f0d1] Command: cd /home/ec2-user/menahouse/releases/20170402090145 && /usr/bin/env chmod u+x artisan
+  INFO [0e34f0d1] Finished in 0.538 seconds with exit status 0 (successful).
+ DEBUG [c5d8cd90] Running if test ! -d /home/ec2-user/menahouse/releases/20170402090145; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170402090145'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [c5d8cd90] Command: if test ! -d /home/ec2-user/menahouse/releases/20170402090145; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170402090145'" 1>&2; false; fi
+ DEBUG [c5d8cd90] Finished in 0.546 seconds with exit status 0 (successful).
+  INFO [7181f1e3] Running /usr/bin/env php artisan optimize as ec2-user@35.161.27.29
+ DEBUG [7181f1e3] Command: cd /home/ec2-user/menahouse/releases/20170402090145 && /usr/bin/env php artisan optimize
+ DEBUG [7181f1e3] 	Generating optimized class loader
+  INFO [7181f1e3] Finished in 2.633 seconds with exit status 0 (successful).
+ DEBUG [62b7a32d] Running if test ! -d /home/ec2-user/menahouse/releases/20170402090145; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170402090145'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [62b7a32d] Command: if test ! -d /home/ec2-user/menahouse/releases/20170402090145; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170402090145'" 1>&2; false; fi
+ DEBUG [62b7a32d] Finished in 0.600 seconds with exit status 0 (successful).
+  INFO [dff4161a] Running /usr/bin/env chmod 777 -R bootstrap/cache as ec2-user@35.161.27.29
+ DEBUG [dff4161a] Command: cd /home/ec2-user/menahouse/releases/20170402090145 && /usr/bin/env chmod 777 -R bootstrap/cache
+  INFO [dff4161a] Finished in 0.560 seconds with exit status 0 (successful).
+  INFO [75621b0c] Running /usr/bin/env chmod 777 -R storage as ec2-user@35.161.27.29
+ DEBUG [75621b0c] Command: cd /home/ec2-user/menahouse/releases/20170402090145 && /usr/bin/env chmod 777 -R storage
+  INFO [75621b0c] Finished in 0.602 seconds with exit status 0 (successful).
+  INFO [bed9edd8] Running /usr/bin/env ln -s /home/ec2-user/menahouse/releases/20170402090145 /home/ec2-user/menahouse/releases/current as ec2-user@35.161.27.29
+ DEBUG [bed9edd8] Command: /usr/bin/env ln -s /home/ec2-user/menahouse/releases/20170402090145 /home/ec2-user/menahouse/releases/current
+  INFO [bed9edd8] Finished in 0.547 seconds with exit status 0 (successful).
+  INFO [fedfcf0c] Running /usr/bin/env mv /home/ec2-user/menahouse/releases/current /home/ec2-user/menahouse as ec2-user@35.161.27.29
+ DEBUG [fedfcf0c] Command: /usr/bin/env mv /home/ec2-user/menahouse/releases/current /home/ec2-user/menahouse
+  INFO [fedfcf0c] Finished in 1.043 seconds with exit status 0 (successful).
+ DEBUG [a3857bda] Running /usr/bin/env ls -xtr /home/ec2-user/menahouse/releases as ec2-user@35.161.27.29
+ DEBUG [a3857bda] Command: /usr/bin/env ls -xtr /home/ec2-user/menahouse/releases
+ DEBUG [a3857bda] 	20170329072651	20170402083745	20170402090145
+ DEBUG [a3857bda] Finished in 0.836 seconds with exit status 0 (successful).
+  INFO Keeping 2 of 3 deployed releases on 35.161.27.29
+  INFO [4bdcd08e] Running /usr/bin/env rm -rf /home/ec2-user/menahouse/releases/20170329072651 as ec2-user@35.161.27.29
+ DEBUG [4bdcd08e] Command: /usr/bin/env rm -rf /home/ec2-user/menahouse/releases/20170329072651
+ DEBUG [4bdcd08e] 	rm: 
+ DEBUG [4bdcd08e] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170329072651/storage/framework/cache/7e/6e/7e6eb0224fd8527b337f188d10b76dadf3a00554’
+ DEBUG [4bdcd08e] 	: Permission denied
+ DEBUG [4bdcd08e] 	
+ DEBUG [4bdcd08e] 	rm: 
+ DEBUG [4bdcd08e] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170329072651/storage/framework/cache/a6/57/a65773383f5a95b66b81c2492f50898d891d4127’
+ DEBUG [4bdcd08e] 	: Permission denied
+ DEBUG [4bdcd08e] 	
+ DEBUG [4bdcd08e] 	rm: 
+ DEBUG [4bdcd08e] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170329072651/storage/framework/cache/ac/70/ac70888bc923633b4b575225cd93f7268f4ecef0’
+ DEBUG [4bdcd08e] 	: Permission denied
+ DEBUG [4bdcd08e] 	
+ DEBUG [4bdcd08e] 	rm: 
+ DEBUG [4bdcd08e] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170329072651/storage/framework/cache/3e/fd/3efdb84e912312746cd89c2061b469772b4b8c59’
+ DEBUG [4bdcd08e] 	: Permission denied
+ DEBUG [4bdcd08e] 	
+ DEBUG [4bdcd08e] 	rm: 
+ DEBUG [4bdcd08e] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170329072651/storage/framework/cache/55/f8/55f87afc4f6b30b41984df8c08124798042079b0’
+ DEBUG [4bdcd08e] 	: Permission denied
+ DEBUG [4bdcd08e] 	
+ DEBUG [4bdcd08e] 	rm: 
+ DEBUG [4bdcd08e] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170329072651/storage/framework/cache/f8/e9/f8e900341c7889a2bbbc546f593b8cfce7a33b52’
+ DEBUG [4bdcd08e] 	: Permission denied
+ DEBUG [4bdcd08e] 	
+ DEBUG [4bdcd08e] 	rm: 
+ DEBUG [4bdcd08e] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170329072651/storage/framework/cache/d5/a5/d5a5f3f3e309a592e96ead735162cad17e9bb203’
+ DEBUG [4bdcd08e] 	: Permission denied
+ DEBUG [4bdcd08e] 	
+ DEBUG [4bdcd08e] 	rm: 
+ DEBUG [4bdcd08e] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170329072651/storage/framework/cache/8c/45/8c45dd87a2c742aee3ffe5e0049aeb98e4c2bb47’
+ DEBUG [4bdcd08e] 	: Permission denied
+ DEBUG [4bdcd08e] 	
+ DEBUG [4bdcd08e] 	rm: 
+ DEBUG [4bdcd08e] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170329072651/storage/framework/cache/89/c1/89c164f872183c093ef39f33ce698cbb01552024’
+ DEBUG [4bdcd08e] 	: Permission denied
+ DEBUG [4bdcd08e] 	
+ DEBUG [4bdcd08e] 	rm: 
+ DEBUG [4bdcd08e] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170329072651/storage/framework/cache/0b/a1/0ba1a2549061cce89bb5ab892ab94642c790064d’
+ DEBUG [4bdcd08e] 	: Permission denied
+ DEBUG [4bdcd08e] 	
+ DEBUG [4bdcd08e] 	rm: 
+ DEBUG [4bdcd08e] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170329072651/storage/framework/cache/2d/b5/2db5aebe8eb957013d03b4cb929d80e2539fc8b9’
+ DEBUG [4bdcd08e] 	: Permission denied
+ DEBUG [4bdcd08e] 	
+ DEBUG [4bdcd08e] 	rm: 
+ DEBUG [4bdcd08e] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170329072651/storage/framework/cache/25/10/2510bccc0eb6204a1545effe24b8320eba93c6e0’
+ DEBUG [4bdcd08e] 	: Permission denied
+ DEBUG [4bdcd08e] 	
+ DEBUG [4bdcd08e] 	rm: 
+ DEBUG [4bdcd08e] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170329072651/storage/framework/cache/df/67/df67286c921b84354f3f5ff1c2213d94dbd0cd8e’
+ DEBUG [4bdcd08e] 	: Permission denied
+ DEBUG [4bdcd08e] 	
+ DEBUG [4bdcd08e] 	rm: 
+ DEBUG [4bdcd08e] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170329072651/storage/framework/cache/8a/f5/8af57232fc4f39c8986f85ff9bbb5ed7c885c20c’
+ DEBUG [4bdcd08e] 	: Permission denied
+ DEBUG [4bdcd08e] 	
+ DEBUG [4bdcd08e] 	rm: 
+ DEBUG [4bdcd08e] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170329072651/storage/framework/cache/17/c2/17c2a95b9d9fd8f768843e5bb41f0ed1eb3d783b’
+ DEBUG [4bdcd08e] 	: Permission denied
+ DEBUG [4bdcd08e] 	
+ DEBUG [4bdcd08e] 	rm: 
+ DEBUG [4bdcd08e] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170329072651/storage/framework/cache/fc/e7/fce78635c0717e61b020fc2596617df005e983a7’
+ DEBUG [4bdcd08e] 	: Permission denied
+ DEBUG [4bdcd08e] 	
+ DEBUG [4bdcd08e] 	rm: 
+ DEBUG [4bdcd08e] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170329072651/storage/framework/cache/a7/c4/a7c4b7d2d8c42abbfdbc5b9dd2a2359338bfe9c3’
+ DEBUG [4bdcd08e] 	: Permission denied
+ DEBUG [4bdcd08e] 	
+ DEBUG [4bdcd08e] 	rm: 
+ DEBUG [4bdcd08e] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170329072651/storage/framework/cache/a7/bd’
+ DEBUG [4bdcd08e] 	: Permission denied
+ DEBUG [4bdcd08e] 	
+ DEBUG [4bdcd08e] 	rm: 
+ DEBUG [4bdcd08e] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170329072651/storage/framework/cache/49/ef/49efa784ecd1670a26fa29e645ccc8ec0a04dcea’
+ DEBUG [4bdcd08e] 	: Permission denied
+ DEBUG [4bdcd08e] 	
+ DEBUG [4bdcd08e] 	rm: 
+ DEBUG [4bdcd08e] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170329072651/storage/framework/cache/77/84’
+ DEBUG [4bdcd08e] 	: Permission denied
+ DEBUG [4bdcd08e] 	
+ DEBUG [4bdcd08e] 	rm: 
+ DEBUG [4bdcd08e] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170329072651/storage/framework/cache/81/d0/81d0fefa7b610b9ac8f4ad4270221454f8306154’
+ DEBUG [4bdcd08e] 	: Permission denied
+ DEBUG [4bdcd08e] 	
+ DEBUG [4bdcd08e] 	rm: 
+ DEBUG [4bdcd08e] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170329072651/storage/framework/cache/61/7c/617c69c28b42b0ff05bae4ffca60e6d2ade14cff’
+ DEBUG [4bdcd08e] 	: Permission denied
+ DEBUG [4bdcd08e] 	
+ DEBUG [4bdcd08e] 	rm: 
+ DEBUG [4bdcd08e] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170329072651/storage/framework/cache/e4/44/e44433bcf94ef6356486450c1b68686688070c8c’
+ DEBUG [4bdcd08e] 	: Permission denied
+ DEBUG [4bdcd08e] 	
+ DEBUG [4bdcd08e] 	rm: 
+ DEBUG [4bdcd08e] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170329072651/storage/framework/cache/fe/41/fe412bdc7f0cc2b0bbe2bda4cb69ca2aaa0e5d83’
+ DEBUG [4bdcd08e] 	: Permission denied
+ DEBUG [4bdcd08e] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-02 12:17:45 +0300 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [f2901c65] Running /usr/bin/env mkdir -p /tmp/menahouse/ as menadeploy@35.161.27.29
+ DEBUG [f2901c65] Command: /usr/bin/env mkdir -p /tmp/menahouse/
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-02 12:21:16 +0300 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [638d5976] Running /usr/bin/env mkdir -p /tmp/menahouse/ as menadeploy@35.161.27.29
+ DEBUG [638d5976] Command: /usr/bin/env mkdir -p /tmp/menahouse/
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-02 12:21:35 +0300 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [a0ced541] Running /usr/bin/env mkdir -p /tmp/menahouse/ as ec2-user@35.161.27.29
+ DEBUG [a0ced541] Command: /usr/bin/env mkdir -p /tmp/menahouse/
+  INFO [a0ced541] Finished in 4.817 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/menahouse/git-ssh.sh 0.0%
+  INFO Uploading /tmp/menahouse/git-ssh.sh 100.0%
+  INFO [8d965993] Running /usr/bin/env chmod +rx /tmp/menahouse/git-ssh.sh as ec2-user@35.161.27.29
+ DEBUG [8d965993] Command: /usr/bin/env chmod +rx /tmp/menahouse/git-ssh.sh
+  INFO [8d965993] Finished in 0.586 seconds with exit status 0 (successful).
+  INFO [2e32d83f] Running /usr/bin/env git ls-remote --heads https://github.com/couldedhusso/menahouse.ru.git as ec2-user@35.161.27.29
+ DEBUG [2e32d83f] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git ls-remote --heads https://github.com/couldedhusso/menahouse.ru.git )
+ DEBUG [2e32d83f] 	b31cec309893bb8c23cf3c5200b451fe47c0a7bd	refs/heads/dev
+04bfc3ecf92325b704f4931475c28f120ae38cf9	refs/heads/master
+  INFO [2e32d83f] Finished in 0.873 seconds with exit status 0 (successful).
+  INFO [8021b68c] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared /home/ec2-user/menahouse/releases as ec2-user@35.161.27.29
+ DEBUG [8021b68c] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared /home/ec2-user/menahouse/releases
+  INFO [8021b68c] Finished in 1.195 seconds with exit status 0 (successful).
+  INFO [86499b41] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared/storage/framework/sessions as ec2-user@35.161.27.29
+ DEBUG [86499b41] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared/storage/framework/sessions
+  INFO [86499b41] Finished in 0.584 seconds with exit status 0 (successful).
+  INFO [44f01e3c] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared as ec2-user@35.161.27.29
+ DEBUG [44f01e3c] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared
+  INFO [44f01e3c] Finished in 0.639 seconds with exit status 0 (successful).
+ DEBUG [82376237] Running [ -f /home/ec2-user/menahouse/shared/.env ] as ec2-user@35.161.27.29
+ DEBUG [82376237] Command: [ -f /home/ec2-user/menahouse/shared/.env ]
+ DEBUG [82376237] Finished in 0.611 seconds with exit status 0 (successful).
+ DEBUG [143b5ee6] Running [ -f /home/ec2-user/menahouse/current/REVISION ] as ec2-user@35.161.27.29
+ DEBUG [143b5ee6] Command: [ -f /home/ec2-user/menahouse/current/REVISION ]
+ DEBUG [143b5ee6] Finished in 0.596 seconds with exit status 0 (successful).
+ DEBUG [fc4ded89] Running /usr/bin/env cat /home/ec2-user/menahouse/current/REVISION 2>/dev/null as ec2-user@35.161.27.29
+ DEBUG [fc4ded89] Command: /usr/bin/env cat /home/ec2-user/menahouse/current/REVISION 2>/dev/null
+ DEBUG [fc4ded89] 	b31cec309893bb8c23cf3c5200b451fe47c0a7bd
+ DEBUG [fc4ded89] Finished in 0.563 seconds with exit status 0 (successful).
+ DEBUG [dffcf031] Running [ -f /home/ec2-user/menahouse/repo/HEAD ] as ec2-user@35.161.27.29
+ DEBUG [dffcf031] Command: [ -f /home/ec2-user/menahouse/repo/HEAD ]
+ DEBUG [dffcf031] Finished in 0.550 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ec2-user/menahouse/repo
+ DEBUG [761ff1ad] Running if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [761ff1ad] Command: if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi
+ DEBUG [761ff1ad] Finished in 0.559 seconds with exit status 0 (successful).
+  INFO [bac248cc] Running /usr/bin/env git remote update --prune as ec2-user@35.161.27.29
+ DEBUG [bac248cc] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [bac248cc] 	Fetching origin
+  INFO [bac248cc] Finished in 0.916 seconds with exit status 0 (successful).
+ DEBUG [5d021e58] Running if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [5d021e58] Command: if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi
+ DEBUG [5d021e58] Finished in 0.557 seconds with exit status 0 (successful).
+  INFO [9e3abe24] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170402092149 as ec2-user@35.161.27.29
+ DEBUG [9e3abe24] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170402092149 )
+  INFO [9e3abe24] Finished in 0.638 seconds with exit status 0 (successful).
+  INFO [4b22dfd0] Running /usr/bin/env git archive dev | tar -x -f - -C /home/ec2-user/menahouse/releases/20170402092149 as ec2-user@35.161.27.29
+ DEBUG [4b22dfd0] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git archive dev | tar -x -f - -C /home/ec2-user/menahouse/releases/20170402092149 )
+  INFO [4b22dfd0] Finished in 1.198 seconds with exit status 0 (successful).
+ DEBUG [3135fac7] Running if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [3135fac7] Command: if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi
+ DEBUG [3135fac7] Finished in 0.646 seconds with exit status 0 (successful).
+ DEBUG [00db7174] Running /usr/bin/env git rev-list --max-count=1 dev as ec2-user@35.161.27.29
+ DEBUG [00db7174] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git rev-list --max-count=1 dev )
+ DEBUG [00db7174] 	b31cec309893bb8c23cf3c5200b451fe47c0a7bd
+ DEBUG [00db7174] Finished in 0.719 seconds with exit status 0 (successful).
+ DEBUG [db51ad05] Running if test ! -d /home/ec2-user/menahouse/releases/20170402092149; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170402092149'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [db51ad05] Command: if test ! -d /home/ec2-user/menahouse/releases/20170402092149; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170402092149'" 1>&2; false; fi
+ DEBUG [db51ad05] Finished in 0.753 seconds with exit status 0 (successful).
+  INFO [f7eaf178] Running /usr/bin/env echo "b31cec309893bb8c23cf3c5200b451fe47c0a7bd" >> REVISION as ec2-user@35.161.27.29
+ DEBUG [f7eaf178] Command: cd /home/ec2-user/menahouse/releases/20170402092149 && /usr/bin/env echo "b31cec309893bb8c23cf3c5200b451fe47c0a7bd" >> REVISION
+  INFO [f7eaf178] Finished in 0.841 seconds with exit status 0 (successful).
+  INFO [c959f8aa] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170402092149 as ec2-user@35.161.27.29
+ DEBUG [c959f8aa] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170402092149
+  INFO [c959f8aa] Finished in 0.835 seconds with exit status 0 (successful).
+ DEBUG [de2dd9dc] Running [ -L /home/ec2-user/menahouse/releases/20170402092149/.env ] as ec2-user@35.161.27.29
+ DEBUG [de2dd9dc] Command: [ -L /home/ec2-user/menahouse/releases/20170402092149/.env ]
+ DEBUG [de2dd9dc] Finished in 0.609 seconds with exit status 1 (failed).
+ DEBUG [8586f1fa] Running [ -f /home/ec2-user/menahouse/releases/20170402092149/.env ] as ec2-user@35.161.27.29
+ DEBUG [8586f1fa] Command: [ -f /home/ec2-user/menahouse/releases/20170402092149/.env ]
+ DEBUG [8586f1fa] Finished in 0.690 seconds with exit status 1 (failed).
+  INFO [09bd0ae7] Running /usr/bin/env ln -s /home/ec2-user/menahouse/shared/.env /home/ec2-user/menahouse/releases/20170402092149/.env as ec2-user@35.161.27.29
+ DEBUG [09bd0ae7] Command: /usr/bin/env ln -s /home/ec2-user/menahouse/shared/.env /home/ec2-user/menahouse/releases/20170402092149/.env
+  INFO [09bd0ae7] Finished in 0.544 seconds with exit status 0 (successful).
+  INFO [4cd64477] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170402092149/storage/framework as ec2-user@35.161.27.29
+ DEBUG [4cd64477] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170402092149/storage/framework
+  INFO [4cd64477] Finished in 0.678 seconds with exit status 0 (successful).
+ DEBUG [d84c224b] Running [ -L /home/ec2-user/menahouse/releases/20170402092149/storage/framework/sessions ] as ec2-user@35.161.27.29
+ DEBUG [d84c224b] Command: [ -L /home/ec2-user/menahouse/releases/20170402092149/storage/framework/sessions ]
+ DEBUG [d84c224b] Finished in 0.597 seconds with exit status 1 (failed).
+ DEBUG [bbbc9cd9] Running [ -d /home/ec2-user/menahouse/releases/20170402092149/storage/framework/sessions ] as ec2-user@35.161.27.29
+ DEBUG [bbbc9cd9] Command: [ -d /home/ec2-user/menahouse/releases/20170402092149/storage/framework/sessions ]
+ DEBUG [bbbc9cd9] Finished in 0.550 seconds with exit status 0 (successful).
+  INFO [ec225deb] Running /usr/bin/env rm -rf /home/ec2-user/menahouse/releases/20170402092149/storage/framework/sessions as ec2-user@35.161.27.29
+ DEBUG [ec225deb] Command: /usr/bin/env rm -rf /home/ec2-user/menahouse/releases/20170402092149/storage/framework/sessions
+  INFO [ec225deb] Finished in 0.566 seconds with exit status 0 (successful).
+  INFO [0b8c5291] Running /usr/bin/env ln -s /home/ec2-user/menahouse/shared/storage/framework/sessions /home/ec2-user/menahouse/releases/20170402092149/storage/framework/sessions as ec2-user@35.161.27.29
+ DEBUG [0b8c5291] Command: /usr/bin/env ln -s /home/ec2-user/menahouse/shared/storage/framework/sessions /home/ec2-user/menahouse/releases/20170402092149/storage/framework/sessions
+  INFO [0b8c5291] Finished in 0.565 seconds with exit status 0 (successful).
+ DEBUG [0d0a22c5] Running if test ! -d /home/ec2-user/menahouse/releases/20170402092149; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170402092149'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [0d0a22c5] Command: if test ! -d /home/ec2-user/menahouse/releases/20170402092149; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170402092149'" 1>&2; false; fi
+ DEBUG [0d0a22c5] Finished in 0.556 seconds with exit status 0 (successful).
+  INFO [1ca23c1e] Running /usr/bin/env composer install --no-dev --quiet as ec2-user@35.161.27.29
+ DEBUG [1ca23c1e] Command: cd /home/ec2-user/menahouse/releases/20170402092149 && /usr/bin/env composer install --no-dev --quiet
+  INFO [1ca23c1e] Finished in 7.557 seconds with exit status 0 (successful).
+  INFO [2923a52d] Running /usr/bin/env chmod u+x artisan as ec2-user@35.161.27.29
+ DEBUG [2923a52d] Command: cd /home/ec2-user/menahouse/releases/20170402092149 && /usr/bin/env chmod u+x artisan
+  INFO [2923a52d] Finished in 0.604 seconds with exit status 0 (successful).
+ DEBUG [7af55504] Running if test ! -d /home/ec2-user/menahouse/releases/20170402092149; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170402092149'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [7af55504] Command: if test ! -d /home/ec2-user/menahouse/releases/20170402092149; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170402092149'" 1>&2; false; fi
+ DEBUG [7af55504] Finished in 1.032 seconds with exit status 0 (successful).
+  INFO [1acb877a] Running /usr/bin/env php artisan optimize as ec2-user@35.161.27.29
+ DEBUG [1acb877a] Command: cd /home/ec2-user/menahouse/releases/20170402092149 && /usr/bin/env php artisan optimize
+ DEBUG [1acb877a] 	Generating optimized class loader
+  INFO [1acb877a] Finished in 2.636 seconds with exit status 0 (successful).
+ DEBUG [a8401e32] Running if test ! -d /home/ec2-user/menahouse/releases/20170402092149; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170402092149'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [a8401e32] Command: if test ! -d /home/ec2-user/menahouse/releases/20170402092149; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170402092149'" 1>&2; false; fi
+ DEBUG [a8401e32] Finished in 0.644 seconds with exit status 0 (successful).
+  INFO [131f1a76] Running /usr/bin/env chmod 777 -R bootstrap/cache as ec2-user@35.161.27.29
+ DEBUG [131f1a76] Command: cd /home/ec2-user/menahouse/releases/20170402092149 && /usr/bin/env chmod 777 -R bootstrap/cache
+  INFO [131f1a76] Finished in 0.558 seconds with exit status 0 (successful).
+  INFO [fd4036bd] Running /usr/bin/env chmod 777 -R storage as ec2-user@35.161.27.29
+ DEBUG [fd4036bd] Command: cd /home/ec2-user/menahouse/releases/20170402092149 && /usr/bin/env chmod 777 -R storage
+  INFO [fd4036bd] Finished in 0.559 seconds with exit status 0 (successful).
+  INFO [6d2ba296] Running /usr/bin/env ln -s /home/ec2-user/menahouse/releases/20170402092149 /home/ec2-user/menahouse/releases/current as ec2-user@35.161.27.29
+ DEBUG [6d2ba296] Command: /usr/bin/env ln -s /home/ec2-user/menahouse/releases/20170402092149 /home/ec2-user/menahouse/releases/current
+  INFO [6d2ba296] Finished in 0.498 seconds with exit status 0 (successful).
+  INFO [903f1a08] Running /usr/bin/env mv /home/ec2-user/menahouse/releases/current /home/ec2-user/menahouse as ec2-user@35.161.27.29
+ DEBUG [903f1a08] Command: /usr/bin/env mv /home/ec2-user/menahouse/releases/current /home/ec2-user/menahouse
+  INFO [903f1a08] Finished in 0.548 seconds with exit status 0 (successful).
+ DEBUG [ca9f283b] Running /usr/bin/env ls -xtr /home/ec2-user/menahouse/releases as ec2-user@35.161.27.29
+ DEBUG [ca9f283b] Command: /usr/bin/env ls -xtr /home/ec2-user/menahouse/releases
+ DEBUG [ca9f283b] 	20170402083745	20170402090145	20170329072651	20170402092149
+ DEBUG [ca9f283b] Finished in 0.596 seconds with exit status 0 (successful).
+  INFO Keeping 2 of 4 deployed releases on 35.161.27.29
+  INFO [1f12ccf4] Running /usr/bin/env rm -rf /home/ec2-user/menahouse/releases/20170402083745 /home/ec2-user/menahouse/releases/20170402090145 as ec2-user@35.161.27.29
+ DEBUG [1f12ccf4] Command: /usr/bin/env rm -rf /home/ec2-user/menahouse/releases/20170402083745 /home/ec2-user/menahouse/releases/20170402090145
+ DEBUG [1f12ccf4] 	rm: 
+ DEBUG [1f12ccf4] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170402083745/storage/framework/cache/7e/6e/7e6eb0224fd8527b337f188d10b76dadf3a00554’
+ DEBUG [1f12ccf4] 	: Permission denied
+ DEBUG [1f12ccf4] 	
+ DEBUG [1f12ccf4] 	rm: 
+ DEBUG [1f12ccf4] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170402083745/storage/framework/cache/ac/70/ac70888bc923633b4b575225cd93f7268f4ecef0’
+ DEBUG [1f12ccf4] 	: Permission denied
+ DEBUG [1f12ccf4] 	
+ DEBUG [1f12ccf4] 	rm: 
+ DEBUG [1f12ccf4] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170402083745/storage/framework/cache/55/f8/55f87afc4f6b30b41984df8c08124798042079b0’
+ DEBUG [1f12ccf4] 	: Permission denied
+ DEBUG [1f12ccf4] 	
+ DEBUG [1f12ccf4] 	rm: 
+ DEBUG [1f12ccf4] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170402083745/storage/framework/cache/d5/a5/d5a5f3f3e309a592e96ead735162cad17e9bb203’
+ DEBUG [1f12ccf4] 	: Permission denied
+ DEBUG [1f12ccf4] 	
+ DEBUG [1f12ccf4] 	rm: 
+ DEBUG [1f12ccf4] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170402083745/storage/framework/cache/8c/45/8c45dd87a2c742aee3ffe5e0049aeb98e4c2bb47’
+ DEBUG [1f12ccf4] 	: Permission denied
+ DEBUG [1f12ccf4] 	
+ DEBUG [1f12ccf4] 	rm: 
+ DEBUG [1f12ccf4] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170402083745/storage/framework/cache/0b/a1/0ba1a2549061cce89bb5ab892ab94642c790064d’
+ DEBUG [1f12ccf4] 	: Permission denied
+ DEBUG [1f12ccf4] 	
+ DEBUG [1f12ccf4] 	rm: 
+ DEBUG [1f12ccf4] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170402083745/storage/framework/cache/2d/b5/2db5aebe8eb957013d03b4cb929d80e2539fc8b9’
+ DEBUG [1f12ccf4] 	: Permission denied
+ DEBUG [1f12ccf4] 	
+ DEBUG [1f12ccf4] 	rm: 
+ DEBUG [1f12ccf4] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170402083745/storage/framework/cache/18/20/1820117044c95e6f60c870eb76988f14bf112295’
+ DEBUG [1f12ccf4] 	: Permission denied
+ DEBUG [1f12ccf4] 	
+ DEBUG [1f12ccf4] 	rm: 
+ DEBUG [1f12ccf4] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170402083745/storage/framework/cache/8a/f5/8af57232fc4f39c8986f85ff9bbb5ed7c885c20c’
+ DEBUG [1f12ccf4] 	: Permission denied
+ DEBUG [1f12ccf4] 	
+ DEBUG [1f12ccf4] 	rm: 
+ DEBUG [1f12ccf4] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170402083745/storage/framework/cache/fc/e7/fce78635c0717e61b020fc2596617df005e983a7’
+ DEBUG [1f12ccf4] 	: Permission denied
+ DEBUG [1f12ccf4] 	
+ DEBUG [1f12ccf4] 	rm: 
+ DEBUG [1f12ccf4] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170402083745/storage/framework/cache/a7/c4/a7c4b7d2d8c42abbfdbc5b9dd2a2359338bfe9c3’
+ DEBUG [1f12ccf4] 	: Permission denied
+ DEBUG [1f12ccf4] 	
+ DEBUG [1f12ccf4] 	rm: 
+ DEBUG [1f12ccf4] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170402083745/storage/framework/cache/81/d0/81d0fefa7b610b9ac8f4ad4270221454f8306154’
+ DEBUG [1f12ccf4] 	: Permission denied
+ DEBUG [1f12ccf4] 	
+ DEBUG [1f12ccf4] 	rm: 
+ DEBUG [1f12ccf4] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170402083745/storage/framework/cache/61/7c/617c69c28b42b0ff05bae4ffca60e6d2ade14cff’
+ DEBUG [1f12ccf4] 	: Permission denied
+ DEBUG [1f12ccf4] 	
+ DEBUG [1f12ccf4] 	rm: 
+ DEBUG [1f12ccf4] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170402083745/storage/framework/cache/dc/70/dc70dcc7d1d8d1e88344b1dc8006734bddb6a4d1’
+ DEBUG [1f12ccf4] 	: Permission denied
+ DEBUG [1f12ccf4] 	
+ DEBUG [1f12ccf4] 	rm: 
+ DEBUG [1f12ccf4] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170402083745/storage/framework/cache/82/99/829932a895b3fbe79c0e03823b7da76cf2a60a80’
+ DEBUG [1f12ccf4] 	: Permission denied
+ DEBUG [1f12ccf4] 	
+ DEBUG [1f12ccf4] 	rm: 
+ DEBUG [1f12ccf4] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170402083745/storage/framework/cache/29/cd/29cd184a339cd72116363c8b7ba2249a92554a73’
+ DEBUG [1f12ccf4] 	: Permission denied
+ DEBUG [1f12ccf4] 	
+ DEBUG [1f12ccf4] 	rm: 
+ DEBUG [1f12ccf4] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170402083745/storage/framework/cache/e4/44/e44433bcf94ef6356486450c1b68686688070c8c’
+ DEBUG [1f12ccf4] 	: Permission denied
+ DEBUG [1f12ccf4] 	
+ DEBUG [1f12ccf4] 	rm: 
+ DEBUG [1f12ccf4] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170402083745/storage/framework/cache/fe/41/fe412bdc7f0cc2b0bbe2bda4cb69ca2aaa0e5d83’
+ DEBUG [1f12ccf4] 	: Permission denied
+ DEBUG [1f12ccf4] 	
+ DEBUG [1f12ccf4] 	rm: 
+ DEBUG [1f12ccf4] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170402083745/storage/framework/cache/86/2f/862f7325bf69eb8775ac5589588d9f30c88c5ddd’
+ DEBUG [1f12ccf4] 	: Permission denied
+ DEBUG [1f12ccf4] 	
+ DEBUG [1f12ccf4] 	rm: 
+ DEBUG [1f12ccf4] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170402090145/storage/framework/cache/ac/70/ac70888bc923633b4b575225cd93f7268f4ecef0’
+ DEBUG [1f12ccf4] 	: Permission denied
+ DEBUG [1f12ccf4] 	
+ DEBUG [1f12ccf4] 	rm: 
+ DEBUG [1f12ccf4] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170402090145/storage/framework/cache/55/f8/55f87afc4f6b30b41984df8c08124798042079b0’
+ DEBUG [1f12ccf4] 	: Permission denied
+ DEBUG [1f12ccf4] 	
+ DEBUG [1f12ccf4] 	rm: 
+ DEBUG [1f12ccf4] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170402090145/storage/framework/cache/8c/45/8c45dd87a2c742aee3ffe5e0049aeb98e4c2bb47’
+ DEBUG [1f12ccf4] 	: Permission denied
+ DEBUG [1f12ccf4] 	
+ DEBUG [1f12ccf4] 	rm: 
+ DEBUG [1f12ccf4] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170402090145/storage/framework/cache/a7/c4/a7c4b7d2d8c42abbfdbc5b9dd2a2359338bfe9c3’
+ DEBUG [1f12ccf4] 	: Permission denied
+ DEBUG [1f12ccf4] 	
+ DEBUG [1f12ccf4] 	rm: 
+ DEBUG [1f12ccf4] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170402090145/storage/framework/cache/81/d0/81d0fefa7b610b9ac8f4ad4270221454f8306154’
+ DEBUG [1f12ccf4] 	: Permission denied
+ DEBUG [1f12ccf4] 	
+ DEBUG [1f12ccf4] 	rm: 
+ DEBUG [1f12ccf4] 	cannot remove ‘/home/ec2-user/menahouse/releases/20170402090145/storage/framework/cache/e4/44/e44433bcf94ef6356486450c1b68686688070c8c’
+ DEBUG [1f12ccf4] 	: Permission denied
+ DEBUG [1f12ccf4] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-02 12:25:44 +0300 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [01c19a1d] Running /usr/bin/env mkdir -p /tmp/menahouse/ as ec2-user@35.161.27.29
+ DEBUG [01c19a1d] Command: /usr/bin/env mkdir -p /tmp/menahouse/
+  INFO [01c19a1d] Finished in 4.536 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/menahouse/git-ssh.sh 0.0%
+  INFO Uploading /tmp/menahouse/git-ssh.sh 100.0%
+  INFO [0481925b] Running /usr/bin/env chmod +rx /tmp/menahouse/git-ssh.sh as ec2-user@35.161.27.29
+ DEBUG [0481925b] Command: /usr/bin/env chmod +rx /tmp/menahouse/git-ssh.sh
+  INFO [0481925b] Finished in 0.559 seconds with exit status 0 (successful).
+  INFO [d8e1a21d] Running /usr/bin/env git ls-remote --heads https://github.com/couldedhusso/menahouse.ru.git as ec2-user@35.161.27.29
+ DEBUG [d8e1a21d] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git ls-remote --heads https://github.com/couldedhusso/menahouse.ru.git )
+ DEBUG [d8e1a21d] 	b31cec309893bb8c23cf3c5200b451fe47c0a7bd	refs/heads/dev
+04bfc3ecf92325b704f4931475c28f120ae38cf9	refs/heads/master
+  INFO [d8e1a21d] Finished in 0.931 seconds with exit status 0 (successful).
+  INFO [1f40d082] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared /home/ec2-user/menahouse/releases as ec2-user@35.161.27.29
+ DEBUG [1f40d082] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared /home/ec2-user/menahouse/releases
+  INFO [1f40d082] Finished in 0.545 seconds with exit status 0 (successful).
+  INFO [5edc97c3] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared/storage/framework/sessions as ec2-user@35.161.27.29
+ DEBUG [5edc97c3] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared/storage/framework/sessions
+  INFO [5edc97c3] Finished in 0.569 seconds with exit status 0 (successful).
+  INFO [69018590] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared as ec2-user@35.161.27.29
+ DEBUG [69018590] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/shared
+  INFO [69018590] Finished in 0.599 seconds with exit status 0 (successful).
+ DEBUG [9c70322e] Running [ -f /home/ec2-user/menahouse/shared/.env ] as ec2-user@35.161.27.29
+ DEBUG [9c70322e] Command: [ -f /home/ec2-user/menahouse/shared/.env ]
+ DEBUG [9c70322e] Finished in 0.554 seconds with exit status 0 (successful).
+ DEBUG [2f9705fc] Running [ -f /home/ec2-user/menahouse/current/REVISION ] as ec2-user@35.161.27.29
+ DEBUG [2f9705fc] Command: [ -f /home/ec2-user/menahouse/current/REVISION ]
+ DEBUG [2f9705fc] Finished in 0.591 seconds with exit status 1 (failed).
+ DEBUG [bd7fc8bd] Running [ -f /home/ec2-user/menahouse/repo/HEAD ] as ec2-user@35.161.27.29
+ DEBUG [bd7fc8bd] Command: [ -f /home/ec2-user/menahouse/repo/HEAD ]
+ DEBUG [bd7fc8bd] Finished in 0.565 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ec2-user/menahouse/repo
+ DEBUG [9f4ca6cd] Running if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [9f4ca6cd] Command: if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi
+ DEBUG [9f4ca6cd] Finished in 0.568 seconds with exit status 0 (successful).
+  INFO [e927905b] Running /usr/bin/env git remote update --prune as ec2-user@35.161.27.29
+ DEBUG [e927905b] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [e927905b] 	Fetching origin
+  INFO [e927905b] Finished in 0.867 seconds with exit status 0 (successful).
+ DEBUG [9a784c47] Running if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [9a784c47] Command: if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi
+ DEBUG [9a784c47] Finished in 0.515 seconds with exit status 0 (successful).
+  INFO [815571fe] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170402092555 as ec2-user@35.161.27.29
+ DEBUG [815571fe] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170402092555 )
+  INFO [815571fe] Finished in 0.560 seconds with exit status 0 (successful).
+  INFO [109e4c06] Running /usr/bin/env git archive dev | tar -x -f - -C /home/ec2-user/menahouse/releases/20170402092555 as ec2-user@35.161.27.29
+ DEBUG [109e4c06] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git archive dev | tar -x -f - -C /home/ec2-user/menahouse/releases/20170402092555 )
+  INFO [109e4c06] Finished in 1.002 seconds with exit status 0 (successful).
+ DEBUG [88096621] Running if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [88096621] Command: if test ! -d /home/ec2-user/menahouse/repo; then echo "Directory does not exist '/home/ec2-user/menahouse/repo'" 1>&2; false; fi
+ DEBUG [88096621] Finished in 0.562 seconds with exit status 0 (successful).
+ DEBUG [e0681599] Running /usr/bin/env git rev-list --max-count=1 dev as ec2-user@35.161.27.29
+ DEBUG [e0681599] Command: cd /home/ec2-user/menahouse/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/menahouse/git-ssh.sh" ; /usr/bin/env git rev-list --max-count=1 dev )
+ DEBUG [e0681599] 	b31cec309893bb8c23cf3c5200b451fe47c0a7bd
+ DEBUG [e0681599] Finished in 0.597 seconds with exit status 0 (successful).
+ DEBUG [bab3a4a1] Running if test ! -d /home/ec2-user/menahouse/releases/20170402092555; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170402092555'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [bab3a4a1] Command: if test ! -d /home/ec2-user/menahouse/releases/20170402092555; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170402092555'" 1>&2; false; fi
+ DEBUG [bab3a4a1] Finished in 0.567 seconds with exit status 0 (successful).
+  INFO [54b4e2e3] Running /usr/bin/env echo "b31cec309893bb8c23cf3c5200b451fe47c0a7bd" >> REVISION as ec2-user@35.161.27.29
+ DEBUG [54b4e2e3] Command: cd /home/ec2-user/menahouse/releases/20170402092555 && /usr/bin/env echo "b31cec309893bb8c23cf3c5200b451fe47c0a7bd" >> REVISION
+  INFO [54b4e2e3] Finished in 0.599 seconds with exit status 0 (successful).
+  INFO [c85006f5] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170402092555 as ec2-user@35.161.27.29
+ DEBUG [c85006f5] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170402092555
+  INFO [c85006f5] Finished in 0.527 seconds with exit status 0 (successful).
+ DEBUG [c9cff2b3] Running [ -L /home/ec2-user/menahouse/releases/20170402092555/.env ] as ec2-user@35.161.27.29
+ DEBUG [c9cff2b3] Command: [ -L /home/ec2-user/menahouse/releases/20170402092555/.env ]
+ DEBUG [c9cff2b3] Finished in 0.541 seconds with exit status 1 (failed).
+ DEBUG [61943952] Running [ -f /home/ec2-user/menahouse/releases/20170402092555/.env ] as ec2-user@35.161.27.29
+ DEBUG [61943952] Command: [ -f /home/ec2-user/menahouse/releases/20170402092555/.env ]
+ DEBUG [61943952] Finished in 0.561 seconds with exit status 1 (failed).
+  INFO [1a046220] Running /usr/bin/env ln -s /home/ec2-user/menahouse/shared/.env /home/ec2-user/menahouse/releases/20170402092555/.env as ec2-user@35.161.27.29
+ DEBUG [1a046220] Command: /usr/bin/env ln -s /home/ec2-user/menahouse/shared/.env /home/ec2-user/menahouse/releases/20170402092555/.env
+  INFO [1a046220] Finished in 0.563 seconds with exit status 0 (successful).
+  INFO [67e0a428] Running /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170402092555/storage/framework as ec2-user@35.161.27.29
+ DEBUG [67e0a428] Command: /usr/bin/env mkdir -p /home/ec2-user/menahouse/releases/20170402092555/storage/framework
+  INFO [67e0a428] Finished in 0.558 seconds with exit status 0 (successful).
+ DEBUG [5be5f8d5] Running [ -L /home/ec2-user/menahouse/releases/20170402092555/storage/framework/sessions ] as ec2-user@35.161.27.29
+ DEBUG [5be5f8d5] Command: [ -L /home/ec2-user/menahouse/releases/20170402092555/storage/framework/sessions ]
+ DEBUG [5be5f8d5] Finished in 0.562 seconds with exit status 1 (failed).
+ DEBUG [8c5f3d19] Running [ -d /home/ec2-user/menahouse/releases/20170402092555/storage/framework/sessions ] as ec2-user@35.161.27.29
+ DEBUG [8c5f3d19] Command: [ -d /home/ec2-user/menahouse/releases/20170402092555/storage/framework/sessions ]
+ DEBUG [8c5f3d19] Finished in 0.549 seconds with exit status 0 (successful).
+  INFO [3bffd724] Running /usr/bin/env rm -rf /home/ec2-user/menahouse/releases/20170402092555/storage/framework/sessions as ec2-user@35.161.27.29
+ DEBUG [3bffd724] Command: /usr/bin/env rm -rf /home/ec2-user/menahouse/releases/20170402092555/storage/framework/sessions
+  INFO [3bffd724] Finished in 0.565 seconds with exit status 0 (successful).
+  INFO [4add97c3] Running /usr/bin/env ln -s /home/ec2-user/menahouse/shared/storage/framework/sessions /home/ec2-user/menahouse/releases/20170402092555/storage/framework/sessions as ec2-user@35.161.27.29
+ DEBUG [4add97c3] Command: /usr/bin/env ln -s /home/ec2-user/menahouse/shared/storage/framework/sessions /home/ec2-user/menahouse/releases/20170402092555/storage/framework/sessions
+  INFO [4add97c3] Finished in 0.558 seconds with exit status 0 (successful).
+ DEBUG [b289b573] Running if test ! -d /home/ec2-user/menahouse/releases/20170402092555; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170402092555'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [b289b573] Command: if test ! -d /home/ec2-user/menahouse/releases/20170402092555; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170402092555'" 1>&2; false; fi
+ DEBUG [b289b573] Finished in 0.562 seconds with exit status 0 (successful).
+  INFO [fa8162f1] Running /usr/bin/env composer install --no-dev --quiet as ec2-user@35.161.27.29
+ DEBUG [fa8162f1] Command: cd /home/ec2-user/menahouse/releases/20170402092555 && /usr/bin/env composer install --no-dev --quiet
+  INFO [fa8162f1] Finished in 7.078 seconds with exit status 0 (successful).
+  INFO [a1a44fa2] Running /usr/bin/env chmod u+x artisan as ec2-user@35.161.27.29
+ DEBUG [a1a44fa2] Command: cd /home/ec2-user/menahouse/releases/20170402092555 && /usr/bin/env chmod u+x artisan
+  INFO [a1a44fa2] Finished in 0.553 seconds with exit status 0 (successful).
+ DEBUG [f2f910ca] Running if test ! -d /home/ec2-user/menahouse/releases/20170402092555; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170402092555'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [f2f910ca] Command: if test ! -d /home/ec2-user/menahouse/releases/20170402092555; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170402092555'" 1>&2; false; fi
+ DEBUG [f2f910ca] Finished in 0.564 seconds with exit status 0 (successful).
+  INFO [6f561ad1] Running /usr/bin/env php artisan optimize as ec2-user@35.161.27.29
+ DEBUG [6f561ad1] Command: cd /home/ec2-user/menahouse/releases/20170402092555 && /usr/bin/env php artisan optimize
+ DEBUG [6f561ad1] 	Generating optimized class loader
+  INFO [6f561ad1] Finished in 2.677 seconds with exit status 0 (successful).
+ DEBUG [a0177af5] Running if test ! -d /home/ec2-user/menahouse/releases/20170402092555; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170402092555'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [a0177af5] Command: if test ! -d /home/ec2-user/menahouse/releases/20170402092555; then echo "Directory does not exist '/home/ec2-user/menahouse/releases/20170402092555'" 1>&2; false; fi
+ DEBUG [a0177af5] Finished in 0.561 seconds with exit status 0 (successful).
+  INFO [6b8ed04e] Running /usr/bin/env chmod 777 -R bootstrap/cache as ec2-user@35.161.27.29
+ DEBUG [6b8ed04e] Command: cd /home/ec2-user/menahouse/releases/20170402092555 && /usr/bin/env chmod 777 -R bootstrap/cache
+  INFO [6b8ed04e] Finished in 1.014 seconds with exit status 0 (successful).
+  INFO [59f6192a] Running /usr/bin/env chmod 777 -R storage as ec2-user@35.161.27.29
+ DEBUG [59f6192a] Command: cd /home/ec2-user/menahouse/releases/20170402092555 && /usr/bin/env chmod 777 -R storage
+  INFO [59f6192a] Finished in 0.550 seconds with exit status 0 (successful).
+  INFO [cedef00b] Running /usr/bin/env ln -s /home/ec2-user/menahouse/releases/20170402092555 /home/ec2-user/menahouse/releases/current as ec2-user@35.161.27.29
+ DEBUG [cedef00b] Command: /usr/bin/env ln -s /home/ec2-user/menahouse/releases/20170402092555 /home/ec2-user/menahouse/releases/current
+  INFO [cedef00b] Finished in 0.599 seconds with exit status 0 (successful).
+  INFO [fd5166eb] Running /usr/bin/env mv /home/ec2-user/menahouse/releases/current /home/ec2-user/menahouse as ec2-user@35.161.27.29
+ DEBUG [fd5166eb] Command: /usr/bin/env mv /home/ec2-user/menahouse/releases/current /home/ec2-user/menahouse
+  INFO [fd5166eb] Finished in 0.554 seconds with exit status 0 (successful).
+ DEBUG [47d50327] Running /usr/bin/env ls -xtr /home/ec2-user/menahouse/releases as ec2-user@35.161.27.29
+ DEBUG [47d50327] Command: /usr/bin/env ls -xtr /home/ec2-user/menahouse/releases
+ DEBUG [47d50327] 	20170402092555
+ DEBUG [47d50327] Finished in 0.556 seconds with exit status 0 (successful).
+ DEBUG [454aaad8] Running if test ! -d /home/ec2-user/menahouse/releases; then echo "Directory does not exist '/home/ec2-user/menahouse/releases'" 1>&2; false; fi as ec2-user@35.161.27.29
+ DEBUG [454aaad8] Command: if test ! -d /home/ec2-user/menahouse/releases; then echo "Directory does not exist '/home/ec2-user/menahouse/releases'" 1>&2; false; fi
+ DEBUG [454aaad8] Finished in 0.560 seconds with exit status 0 (successful).
+  INFO [273855d0] Running /usr/bin/env echo "Branch dev (at b31cec309893bb8c23cf3c5200b451fe47c0a7bd) deployed as release 20170402092555 by couldedhusso" >> /home/ec2-user/menahouse/revisions.log as ec2-user@35.161.27.29
+ DEBUG [273855d0] Command: cd /home/ec2-user/menahouse/releases && /usr/bin/env echo "Branch dev (at b31cec309893bb8c23cf3c5200b451fe47c0a7bd) deployed as release 20170402092555 by couldedhusso" >> /home/ec2-user/menahouse/revisions.log
+  INFO [273855d0] Finished in 0.527 seconds with exit status 0 (successful).

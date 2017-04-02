@@ -218,8 +218,8 @@
                                                       <option value="1" selected>Москва</option>
                                                       <option value="2">Московская область</option>
                                                       <option value="3">Новая Москва</option>
-{{-- 
-                                                    {{-- @elseif($house->gorod === 'Московская область') --}}
+
+                                                   @elseif($house->gorod === 'Московская область')
 
                                                       <option value="1">Москва</option>
                                                       <option value="2" selected>Московская область</option>
@@ -233,30 +233,13 @@
                                                     @endif
                                                 </select>
                                             </div>
-                                            {{-- <div class="form-group">
-                                                <label for="submit-district">Округ/район</label>
-                                                <select name="rayon" id="submit-district">
-                                                    <option value="">Округ</option>
-                                                    <option value="" data-city="2" style="display:none">Все округа</option>
-                                                    <option value="1" data-city="2">Центральный</option>
-                                                    <option value="2" data-city="2">Северный</option>
-                                                    <option value="3" data-city="2">Северо-Восточный</option>
-                                                    <option value="4" data-city="2">Восточный</option>
-                                                    <option value="5" data-city="2">Юго-Восточный</option>
-                                                    <option value="6" data-city="2">Южный</option>
-                                                    <option value="7" data-city="2">Юго-Западный</option>
-                                                    <option value="8" data-city="2">Западный</option>
-                                                    <option value="9" data-city="2">Северо-Западный</option>
-                                                    <option value="10" data-city="2">Зеленоградский</option>
-                                                    <option value="11" data-city="3">Все районы</option>
-                                                    <option value="12" data-city="4">Новомосковский АО</option>
-                                                    <option value="13" data-city="4">Троицкий АО</option>
-                                                </select>
-                                            </div><!-- /.form-group --> --}}
+                                   
+
                                             <div class="form-group">
                                                 <label for="metro">Ближайшее метро</label>
                                                 <input type="text" class="form-control" id="metro" name="metro" value="{{$house->metro}}" placeholder="Укажите название станции метро рядом с Вами" required>
                                             </div><!-- /.form-group -->
+                                            
                                             <div class="form-group">
                                                 <label for="address-map">Улица</label>
                                                 <input type="text" class="form-control" id="address-map" name="ulitsa" value="{{$house->ulitsa}}" placeholder="Введите адрес в свободной форме" required>

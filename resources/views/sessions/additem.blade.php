@@ -140,7 +140,7 @@
                                         <div class="col-md-12 col-sm-12">
                                             <div class="form-group">
                                                 <label for="submit-location">Местоположение</label>
-                                                <select name="gorod" id="submit-location">
+                                                <select name="gorod" id="submit-location" required>
                                                     {{-- <option value=""></option> --}}
                                                     <option value="" title="Какой город?" style="display:none;">Город</option>
                                                     @foreach(listCities() as $city)
