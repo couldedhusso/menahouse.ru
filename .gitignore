@@ -5,7 +5,7 @@ Homestead.json
 .env
 *.sql
 .elasticbeanstalk/
-.ebextensions/
+.ebextensions/*
 Capfile
-/lib
+/lib/*
 

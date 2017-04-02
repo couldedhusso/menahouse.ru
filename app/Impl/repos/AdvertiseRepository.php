@@ -171,9 +171,9 @@ class AdvertiseRepository implements AdvertiseInterface
 
   public function setCacheTime(){
       if ($this->isAuthentificated()){
-          return  Carbon::now()->addMinutes(3);
+          return  Carbon::now()->addMinutes(1);
       }
-      return Carbon::now()->addMinutes(40);
+      return Carbon::now()->addMinutes(10);
   }
 
   public function getCountHouse(){

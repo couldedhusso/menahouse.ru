@@ -8,7 +8,7 @@ set :default_stage, 'production'
 set :user, 'ec2-user'
 
 
-set :branch, 'master'
+set :branch, 'dev'
 # Default branch is :dev
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
