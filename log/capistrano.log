@@ -12362,3 +12362,10 @@ Command Cancelled!
   INFO [62ae761c] Running /usr/bin/env echo "Branch master (at e223b7ee4a2220e4e3169c9105a20f03a2b7a751) deployed as release 20170329212425 by couldedhusso" >> /home/ec2-user/menahouse/revisions.log as ec2-user@54.70.201.75
  DEBUG [62ae761c] Command: cd /home/ec2-user/menahouse/releases && /usr/bin/env echo "Branch master (at e223b7ee4a2220e4e3169c9105a20f03a2b7a751) deployed as release 20170329212425 by couldedhusso" >> /home/ec2-user/menahouse/revisions.log
   INFO [62ae761c] Finished in 0.561 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-02 11:30:33 +0300 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [baec0c82] Running /usr/bin/env mkdir -p /tmp/menahouse/ on 54.70.201.75
+  INFO [0ad59596] Running /usr/bin/env mkdir -p /tmp/menahouse/ as ec2-user@35.161.27.29
+ DEBUG [baec0c82] Command: /usr/bin/env mkdir -p /tmp/menahouse/
+ DEBUG [0ad59596] Command: /usr/bin/env mkdir -p /tmp/menahouse/
