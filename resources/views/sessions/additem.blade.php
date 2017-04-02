@@ -40,8 +40,8 @@
                                   <label for="submit-property-type">Тип жилья</label>
                                   <select name="type_nedvizhimosti" id="submit-property-type">
                                       <option value="" title="Какой вид недвижимости?" style="display:none" >Тип жилья</option>
-                                      <option value="1" id="Komnata">Квартира</option>
-                                      <option value="2" id="Kvartira">Комната</option>
+                                      <option value="1" id="Kvartira">Квартира</option>
+                                      <option value="2" id="Komnata">Комната</option>
                                       <option value="3" id="Dom">Частный дом</option>
                                       <option value="4" id="Novostroyka">Новостройки</option>
                                   </select>
@@ -330,7 +330,7 @@
               <div class="form-group">
                 <input id="file-upload" name="file-upload[]" type="file" class="file" multiple="true" enctype="multipart/form-data"
                 data-show-upload="false" data-show-caption="false" data-show-remove="false" 
-                data-browse-class="btn btn-white2" data-browse-label="Загрузить изображения">
+                data-browse-class="btn btn-white2" data-browse-label="Загрузить изображения" accept="image/*">
                 <figure class="note"><strong>Совет:</strong>Загрузите фотографии вашего жилья в формате jpeg или png!</figure>
               </div>
             </div>

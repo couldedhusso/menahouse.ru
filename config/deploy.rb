@@ -18,8 +18,8 @@ set :branch, 'master'
 set :deploy_to, '/home/ec2-user/menahouse'
 #set :deploy_to, '/home/ubuntu/menahouse'
 
-role :web, '35.161.27.29' # Your HTTP server, Apache/etc
-role :app, '35.161.27.29' # This may be the same as your `Web` server
+# role :web, '35.161.27.29' # Your HTTP server, Apache/etc
+# role :app, '35.161.27.29' # This may be the same as your `Web` server
 
 role :web, '54.70.201.75' # Your HTTP server, Apache/etc
 role :app, '54.70.201.75' # This may be the same as your `Web` server

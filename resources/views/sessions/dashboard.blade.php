@@ -49,7 +49,7 @@
                                     @if(Auth::user()->status == 'banned')
 
                                         <td class="image">
-                                            <a href="#"><img alt="" src="{{'https://s3.amazonaws.com/devmenastorage/'.$house->thumb->source}}"></a>
+                                            <a href="#"><img alt="" src="{{'https://s3-us-west-2.amazonaws.com/mena-'.env('APP_ENV').'/'.$house->thumb->source}}"></a>
                                             </td>
                                             <td><div class="inner">
                                                 <a href="#"><h2>{{ $house->type_appart.', м.'.$house->metro }}</h2></a>
@@ -77,7 +77,7 @@
                                         <td class="image">
 
                                             {{-- ====== TODO : utiliser cloudfront pour le rendu des imqges --}}
-                                            <a href="{{url('/'.$house->link)}}"><img alt="" src="{{'https://s3.amazonaws.com/devmenastorage/'.$house->thumb->source}}"></a>
+                                            <a href="{{url('/'.$house->link)}}"><img alt="" src="{{'https://s3-us-west-2.amazonaws.com/mena-'.env('APP_ENV').'/'.$house->thumb->source}}"></a>
                                             </td>
                                             <td><div class="inner">
                                                 <a href="{{url('/'.$house->link)}}"><h2>{{ $house->type_appart.', м.'.$house->metro }}</h2></a>
@@ -96,7 +96,7 @@
                                             </td>
 
                                             <td class="actions">
-                                                <a href="{{url('dashboard/advertisement/edit/'.$house->id)}}" class="edit"><i class="fa fa-pencil" title="Редактировать объявление"></i>Редактировать</a>
+                                                <a href="{{url('me/redaktirovat-obyavlenie')}}" class="edit"><i class="fa fa-pencil" title="Редактировать объявление"></i>Редактировать</a>
                                                 <a href="{{url('dashboard/advertisement/delete/'.$house->id)}}"><i class="delete fa fa-trash-o" title="Удалить объявлени"></i></a>
                                             </td>
                                         

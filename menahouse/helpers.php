@@ -27,9 +27,7 @@ function getAppartInfos($id){
         $url = 'api/appart?id='.$id;
 
         $response = $dispatcher->raw()->get($url);
-
         $house = json_decode($response->content());
-
         $house = $house->data;
 
         return $house;
@@ -38,6 +36,31 @@ function getAppartInfos($id){
 function isProprio(User $user){
     $policies = $flash = app('Menahouse\Repositories\PolicyRepository');
     return $policies->isOwner($user);
+}
+
+function link_to_model($body, $path,  $type){
+    $csrf = csrf_field();
+    if (is_object($path)) {
+
+        $action = $path->getTable();
+        if (in_array($type, ['PUT', 'PATCH', 'DELETE'])){
+            $action .= '/'.$path->getKey();
+        }
+        
+    } else{
+        $action = $path;
+    }
+
+    return <<<EOT
+    
+         <form method= "POST" action="{$action}">
+            $csrf
+
+            <input type="hidden" name="_method" value="{$type}">
+            <button type="submit" class="btn success small">{$body}</button>
+
+        </form>
+EOT;
 }
 
 function sidebar(){

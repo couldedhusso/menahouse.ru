@@ -87,7 +87,7 @@ class Obivlenie extends Model
     public function getObvThumbnail($id){
 
         return DB::table('thumb')->where('obivlenie_id', $id)
-                                 ->select('file_name as source')
+                                 ->select('file_name as source', 'obivlenie_id as id')
                                  ->first();
     }
 

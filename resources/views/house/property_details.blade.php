@@ -13,7 +13,7 @@
   <section id="property-detail">
   <header class="property-title">
 
-      @if($house->status == 'Обмен')
+      @if($house->status === 'Обмен')
          <h1>{{$house->entete_annonce .' '. "на обмен" }}</h1>   
       @else
         <h1>{{$house->entete_annonce .' '. "на обмен/продажу" }}</h1>          
@@ -35,8 +35,8 @@
     <div class="owl-carousel property-carousel">
       @foreach($house->images->data as $img )
       <div class="property-slide">
-          <a href="{{asset('https://s3.amazonaws.com/devmenastorage/'.$img->source)}}" class="image-popup">
-            <img alt="" src="{{asset('https://s3.amazonaws.com/devmenastorage/'.$img->source)}}">
+          <a href="{{asset('https://s3-us-west-2.amazonaws.com/mena-'.env('APP_ENV').'/'.$img->source)}}" class="image-popup">
+            <img alt="" src="{{asset('https://s3-us-west-2.amazonaws.com/mena-'.env('APP_ENV').'/'.$img->source)}}">
           </a>
       </div>
       <!-- /.property-slide -->
@@ -121,10 +121,16 @@
 
           {{-- @if(Auth::check())
 
+           
           @endif --}}
+
+         @if($house->owner !== Auth::id())
+
           <form role="form" id="form-contact-agent" method="post" class="clearfix" action="/mailbox/message/compose">
             <input name="_token" type="hidden" value="{!! csrf_token() !!}" />
             {!! csrf_field() !!}
+
+        
 
 
             <input type="hidden" name="subject" value="{{ $house->type_appart }}">
@@ -135,13 +141,18 @@
               <label for="form-contact-agent-message">Вам понравилось? Есть вопросы? Напишите письмо<em>*</em></label>
               <textarea class="form-control" id="form-contact-agent-message" rows="5" name="form-message" placeholder="Добрый день! Мне понравился ваш объект..." required></textarea>
             </div>
-            <!-- /.form-group -->
-            <div class="form-group">
-              <button type="submit" class="btn pull-right btn-white2" id="form-contact-agent-submit">Отправить сообщение</button>
-            </div>
+
+
+                <!-- /.form-group -->
+             <div class="form-group">
+                  <button type="submit" class="btn pull-right btn-white2" id="form-contact-agent-submit">Отправить сообщение</button>
+             </div>
+              
             <!-- /.form-group -->
             <div id="form-contact-agent-status"></div>
           </form>
+
+        @endif
           <!-- /#form-contact -->
         </div>
         <!-- /.agent-form -->

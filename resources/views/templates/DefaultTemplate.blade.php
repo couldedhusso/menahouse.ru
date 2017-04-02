@@ -7,9 +7,49 @@
     <meta name="author" content="ThemeStarz">
 
     <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" 
+    
+    integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link href="{{ asset('assets/fonts/font-awesome.css') }}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="{{ elixir("css/all.css") }}">
+    <style>
+        .thumbnail {
+           border : none !important;
+        }
+
+        .gallery__image{
+            margin-bottom : 1.2em;
+        }
+
+        .update-form__btn{
+            width : 2em;
+            float : left;
+            margin-right : 4em;
+        }
+
+        .update-form__input{
+             float : left;
+        }
+
+        /*.gallery__list{
+            list-style-type: none;
+            margin: 0 !important;
+            padding: 0 !important; 
+            width:100%;
+        }
+        .gallery__list > li{
+            display : block;
+            float : left; 
+        } */
+
+        
+
+        .update-form__input .btn-toolbar-margin {
+            margin-left: 2px;
+         }
+        
+    </style>
 
     <title>@yield('Title')</title>
 
@@ -98,6 +138,10 @@
 
         <div class="container">
             @yield('content')
+        </div><!-- /.container -->
+
+        <div class="container">
+            @yield('images')
         </div><!-- /.container -->
     </div>
     <!-- end Page Content -->

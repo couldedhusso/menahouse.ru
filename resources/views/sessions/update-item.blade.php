@@ -15,8 +15,8 @@
   <input name="_token" type="hidden" value="{!! csrf_token() !!}" />
   {!! csrf_field() !!}
 
-  <input name="_token" type="hidden" value="{!! csrf_token() !!}" />
-  {!! csrf_field() !!}
+  {{-- <input name="_token" type="hidden" value="{!! csrf_token() !!}" />
+  {!! csrf_field() !!} --}}
 
   <div class="row">
     <div class="col-md-9 col-sm-9">
@@ -27,7 +27,7 @@
           <div class="form-group">
             <label for="submit-description">Описание</label>
             <textarea class="form-control" id="tekct_obivlenia" rows="8" name="tekct_obivlenia" >{{$house->tekct_obivlenia}}</textarea>
-            <input name="id" type="hidden" value="{!! $id !!}" />
+            <input name="id" type="hidden" value="{!! $house->id !!}" />
           </div>
           <!-- /.form-group -->
         </section>
@@ -69,32 +69,36 @@
                                   <label for="submit-property-type">Тип жилья</label>
                                   <select name="type_nedvizhimosti" id="submit-property-type">
 
-                                      @if($house->type_nedvizhimosti == '1')
+                                  {{-- <option value="1" id="Komnata">Квартира</option>
+                                      <option value="2" id="Kvartira">Комната</option>
+                                      <option value="3" id="Dom">Частный дом</option>
+                                      <option value="4" id="Novostroyka">Новостройки</option> --}}
+
+                                      {{-- @if($house->type_nedvizhimosti == '1') --}}
                                         <option value="" title="Какой вид недвижимости?" style="display:none" >Тип жилья</option>
-                                        <option value="1" id="Komnata" selected>Квартира</option>
-                                        <option value="2" id="Kvartira">Комната</option>
+                                        <option value="1" id="Komnata">Комната</option>
+                                        <option value="2" id="Kvartira">Квартира</option>
                                         <option value="3" id="Dom">Частный дом</option>
                                         <option value="4" id="Novostroyka" >Новостройки</option>
-                                      @elseif($house->type_nedvizhimosti == '2')
+                                      {{-- @elseif($house->type_nedvizhimosti == '2')
                                         <option value="" title="Какой вид недвижимости?" style="display:none" >Тип жилья</option>
-                                        <option value="1" id="Komnata" selected>Квартира</option>
-                                        <option value="2" id="Kvartira">Комната</option>
+                                        <option value="1" id="Komnata">Комната</option>
+                                        <option value="2" id="Kvartira" selected>Квартира</option>
                                         <option value="3" id="Dom">Частный дом</option>
-                                        <option value="4" id="Novostroyka" selected>Новостройки</option>
+                                        <option value="4" id="Novostroyka" >Новостройки</option>
                                       @elseif($house->type_nedvizhimosti == '3')
                                         <option value="" title="Какой вид недвижимости?" style="display:none" >Тип жилья</option>
-                                        <option value="1" id="Komnata">Квартира</option>
-                                        <option value="2" id="Kvartira">Комната</option>
+                                        <option value="1" id="Komnata">Комната</option>
+                                        <option value="2" id="Kvartira">Квартира</option>
                                         <option value="3" id="Dom" selected>Частный дом</option>
-                                        <option value="4" id="Novostroyka" selected>Новостройки</option>
+                                        <option value="4" id="Novostroyka" >Новостройки</option>
                                       @else
                                         <option value="" title="Какой вид недвижимости?" style="display:none" >Тип жилья</option>
-                                        <option value="1" id="Komnata">Квартира</option>
-                                        <option value="2" id="Kvartira">Комната</option>
+                                        <option value="1" id="Komnata">Комната</option>
+                                        <option value="2" id="Kvartira">Квартира</option>
                                         <option value="3" id="Dom">Частный дом</option>
                                         <option value="4" id="Novostroyka" selected>Новостройки</option>
-
-                                      @endif
+                                      @endif --}}
                                   </select>
                               </div><!-- /.form-group -->
                           </div><!-- /.col-md-6 -->
@@ -147,7 +151,7 @@
                                                 <div class="form-group">
                                                     <label for="submit-area" title="Какова общая площадь квартиры?">Общая</label>
                                                     <div class="input-group">
-                                                        <input type="text" class="form-control" id="submit-Beds" name="obshaya_ploshad" value="{{$house->obshaya_ploshad}}" title="Какова общая площадь квартиры?" pattern="\d*" required>
+                                                        <input type="text" class="form-control" id="submit-Beds" name="obshaya_ploshad" value="{{$house->superficie_totale}}" title="Какова общая площадь квартиры?" pattern="\d*" required>
                                                         <span class="input-group-addon">м<sup>2</sup></span>
                                                     </div>
                                                 </div><!-- /.form-group -->
@@ -156,7 +160,7 @@
                                                 <div class="form-group">
                                                     <label for="submit-beds" title="Площадь жилой зоне очень важный параметр">Жилая</label>
                                                     <div class="input-group">
-                                                        <input type="text" class="form-control" id="submit-Baths" name="zhilaya_ploshad" value="{{$house->zhilaya_ploshad}}"  title="Площадь жилой зоне очень важный параметр" pattern="\d*" required>
+                                                        <input type="text" class="form-control" id="submit-Baths" name="zhilaya_ploshad" value="{{$house->superficie_living_room}}"  title="Площадь жилой зоне очень важный параметр" pattern="\d*" required>
                                                         <span class="input-group-addon">м<sup>2</sup></span>
                                                     </div>
                                                 </div><!-- /.form-group -->
@@ -167,7 +171,7 @@
                                                 <div class="form-group">
                                                     <label for="submit-kitchen" title="Все хотят знать насколько большая кухня, укажите">Кухня</label>
                                                     <div class="input-group">
-                                                        <input type="text" class="form-control" id="submit-area" name="ploshad_kurhni" value="{{$house->ploshad_kurhni}}" title="Все хотят знать насколько большая кухня, укажите" pattern="\d*" required>
+                                                        <input type="text" class="form-control" id="submit-area" name="ploshad_kurhni" value="{{$house->superficie_cuisine}}" title="Все хотят знать насколько большая кухня, укажите" pattern="\d*" required>
                                                         <span class="input-group-addon">м<sup>2</sup></span>
                                                     </div>
                                                 </div><!-- /.form-group -->
@@ -207,14 +211,15 @@
                                                 <label for="submit-location">Местоположение</label>
                                                 <select name="gorod" id="submit-location">
                                                     <option value="">Город</option>
-                                                    <option value="1" style="display:none">Все города</option>
+                                                    {{-- <option value="" style="display:none">Все города</option> --}}
 
-                                                    @if($house->gorod == '1')
+                                                    {{-- @if($house->gorod === 'Москва') --}}
 
-                                                      <option value="1" selected>Москва</option>
+                                                      <option value="1">Москва</option>
                                                       <option value="2">Московская область</option>
                                                       <option value="3">Новая Москва</option>
-                                                    @elseif($house->gorod == '2')
+{{-- 
+                                                    @elseif($house->gorod === 'Московская область')
 
                                                       <option value="1">Москва</option>
                                                       <option value="2" selected>Московская область</option>
@@ -225,7 +230,7 @@
                                                       <option value="1">Москва</option>
                                                       <option value="2">Московская область</option>
                                                       <option value="3" selected>Новая Москва</option>
-                                                    @endif
+                                                    @endif --}}
                                                 </select>
                                             </div>
                                             <div class="form-group">
@@ -305,12 +310,12 @@
                       <label for="submit-status">Статус</label>
                       <select name="status" id="submit-status">
 
-                        @if($house->status == '1')
-                            <option value="1" selected>Обмен</option>
-                            <option value="2">Обмен продажа</option>
+                        @if($house->status == 'Обмен продажа')
+                            <option value="1">Обмен</option>
+                            <option value="2" selected>Обмен продажа</option>
                         @else
-                          <option value="1">Обмен</option>
-                          <option value="2" selected>Обмен продажа</option>
+                          <option value="1" selected>Обмен</option>
+                          <option value="2">Обмен продажа</option>
                         @endif
 
                       </select>
@@ -359,7 +364,7 @@
                       <label for="submit-price">Предположительная цена объекта</label><i class="fa fa-question-circle tool-tip" data-toggle="tooltip" data-placement="right" title="Мы можем помочь в определении рыночной цены объекта"></i>
                       <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-rub"></i></span>
-                        <input type="text" class="form-control" id="submit-price" name="price"  value="{{$house->price}}" pattern="\d*">
+                        <input type="text" class="form-control" id="submit-price" name="price"  value="{{$house->price_}}" pattern="\d*">
                       </div>
                     </div>
                     <!-- /.form-group -->
@@ -384,7 +389,7 @@
                       <div class="form-group">
                         <div class="input-group">
                           <span class="input-group-addon"><i class="fa fa-rub"></i></span>
-                          <input type="text" class="form-control" id="submit-doplata" name="doplata" value="{{$house->doplata}}" >
+                          <input type="text" class="form-control" id="submit-doplata" name="doplata" value="{{$house->doplata_}}" >
                         </div>
                       </div>
                       <!-- /.form-group -->
@@ -398,7 +403,7 @@
             <!-- /.col-md-6 -->
           </div>
           <!-- /.row -->
-          <hr>
+
         </section>
       </div>
       <!-- /.col-md-9 -->
@@ -407,45 +412,10 @@
         <aside class="submit-step">
           <figure class="step-number">2</figure>
           <div class="description">
-                                          <h4>Укажите какие цели обмена?</h4>
-                                          <p>Укажите большую или меньшую жильё вы хотите получить. Предположительную цену объекта и желаемую сумму доплаты, если Вы идёте на уменьшение. Будьте внимательны. От правильности заполнения зависит подбор автоматически обучаемого поиска!
-                                          </p>
-                                      </div>
-        </aside>
-        <!-- /.submit-step -->
-      </div>
-      <!-- /.col-md-3 -->
-    </div>
-  </div>
-  <!-- /.row -->
-  <div class="row">
-    <div class="block clearfix">
-      <div class="col-md-9 col-sm-9">
-        <section id="submit-form">
-          <section class="block" id="gallery">
-            <header>
-              <h2>Фотографии</h2></header>
-            <div class="center">
-              <div class="form-group">
-                <input id="file-upload" name="file-upload[]" type="file" class="file" multiple="true" enctype="multipart/form-data"
-                data-show-upload="false" data-show-caption="false" data-show-remove="false"
-                data-browse-class="btn btn-white2" data-browse-label="Загрузить изображения">
-                <figure class="note"><strong>Совет:</strong>Загрузите фотографии вашего жилья в формате jpeg или png!</figure>
+             <h4>Укажите какие цели обмена?</h4>
+                  <p>Укажите большую или меньшую жильё вы хотите получить. Предположительную цену объекта и желаемую сумму доплаты, если Вы идёте на уменьшение. Будьте внимательны. От правильности заполнения зависит подбор автоматически обучаемого поиска!
+                  </p>
               </div>
-            </div>
-          </section>
-        </section>
-      </div>
-      <!-- /.col-md-9 -->
-      <div class="col-md-3 col-sm-3">
-        </br>
-        </br>
-        <aside class="submit-step">
-          <figure class="step-number">3</figure>
-          <div class="description">
-              <h4>Загрузите фотографии</h4>
-              <p>Загрузите несколько красивых фотографий вашего объекта. От качества фотографий зависит какое впечатление составят об объекте.  </p>
-          </div>
         </aside>
         <!-- /.submit-step -->
       </div>
@@ -453,18 +423,20 @@
     </div>
   </div>
   <!-- /.row -->
+  <hr>
 
   <div class="row">
     <div class="block">
       <div class="col-md-9 col-sm-9">
-        <div class="center">
+        <div class="float-right">
           <div class="form-group">
-            <button type="submit" class="btn btn-success large">Отправить данные</button>
+            <button type="submit" class="btn btn-success large">Обнавить данные</button>
           </div>
           <!-- /.form-group -->
-          <figure class="note block">Нажимая кнопку “Отправить данные” Вы подтверждаете, что уведомлены и согласны с <a href="{{url('/terms-conditions')}}">Правилами нашего сайта</a></figure>
+          {{-- <figure class="note block">Нажимая кнопку “Отправить данные” Вы подтверждаете, что уведомлены и согласны с <a href="{{url('/terms-conditions')}}">Правилами нашего сайта</a></figure> --}}
         </div>
       </div>
+
       <div class="col-md-3 col-sm-3">
         <aside class="submit-step">
           <figure class="step-number">4</figure>
@@ -482,4 +454,146 @@
 
   {!! Form::close() !!}
   <!--</form> /#form-submit -->
+@endsection
+
+@section('images')
+
+<div class="col-md-9">
+
+    <div class="block clearfix gallery">
+
+     <header><h2>Фотографии</h2></header>
+
+
+<br> <br>
+     
+     <div class="row">
+
+         <div class="col-md-6 gallery__image"> 
+                  
+                        <form method= "POST" action="/photo/{{$house->thumb->id}}" class="update-form__btn" enctype="multipart/form-data">
+                            {{ csrf_field() }}
+
+                            <input type="hidden" name="_method" value="PATCH">
+
+                            <input type="hidden" name="thumnail_id" value="{{$house->thumb->id}}">
+
+                            {{-- <div>
+                              <label for="file" class="btn success small">
+                                <i class="cloud icon"></i>
+                              </label>
+                              <input type="file" id="hidden-new-file" style="display: none">
+                            </div> --}}
+
+                             <div class="btn-toolbar btn-toolbar-margin" role="toolbar" aria-label="Toolbar with button groups">
+                              <div class="btn-group mr-2" role="group" aria-label="First group">
+                                {{-- <button type="button" class="btn btn-secondary">1</button> --}}
+                                <label for="upload" class="btn small"> 
+                                        <i class="fa fa-upload">&nbsp;Загрузить изображения</i>
+                                        <input type="file" name="thumb" id="upload" style="display:none" accept="image/jpg, 
+                                                      image/png, image/jpeg, image/pjpeg, image/x-png">
+                                      </label>
+                            
+                              </div>
+                              <div class="btn-group mr-2" role="group" aria-label="Second group">
+                                <button type="submit" class="btn success small ">Изменить</button>
+                                {{-- <input type="submit" value="Изменить" class="btn success small form-control pull-left">  --}} 
+                              </div>
+                        
+                            </div>
+
+
+                            {{-- <div class="form-group">
+                              <div class="input-group">
+                                     <label for="upload form-control"> 
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true">dsgdfh</span>
+                                        <input type="file" name="thumb" id="upload" style="display:none" accept="image/jpg, 
+                                                      image/png, image/jpeg, image/pjpeg, image/x-png">
+                                      </label>
+                              </div>
+                            </div>
+
+                             <div class="form-group">
+                              <div class="input-group">
+                                   <input type="submit" value="Изменить" class="btn success small form-control pull-left">
+                              </div>
+                            </div> --}}
+
+                        </form>
+                        <a href="#">
+                          <img src="{{'https://s3-us-west-2.amazonaws.com/mena-'.env('APP_ENV').'/'.$house->thumb->source}}" alt="" 
+                          style="width:400px; height:250px;">
+                        </a>
+          </div> 
+     </div>
+      <h4>изображение обложки</h4>     
+
+      <hr>
+
+      <div class="row">
+    <!-- 1 Изображение -->
+          @foreach(array_chunk($house->images->data, 2) as $photo)
+          <div class="row">
+              @foreach($photo as $img)
+                     <div class="col-md-6 gallery__image"> 
+                        
+                        <form method= "POST" action="/photo/{{$img->id}}" class="update-form__btn" >
+                            {{ csrf_field() }}
+
+                            <input type="hidden" name="_method" value="DELETE">
+                            {{-- <button type="submit" class="btn success small"></button> --}}
+
+                            {{-- <div class="input-group ">
+                                <input id="uploadname" type="text" class="form-control">
+                                <a class="input-group-btn btn btn-default go inline">Upload to DocMan</a>
+                            </div> --}}
+
+                           <div class="btn-toolbar btn-toolbar-margin" role="toolbar" aria-label="Toolbar with button groups">
+                              <div class="btn-group mr-2" role="group" aria-label="First group">
+                                {{-- <button type="button" class="btn btn-secondary">1</button> --}}
+                                <label for="upload" class="btn small"> 
+                                        <i class="fa fa-upload">&nbsp;Загрузить изображения</i>
+                                        <input type="file" name="thumb" id="upload" style="display:none" accept="image/jpg, 
+                                                      image/png, image/jpeg, image/pjpeg, image/x-png">
+                                      </label>
+                            
+                              </div>
+                              <div class="btn-group mr-2" role="group" aria-label="Second group">
+                                <button type="submit" class="btn success small ">Изменить</button>
+                                {{-- <input type="submit" value="Изменить" class="btn success small form-control pull-left">  --}} 
+                              </div>
+                        
+                            </div>
+
+                             {{-- <div class="form-group">
+                              <div class="input-group">
+                                     <label for="upload" class="btn"> 
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true">dsgdfh</span>
+                                        <input type="file" name="thumb" id="upload" style="display:none" accept="image/jpg, 
+                                                      image/png, image/jpeg, image/pjpeg, image/x-png">
+                                      </label>
+                              </div>
+                            </div>
+                            <input type="submit" value="Изменить" class="btn success small input-group-btn inline"> --}}
+                        </form>
+                        <a href="#">
+                          <img src="{{'https://s3-us-west-2.amazonaws.com/mena-'.env('APP_ENV').'/'.$img->source}}" alt="" 
+                          style="width:400px; height:250px;">
+                        </a>
+
+                        <form method= "POST" action="/photo/{{$img->id}}">
+                            {{ csrf_field() }}
+
+                            <input type="hidden" name="_method" value="DELETE">
+                            {{-- <button type="submit" class="btn success small"></button> --}}
+                            <input type="submit" value="Удалить" class="btn success small">
+                        </form>
+                    </div>       
+                  @endforeach
+              </div>   
+          @endforeach
+         </div>
+    </div>
+</div>
+    
 @endsection

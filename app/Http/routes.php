@@ -52,6 +52,19 @@ Route::group(['prefix' => 'obmen-prodazha'], function () {
 
 });
 
+Route::group(['prefix' => 'obmen'], function () {
+
+    Route::get('moskva/{name}={id}', 'ObivlenieController@detailsAppart')
+    ->where(['id' => '[0-9]+', 'name' => '[a-z]+']);
+
+    Route::get('moskovskaya-oblast/{name}={id}', 'ObivlenieController@detailsAppart'
+    )->where(['id' => '[0-9]+', 'name' => '[a-z]+']);
+
+    Route::get('novaya-moskva/{name}={id}', 'ObivlenieController@detailsAppart')
+    ->where(['id' => '[0-9]+', 'name' => '[a-z]+']);
+
+});
+
 
 Route::get('no-appart-notification', function(Request $request){
 
@@ -68,19 +81,6 @@ Route::get('auth-notification', function(Request $request){
      return redirect()->back();
 });
 
-Route::group(['prefix' => 'obmen'], function () {
-
-    Route::get('moskva/{name}={id}', 'ObivlenieController@detailsAppart')
-    ->where(['id' => '[0-9]+', 'name' => '[a-z]+']);
-
-    Route::get('moskovskaya-oblast/{name}={id}', 'ObivlenieController@detailsAppart'
-    )->where(['id' => '[0-9]+', 'name' => '[a-z]+']);
-
-    Route::get('novaya-moskva/{name}={id}', 'ObivlenieController@detailsAppart')
-    ->where(['id' => '[0-9]+', 'name' => '[a-z]+']);
-
-});
-
 
 Route::group(['middleware' => 'auth'], function () {
 
@@ -94,7 +94,8 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('me/obyavlenie', 'ObivlenieController@getUserObyavlenie');
         Route::get('me/rasmestit-obyavlenie', 'ObivlenieController@index');
         Route::get('me/udalit-obyavlenie', 'ObivlenieController@destroy');
-        Route::get('me/redaktirovat-obyavlenie', 'ObivlenieController@destroy');
+
+        Route::get('me/redaktirovat-obyavlenie', 'ObivlenieController@editAppart');
 
         Route::get('me/favorites/obyavlenie', 'ObivlenieController@getUserFavoris');
 
@@ -103,6 +104,9 @@ Route::group(['middleware' => 'auth'], function () {
 
         Route::post('me/restore-account', 'AbuseReportController@restore');
         Route::post('me/zhaloba', 'AbuseReportController@plaintesUser');
+
+        Route::delete('photo/{id}', 'PhotosController@destroy');
+        Route::patch('photo/{id}', 'PhotosController@updateImage');
 
         
         // Route::get('{action}={param}', 'UserMessageController@index')
@@ -141,14 +145,14 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('dashboard/bookmarked/delete/{id}', 'ObivlenieController@destroyObj');
 
-    Route::get('dashboard/advertisement/edit/{id}', function ($id)    {
+    // Route::get('dashboard/advertisement/edit/{id}', function ($id)    {
 
-        $house = DB::table('obivlenie')->whereid($id)->first();
+    //     $house = Obivlenie::whereid($id)->first();
+    //    // dd($house);
+    //     if (null == $house) return redirect('/');
 
-        if (null == $house) return redirect('/');
-
-        return View('sessions.update-item', compact('house', 'id')) ;
-    });
+    //     return View('sessions.update-item', compact('house', 'id')) ;
+    // });
 
     Route::get('dashboard/advertisement/edit', ['as' => 'path_update_item',
                         'uses' => 'ObivlenieController@update']);

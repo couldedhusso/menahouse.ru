@@ -55,9 +55,11 @@ class AdvertiseRepository implements AdvertiseInterface
 
 
   protected $imageRepos;
+  protected $dispatcher;
   public function __construct(ImageManipulationInterface $clsImageHelper){
 
       $this->imageRepos = $clsImageHelper;
+      $this->dispatcher = app('Dingo\Api\Dispatcher');
 
   }
 
@@ -108,6 +110,19 @@ class AdvertiseRepository implements AdvertiseInterface
         ]);
         return $favoris;
  }
+
+
+
+ // ======  TODO : remplacer ttes les appart details par cette function 
+//  public function infoAppart($id, $withImages = null){
+
+//         $url = 'api/user/appart?include=images';        
+       
+//         $response = $this->dispatcher->raw()->get($url);  
+//         $house = json_decode($response->content());
+
+//         return  $house->data;
+//  }
 
 
  private function getCountHouseByType($parametres, $cacheKey) {
@@ -437,9 +452,7 @@ class AdvertiseRepository implements AdvertiseInterface
  }
 
  public function obyavlenie(){
-
      return Obivlenie::where('user_id', $this->userId())->first();
-
  }
 
  public function userObyavlenie($request){
@@ -669,9 +682,7 @@ class AdvertiseRepository implements AdvertiseInterface
           }
 
 
-           }
-
-
+    }
 
 
         //     $madeThumnail = true ;
@@ -722,9 +733,62 @@ class AdvertiseRepository implements AdvertiseInterface
          // return $del;
 
           return 'me/obyavlenie' ;
-
-
  }
+
+
+    public function updateAppart($request){
+
+
+
+         
+
+    if (null !== $request['file-upload'][0]){
+
+        foreach($request['file-upload'] as $imgvalue) {
+
+               if( $imgvalue->isValid() ){
+
+                   // $filename = sha1(time().'.'.$imgvalue->guessClientExtension());
+
+                   $name = sha1(time().'.'.$imgvalue->getClientOriginalName());
+
+                   $filename = $name.'.'.$imgvalue->guessClientExtension();
+
+
+                    if (! $madeThumnail){
+
+                       $thumbnailFileName = 'tn-'.$filename;
+
+                       $ThumbNail = ThumbNail::create([
+                         'obivlenie_id' => $obivlenie->id,
+                         'file_name' => $thumbnailFileName
+                       ]);
+
+                       $thumbImag = new Images;
+                       $thumbImag = $ThumbNail->images()->create(array('path' => $thumbnailFileName));
+
+                       $this->imageRepos->UploadToS3($thumbnailFileName, file_get_contents($imgvalue));
+                       $ThumbNail->images()->save($thumbImag);
+
+                       $madeThumnail = true ;
+                   }
+
+                   $img = new Images ;
+                   $img = $obivlenie->images()->create(array('path' => $filename));
+                   $this->imageRepos->UploadToS3($filename, file_get_contents($imgvalue));
+
+                   $obivlenie->images()->save($img);
+               }
+          }
+
+
+    }
+
+
+
+         return 'me/obyavlenie' ;
+
+    }
 
 //  public function saveAs($model, $fileName, Uploadfile $file){
 

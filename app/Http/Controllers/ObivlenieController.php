@@ -55,7 +55,7 @@ use League\Fractal\Manager;
 
 // use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Illuminate\Http\Request;
-
+use Menahouse\Contracts\ImageManipulationInterface;
 use JavaScript;
 
 
@@ -82,15 +82,20 @@ class ObivlenieController extends Controller
     protected $policies ;
     protected $dispatcher ;
     protected $rechercheResulstUrl;
+
+    protected $imageRepos;
+  
     // protected $fractal;
 
 
-    public function __construct(AdvertiseInterface $repos, PolicyRepository $policies)
+    public function __construct(AdvertiseInterface $repos, PolicyRepository $policies, 
+                                                           ImageManipulationInterface $clsImageHelper)
     {
         $this->repos = $repos;
         $this->policies = $policies;
-    $this->dispatcher = app('Dingo\Api\Dispatcher');
+        $this->dispatcher = app('Dingo\Api\Dispatcher');
         $this->rechercheResulstUrl = 'api/recherches';
+        $this->imageRepos = $clsImageHelper;
         // $this->fractal = $fractal;
     }
 
@@ -244,6 +249,23 @@ class ObivlenieController extends Controller
 
         return View('house.property_details', compact('house'));
     }
+
+    public function editAppart(Request $request){
+
+        $id  = $request->user()->id ;  
+        $url = 'api/user/appart?include=images';        
+       
+        $response = $this->dispatcher->raw()->get($url);  
+        $house = json_decode($response->content());
+        $house = $house->data;
+
+        // dd($house);
+
+        return View('sessions.update-item', compact('house', 'id')) ;
+    }
+
+
+    
 
 
 
@@ -756,38 +778,12 @@ class ObivlenieController extends Controller
       //     $updateparams += array('metro' => trim($metro) );
       // }
 
-        $inputall = Input::except('_token', 'file-upload');
+        $inputall = Input::except('_token');
 
-       /// $arrayName = ['city', 'district', 'propertytype', 'room'];
-
-        // foreach ($inputall as $key => $value) {
-        //     // if (!in_array($key, $excludeKeyValues) and (!empty($value))) {
-        //     //     if (in_array($key, $arrayName)) {
-        //     //         $paramupdte = $Helper->mappingFields($key, $value);
-        //     //         $updateparams += [$paramupdte['1'] => $paramupdte['2'] ];
-        //     //     } else {
-        //             //  dd(array( $key => $value ));
-        //             $updateparams += [$key => $value] ;
-        //     //     }
-        //     // }
-        // }
-
-      //  dd($updateparams);
-
+        dd($inputall);
 
         $house = Obivlenie::where('id', Input::get('id'))->update($inputall);
-
-       // dd($house);
-
-        // foreach ($updateparams as $key => $value) {
-        //     $house[$key] = $value ;
-        // }
-        // $house->save();
-
-      // $house = Obivlenie::where('id', '=', $updateparams['id'])->first();
-      // $house->update($updateparams);
-
-      
+        // dd($house);
         
 
         if ($request->hasFile('file-upload')){

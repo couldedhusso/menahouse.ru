@@ -10,7 +10,7 @@ class ImageTransformer extends TransformerAbstract
     public function transform(Images $model)
     {
         return [
-            // 'id' => $model->id,
+            'id' => $model->id,
             'source' => $model->path
         ];
     }

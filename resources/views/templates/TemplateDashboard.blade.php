@@ -7,8 +7,10 @@
     <meta name="author" content="ThemeStarz">
 
     <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ asset('assets/css/vendor/font-awesome.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link href="{{ asset('assets/fonts/font-awesome.css') }}" rel="stylesheet" type="text/css">
+    {{-- <link href="{{ asset('assets/fonts/bootstrap3.min.css') }}" rel="stylesheet" type="text/css"> --}}
     <link rel="stylesheet" href="{{ elixir("css/all.css") }}">
 
     <title>@yield('Title')</title>
