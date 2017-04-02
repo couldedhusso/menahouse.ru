@@ -136,7 +136,7 @@ return [
         Cmgmyr\Messenger\MessengerServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         'Collective\Html\HtmlServiceProvider',
-        'Barryvdh\Debugbar\ServiceProvider',
+        // 'Barryvdh\Debugbar\ServiceProvider',
         'Intervention\Image\ImageServiceProvider',
         'Laracasts\Flash\FlashServiceProvider',
         'Kamaln7\Toastr\ToastrServiceProvider',
